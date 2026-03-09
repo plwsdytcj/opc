@@ -10,6 +10,7 @@ import { assetsApi } from "../api/assets";
 import { usePanel } from "../context/PanelContext";
 import { useCompany } from "../context/CompanyContext";
 import { useBreadcrumbs } from "../context/BreadcrumbContext";
+import { useI18n } from "../context/I18nContext";
 import { queryKeys } from "../lib/queryKeys";
 import { ProjectProperties } from "../components/ProjectProperties";
 import { InlineEditor } from "../components/InlineEditor";
@@ -192,6 +193,7 @@ function ProjectIssuesList({ projectId, companyId }: { projectId: string; compan
 /* ── Main project page ── */
 
 export function ProjectDetail() {
+  const { t } = useI18n();
   const { companyPrefix, projectId, filter } = useParams<{
     companyPrefix?: string;
     projectId: string;
@@ -319,7 +321,7 @@ export function ProjectDetail() {
           size="icon-xs"
           className="ml-auto md:hidden shrink-0"
           onClick={() => setMobilePropsOpen(true)}
-          title="Properties"
+          title={t("common.properties")}
         >
           <SlidersHorizontal className="h-4 w-4" />
         </Button>
@@ -331,7 +333,7 @@ export function ProjectDetail() {
             panelVisible ? "opacity-0 pointer-events-none w-0 overflow-hidden" : "opacity-100",
           )}
           onClick={() => setPanelVisible(true)}
-          title="Show properties"
+          title={t("common.showProperties")}
         >
           <SlidersHorizontal className="h-4 w-4" />
         </Button>
@@ -381,7 +383,7 @@ export function ProjectDetail() {
       <Sheet open={mobilePropsOpen} onOpenChange={setMobilePropsOpen}>
         <SheetContent side="bottom" className="max-h-[85dvh] pb-[env(safe-area-inset-bottom)]">
           <SheetHeader>
-            <SheetTitle className="text-sm">Properties</SheetTitle>
+            <SheetTitle className="text-sm">{t("common.properties")}</SheetTitle>
           </SheetHeader>
           <ScrollArea className="flex-1 overflow-y-auto">
             <div className="px-4 pb-4">

@@ -227,6 +227,7 @@ function asNonEmptyString(value: unknown): string | null {
 }
 
 export function AgentDetail() {
+  const { t } = useI18n();
   const { companyPrefix, agentId, tab: urlTab, runId: urlRunId } = useParams<{
     companyPrefix?: string;
     agentId: string;
@@ -469,7 +470,7 @@ export function AgentDetail() {
             disabled={agentAction.isPending || isPendingApproval}
           >
             <Play className="h-3.5 w-3.5 sm:mr-1" />
-            <span className="hidden sm:inline">Run Heartbeat</span>
+            <span className="hidden sm:inline">{t("agentDetail.runHeartbeat")}</span>
           </Button>
           {agent.status === "paused" ? (
             <Button

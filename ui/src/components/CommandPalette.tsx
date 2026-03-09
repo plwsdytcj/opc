@@ -104,14 +104,14 @@ export function CommandPalette() {
         if (v && isMobile) setSidebarOpen(false);
       }}>
       <CommandInput
-        placeholder={"Search issues, agents, projects..."}
+        placeholder={t("command.searchPlaceholder")}
         value={query}
         onValueChange={setQuery}
       />
       <CommandList>
         <CommandEmpty>{t("common.noResults")}</CommandEmpty>
 
-        <CommandGroup heading="Actions">
+        <CommandGroup heading={t("command.actions")}>
           <CommandItem
             onSelect={() => {
               setOpen(false);
@@ -119,7 +119,7 @@ export function CommandPalette() {
             }}
           >
             <SquarePen className="mr-2 h-4 w-4" />
-            Create new issue
+            {t("command.createIssue")}
             <span className="ml-auto text-xs text-muted-foreground">C</span>
           </CommandItem>
           <CommandItem
@@ -129,7 +129,7 @@ export function CommandPalette() {
             }}
           >
             <Plus className="mr-2 h-4 w-4" />
-            Create new agent
+            {t("command.createAgent")}
           </CommandItem>
           <CommandItem onSelect={() => go("/projects")}>
             <Plus className="mr-2 h-4 w-4" />

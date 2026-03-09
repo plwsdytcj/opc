@@ -607,7 +607,7 @@ export function IssueDetail() {
             size="icon-xs"
             className="ml-auto md:hidden shrink-0"
             onClick={() => setMobilePropsOpen(true)}
-            title="Properties"
+            title={t("common.properties")}
           >
             <SlidersHorizontal className="h-4 w-4" />
           </Button>
@@ -621,7 +621,7 @@ export function IssueDetail() {
                 panelVisible ? "opacity-0 pointer-events-none w-0 overflow-hidden" : "opacity-100",
               )}
               onClick={() => setPanelVisible(true)}
-              title="Show properties"
+              title={t("common.showProperties")}
             >
               <SlidersHorizontal className="h-4 w-4" />
             </Button>
@@ -644,7 +644,7 @@ export function IssueDetail() {
                 }}
               >
                 <EyeOff className="h-3 w-3" />
-                Hide this Issue
+                {t("issueDetail.hideIssue")}
               </button>
             </PopoverContent>
             </Popover>
@@ -721,7 +721,7 @@ export function IssueDetail() {
                     className="text-muted-foreground hover:text-destructive"
                     onClick={() => deleteAttachment.mutate(attachment.id)}
                     disabled={deleteAttachment.isPending}
-                    title="Delete attachment"
+                    title={t("issueDetail.deleteAttachment")}
                   >
                     <Trash2 className="h-3.5 w-3.5" />
                   </button>

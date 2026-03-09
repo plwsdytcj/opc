@@ -96,7 +96,7 @@ export function AuthPage() {
           >
             {mode === "sign_up" && (
               <div>
-                <label className="text-xs text-muted-foreground mb-1 block">Name</label>
+                <label className="text-xs text-muted-foreground mb-1 block">{t("auth.field.name")}</label>
                 <input
                   className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
                   value={name}
@@ -107,7 +107,7 @@ export function AuthPage() {
               </div>
             )}
             <div>
-              <label className="text-xs text-muted-foreground mb-1 block">Email</label>
+              <label className="text-xs text-muted-foreground mb-1 block">{t("auth.field.email")}</label>
               <input
                 className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
                 type="email"
@@ -118,7 +118,7 @@ export function AuthPage() {
               />
             </div>
             <div>
-              <label className="text-xs text-muted-foreground mb-1 block">Password</label>
+              <label className="text-xs text-muted-foreground mb-1 block">{t("auth.field.password")}</label>
               <input
                 className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
                 type="password"

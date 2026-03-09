@@ -65,6 +65,17 @@ const resources: Record<Language, Dict> = {
     "labels.issues": "issues",
     "labels.unlimitedBudget": "Unlimited budget",
     "labels.created": "Created {time}",
+
+    // Auth
+    "auth.signInTitle": "Sign in to Paperclip",
+    "auth.createTitle": "Create your Paperclip account",
+    "auth.createDesc": "Create an account for this instance. Email confirmation is not required in v1.",
+    "auth.createAccount": "Create Account",
+    "auth.switch.createOne": "Create one",
+    "auth.switch.signIn": "Sign in",
+    "auth.field.name": "Name",
+    "auth.field.email": "Email",
+    "auth.field.password": "Password",
     // Activity page
     "activity.selectCompany": "Select a company to view activity.",
     "activity.filter.placeholder": "Filter by type",
@@ -237,6 +248,21 @@ const resources: Record<Language, Dict> = {
     "agentDetail.config.nobodyTop": "Nobody (top-level)",
     "agentDetail.config.directReports": "Direct reports",
 
+    // Command palette
+    "command.searchPlaceholder": "Search issues, agents, projects...",
+    "command.actions": "Actions",
+    "command.createIssue": "Create new issue",
+    "command.createAgent": "Create new agent",
+
+    // Common UI
+    "common.properties": "Properties",
+    "common.showProperties": "Show properties",
+
+    // Issue detail (more)
+    "issueDetail.hideIssue": "Hide this Issue",
+    "issueDetail.deleteAttachment": "Delete attachment",
+    "agentDetail.runHeartbeat": "Run Heartbeat",
+
     // Costs
     "costs.utilized": "{percent}% utilized",
     "costs.range.to": "to",
@@ -381,6 +407,17 @@ const resources: Record<Language, Dict> = {
     "labels.issues": "个问题",
     "labels.unlimitedBudget": "不限预算",
     "labels.created": "创建于{time}",
+
+    // Auth
+    "auth.signInTitle": "登录 Paperclip",
+    "auth.createTitle": "创建你的 Paperclip 账户",
+    "auth.createDesc": "为此实例创建账户。V1 不需要邮箱验证。",
+    "auth.createAccount": "创建账户",
+    "auth.switch.createOne": "去创建",
+    "auth.switch.signIn": "去登录",
+    "auth.field.name": "姓名",
+    "auth.field.email": "邮箱",
+    "auth.field.password": "密码",
     "common.noResults": "未找到结果。",
 
     // Settings (Company)
@@ -589,6 +626,21 @@ const resources: Record<Language, Dict> = {
     "agentDetail.config.reportsTo": "汇报对象",
     "agentDetail.config.nobodyTop": "无（顶级）",
     "agentDetail.config.directReports": "直系下属",
+
+    // Command palette
+    "command.searchPlaceholder": "搜索问题、智能体、项目…",
+    "command.actions": "操作",
+    "command.createIssue": "新建问题",
+    "command.createAgent": "新建智能体",
+
+    // Common UI
+    "common.properties": "属性",
+    "common.showProperties": "显示属性",
+
+    // Issue detail (more)
+    "issueDetail.hideIssue": "隐藏此问题",
+    "issueDetail.deleteAttachment": "删除附件",
+    "agentDetail.runHeartbeat": "触发心跳",
 
     // Costs
     "costs.utilized": "已使用 {percent}%",
