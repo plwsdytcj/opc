@@ -104,7 +104,7 @@ export function CommandPalette() {
         if (v && isMobile) setSidebarOpen(false);
       }}>
       <CommandInput
-        placeholder="Search issues, agents, projects..."
+        placeholder={"Search issues, agents, projects..."}
         value={query}
         onValueChange={setQuery}
       />

@@ -145,7 +145,7 @@ export function InviteLandingPage() {
             The first instance admin is now configured. You can continue to the board.
           </p>
           <Button asChild className="mt-4">
-            <Link to="/">Open board</Link>
+            <Link to="/">{t("invite.openBoard")}</Link>
           </Button>
         </div>
       </div>
@@ -260,7 +260,7 @@ export function InviteLandingPage() {
               />
             </label>
             <label className="block text-sm">
-              <span className="mb-1 block text-muted-foreground">Adapter type</span>
+              <span className="mb-1 block text-muted-foreground">{t("invite.adapterType")}</span>
               <select
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                 value={adapterType}
@@ -274,7 +274,7 @@ export function InviteLandingPage() {
               </select>
             </label>
             <label className="block text-sm">
-              <span className="mb-1 block text-muted-foreground">Capabilities (optional)</span>
+              <span className="mb-1 block text-muted-foreground">{t("invite.capabilities")}</span>
               <textarea
                 className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
                 rows={4}
@@ -287,7 +287,7 @@ export function InviteLandingPage() {
 
         {requiresAuthForHuman && (
           <div className="mt-4 rounded-md border border-border bg-muted/30 p-3 text-sm">
-            Sign in or create an account before submitting a human join request.
+            {t("invite.signInFirst")}
             <div className="mt-2">
               <Button asChild size="sm" variant="outline">
                 <Link to={`/auth?next=${encodeURIComponent(`/invite/${token}`)}`}>{t("auth.signInOrCreate")}</Link>
@@ -308,10 +308,10 @@ export function InviteLandingPage() {
           onClick={() => acceptMutation.mutate()}
         >
           {acceptMutation.isPending
-            ? "Submitting…"
+            ? t("invite.submitting")
             : invite.inviteType === "bootstrap_ceo"
-              ? "Accept bootstrap invite"
-              : "Submit join request"}
+              ? t("invite.acceptBootstrap")
+              : t("invite.submitJoin")}
         </Button>
       </div>
     </div>

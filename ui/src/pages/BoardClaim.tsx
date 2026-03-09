@@ -43,11 +43,11 @@ export function BoardClaimPage() {
   });
 
   if (!token || !code) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-destructive">Invalid board claim URL.</div>;
+    return <div className="mx-auto max-w-xl py-10 text-sm text-destructive">{t("board.invalidUrl")}</div>;
   }
 
   if (statusQuery.isLoading || sessionQuery.isLoading) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">Loading claim challenge...</div>;
+    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">{t("board.loading")}</div>;
   }
 
   if (statusQuery.error) {
@@ -72,12 +72,10 @@ export function BoardClaimPage() {
     return (
       <div className="mx-auto max-w-xl py-10">
         <div className="rounded-lg border border-border bg-card p-6">
-          <h1 className="text-lg font-semibold">Board ownership claimed</h1>
-          <p className="mt-2 text-sm text-muted-foreground">
-            This instance is now linked to your authenticated user.
-          </p>
+          <h1 className="text-lg font-semibold">{t("board.claimed.title")}</h1>
+          <p className="mt-2 text-sm text-muted-foreground">{t("board.claimed.desc")}</p>
           <Button asChild className="mt-4">
-            <Link to="/">Open board</Link>
+            <Link to="/">{t("board.open")}</Link>
           </Button>
         </div>
       </div>
@@ -88,10 +86,8 @@ export function BoardClaimPage() {
     return (
       <div className="mx-auto max-w-xl py-10">
         <div className="rounded-lg border border-border bg-card p-6">
-          <h1 className="text-lg font-semibold">Sign in required</h1>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Sign in or create an account, then return to this page to claim Board ownership.
-          </p>
+          <h1 className="text-lg font-semibold">{t("board.signInRequired")}</h1>
+          <p className="mt-2 text-sm text-muted-foreground">{t("board.signInPrompt")}</p>
           <Button asChild className="mt-4">
             <Link to={`/auth?next=${encodeURIComponent(currentPath)}`}>{t("auth.signInOrCreate")}</Link>
           </Button>
@@ -103,10 +99,8 @@ export function BoardClaimPage() {
   return (
     <div className="mx-auto max-w-xl py-10">
       <div className="rounded-lg border border-border bg-card p-6">
-        <h1 className="text-xl font-semibold">Claim Board ownership</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          This will promote your user to instance admin and migrate company ownership access from local trusted mode.
-        </p>
+        <h1 className="text-xl font-semibold">{t("board.claim.title")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("board.claim.desc")}</p>
 
         {claimMutation.error && (
           <p className="mt-3 text-sm text-destructive">
@@ -119,7 +113,7 @@ export function BoardClaimPage() {
           onClick={() => claimMutation.mutate()}
           disabled={claimMutation.isPending}
         >
-          {claimMutation.isPending ? "Claiming…" : "Claim ownership"}
+          {claimMutation.isPending ? t("board.claim.claiming") : t("board.claim.button")}
         </Button>
       </div>
     </div>

@@ -639,3 +639,2679 @@
 [14:56:54] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
 [14:56:59] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
 [14:57:04] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:14] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:14] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:57:24] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:29] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:57:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:44] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:44] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:57:54] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:57:59] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:58:04] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:14] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:14] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:58:24] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:29] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:58:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:44] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:44] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[14:58:54] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[14:58:59] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+11:04:30 PM [vite] (client) hmr update /src/context/I18nContext.tsx, /src/index.css
+11:04:30 PM [vite] (client) warning: Duplicate key "common.noResults" in object literal
+296|      "costs.byProject.none": "No project-attributed run costs yet.",
+297|      "costs.unattributed": "Unattributed",
+298|      "common.noResults": "No results found.",
+   |      ^
+299|  
+300|      // Settings (Company)
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.title" in object literal
+299|  
+300|      // Settings (Company)
+301|      "settings.title": "Company Settings",
+   |      ^
+302|      "settings.sections.general": "General",
+303|      "settings.sections.appearance": "Appearance",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.sections.general" in object literal
+300|      // Settings (Company)
+301|      "settings.title": "Company Settings",
+302|      "settings.sections.general": "General",
+   |      ^
+303|      "settings.sections.appearance": "Appearance",
+304|      "settings.sections.hiring": "Hiring",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.sections.appearance" in object literal
+301|      "settings.title": "Company Settings",
+302|      "settings.sections.general": "General",
+303|      "settings.sections.appearance": "Appearance",
+   |      ^
+304|      "settings.sections.hiring": "Hiring",
+305|      "settings.sections.invites": "Invites",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.sections.hiring" in object literal
+302|      "settings.sections.general": "General",
+303|      "settings.sections.appearance": "Appearance",
+304|      "settings.sections.hiring": "Hiring",
+   |      ^
+305|      "settings.sections.invites": "Invites",
+306|      "settings.general.companyName": "Company name",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.sections.invites" in object literal
+303|      "settings.sections.appearance": "Appearance",
+304|      "settings.sections.hiring": "Hiring",
+305|      "settings.sections.invites": "Invites",
+   |      ^
+306|      "settings.general.companyName": "Company name",
+307|      "settings.general.companyName.hint": "The display name for your company.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.general.companyName" in object literal
+304|      "settings.sections.hiring": "Hiring",
+305|      "settings.sections.invites": "Invites",
+306|      "settings.general.companyName": "Company name",
+   |      ^
+307|      "settings.general.companyName.hint": "The display name for your company.",
+308|      "settings.general.description": "Description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.general.companyName.hint" in object literal
+305|      "settings.sections.invites": "Invites",
+306|      "settings.general.companyName": "Company name",
+307|      "settings.general.companyName.hint": "The display name for your company.",
+   |      ^
+308|      "settings.general.description": "Description",
+309|      "settings.general.description.hint": "Optional description shown in the company profile.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.general.description" in object literal
+306|      "settings.general.companyName": "Company name",
+307|      "settings.general.companyName.hint": "The display name for your company.",
+308|      "settings.general.description": "Description",
+   |      ^
+309|      "settings.general.description.hint": "Optional description shown in the company profile.",
+310|      "settings.general.description.placeholder": "Optional company description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.general.description.hint" in object literal
+307|      "settings.general.companyName.hint": "The display name for your company.",
+308|      "settings.general.description": "Description",
+309|      "settings.general.description.hint": "Optional description shown in the company profile.",
+   |      ^
+310|      "settings.general.description.placeholder": "Optional company description",
+311|      "settings.appearance.brandColor": "Brand color",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.general.description.placeholder" in object literal
+308|      "settings.general.description": "Description",
+309|      "settings.general.description.hint": "Optional description shown in the company profile.",
+310|      "settings.general.description.placeholder": "Optional company description",
+   |      ^
+311|      "settings.appearance.brandColor": "Brand color",
+312|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor" in object literal
+309|      "settings.general.description.hint": "Optional description shown in the company profile.",
+310|      "settings.general.description.placeholder": "Optional company description",
+311|      "settings.appearance.brandColor": "Brand color",
+   |      ^
+312|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+313|      "settings.appearance.auto": "Auto",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor.hint" in object literal
+310|      "settings.general.description.placeholder": "Optional company description",
+311|      "settings.appearance.brandColor": "Brand color",
+312|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+   |      ^
+313|      "settings.appearance.auto": "Auto",
+314|      "settings.appearance.clear": "Clear",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.appearance.auto" in object literal
+311|      "settings.appearance.brandColor": "Brand color",
+312|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+313|      "settings.appearance.auto": "Auto",
+   |      ^
+314|      "settings.appearance.clear": "Clear",
+315|      "settings.save.saving": "Saving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.appearance.clear" in object literal
+312|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+313|      "settings.appearance.auto": "Auto",
+314|      "settings.appearance.clear": "Clear",
+   |      ^
+315|      "settings.save.saving": "Saving...",
+316|      "settings.save.saveChanges": "Save changes",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.save.saving" in object literal
+313|      "settings.appearance.auto": "Auto",
+314|      "settings.appearance.clear": "Clear",
+315|      "settings.save.saving": "Saving...",
+   |      ^
+316|      "settings.save.saveChanges": "Save changes",
+317|      "settings.save.saved": "Saved",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.save.saveChanges" in object literal
+314|      "settings.appearance.clear": "Clear",
+315|      "settings.save.saving": "Saving...",
+316|      "settings.save.saveChanges": "Save changes",
+   |      ^
+317|      "settings.save.saved": "Saved",
+318|      "settings.save.failed": "Failed to save",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.save.saved" in object literal
+315|      "settings.save.saving": "Saving...",
+316|      "settings.save.saveChanges": "Save changes",
+317|      "settings.save.saved": "Saved",
+   |      ^
+318|      "settings.save.failed": "Failed to save",
+319|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.save.failed" in object literal
+316|      "settings.save.saveChanges": "Save changes",
+317|      "settings.save.saved": "Saved",
+318|      "settings.save.failed": "Failed to save",
+   |      ^
+319|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+320|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.label" in object literal
+317|      "settings.save.saved": "Saved",
+318|      "settings.save.failed": "Failed to save",
+319|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+   |      ^
+320|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+321|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.hint" in object literal
+318|      "settings.save.failed": "Failed to save",
+319|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+320|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+   |      ^
+321|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+322|      "settings.invites.generating": "Generating...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.generate" in object literal
+319|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+320|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+321|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+   |      ^
+322|      "settings.invites.generating": "Generating...",
+323|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.generating" in object literal
+320|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+321|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+322|      "settings.invites.generating": "Generating...",
+   |      ^
+323|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+324|      "settings.invites.copied": "Copied!",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.promptTitle" in object literal
+321|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+322|      "settings.invites.generating": "Generating...",
+323|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+   |      ^
+324|      "settings.invites.copied": "Copied!",
+325|      "settings.invites.dismiss": "Dismiss",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.copied" in object literal
+322|      "settings.invites.generating": "Generating...",
+323|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+324|      "settings.invites.copied": "Copied!",
+   |      ^
+325|      "settings.invites.dismiss": "Dismiss",
+326|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.dismiss" in object literal
+323|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+324|      "settings.invites.copied": "Copied!",
+325|      "settings.invites.dismiss": "Dismiss",
+   |      ^
+326|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+327|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.generateDesc" in object literal
+324|      "settings.invites.copied": "Copied!",
+325|      "settings.invites.dismiss": "Dismiss",
+326|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+   |      ^
+327|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+328|      "settings.invites.copySnippet": "Copy snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.hint" in object literal
+325|      "settings.invites.dismiss": "Dismiss",
+326|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+327|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+   |      ^
+328|      "settings.invites.copySnippet": "Copy snippet",
+329|      "settings.invites.copiedSnippet": "Copied snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.copySnippet" in object literal
+326|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+327|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+328|      "settings.invites.copySnippet": "Copy snippet",
+   |      ^
+329|      "settings.invites.copiedSnippet": "Copied snippet",
+330|      "settings.danger.title": "Danger Zone",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.invites.copiedSnippet" in object literal
+327|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+328|      "settings.invites.copySnippet": "Copy snippet",
+329|      "settings.invites.copiedSnippet": "Copied snippet",
+   |      ^
+330|      "settings.danger.title": "Danger Zone",
+331|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.title" in object literal
+328|      "settings.invites.copySnippet": "Copy snippet",
+329|      "settings.invites.copiedSnippet": "Copied snippet",
+330|      "settings.danger.title": "Danger Zone",
+   |      ^
+331|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+332|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.desc" in object literal
+329|      "settings.invites.copiedSnippet": "Copied snippet",
+330|      "settings.danger.title": "Danger Zone",
+331|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+   |      ^
+332|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+333|      "settings.danger.archive.archiving": "Archiving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.confirm" in object literal
+330|      "settings.danger.title": "Danger Zone",
+331|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+332|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+   |      ^
+333|      "settings.danger.archive.archiving": "Archiving...",
+334|      "settings.danger.archive.already": "Already archived",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.archiving" in object literal
+331|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+332|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+333|      "settings.danger.archive.archiving": "Archiving...",
+   |      ^
+334|      "settings.danger.archive.already": "Already archived",
+335|      "settings.danger.archive.button": "Archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.already" in object literal
+332|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+333|      "settings.danger.archive.archiving": "Archiving...",
+334|      "settings.danger.archive.already": "Already archived",
+   |      ^
+335|      "settings.danger.archive.button": "Archive company",
+336|      "settings.danger.archive.failed": "Failed to archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.button" in object literal
+333|      "settings.danger.archive.archiving": "Archiving...",
+334|      "settings.danger.archive.already": "Already archived",
+335|      "settings.danger.archive.button": "Archive company",
+   |      ^
+336|      "settings.danger.archive.failed": "Failed to archive company",
+337|  
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) warning: Duplicate key "settings.danger.archive.failed" in object literal
+334|      "settings.danger.archive.already": "Already archived",
+335|      "settings.danger.archive.button": "Archive company",
+336|      "settings.danger.archive.failed": "Failed to archive company",
+   |      ^
+337|  
+338|      // Board claim
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:04:30 PM [vite] (client) hmr invalidate /src/context/I18nContext.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:04:30 PM [vite] (client) page reload src/context/I18nContext.tsx
+[15:04:30] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068670613 200[39m
+[15:04:30] [32mINFO[39m: [36mGET /src/index.css?t=1773068670613 200[39m
+[15:04:31] [32mINFO[39m: [36mGET /index.html 200[39m
+[15:04:31] [32mINFO[39m: [36mGET /@vite/client 304[39m
+[15:04:31] [32mINFO[39m: [36mGET /src/main.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/vite@6.4.1_@types+node@24.12.0_jiti@2.6.1_lightningcss@1.30.2_tsx@4.21.0/node_modules/vite/dist/client/env.mjs 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@react-refresh 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/router.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/App.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/CompanyContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/LiveUpdatesProvider.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/BreadcrumbContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/PanelContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/DialogContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/SidebarContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/ToastContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068670613 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/context/ThemeContext.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/tooltip.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/index.css?t=1773068670613 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/@mdxeditor+editor@3.52.4_@codemirror+language@6.12.1_@lezer+highlight@1.2.3_@types+react-dom@_pzhotnbszb5q3cxok3ldaus4se/node_modules/@mdxeditor/editor/dist/style.css 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/button.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/company-routes.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/Layout.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/OnboardingWizard.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/auth.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/health.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Dashboard.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Companies.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Agents.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/ProjectDetail.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Projects.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Issues.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/IssueDetail.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Goals.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/GoalDetail.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Approvals.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Costs.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/ApprovalDetail.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Activity.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Inbox.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/CompanySettings.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/OrgChart.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/DesignGuide.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/queryKeys.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/companies.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/client.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/utils.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/CompanyRail.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/Sidebar.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/SidebarNavItem.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/BreadcrumbBar.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/PropertiesPanel.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/NewIssueDialog.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/NewProjectDialog.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/NewGoalDialog.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/NewAgentDialog.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ToastViewport.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/MobileBottomNav.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/hooks/useCompanyPageMemory.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/hooks/useKeyboardShortcuts.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/goals.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/agents.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/issues.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/popover.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/dialog.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/model-utils.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/agent-config-defaults.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/AsciiArtAnimation.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/PathInstructionsModal.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/agent-config-primitives.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/dashboard.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/OpenCodeLogoIcon.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/activity.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/projects.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/heartbeats.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/MetricCard.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/EmptyState.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/StatusIcon.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/PriorityIcon.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ActivityRow.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/Identity.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/timeAgo.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ActiveAgentsPanel.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ActivityCharts.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/PageSkeleton.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/dropdown-menu.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/StatusBadge.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/input.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/status-colors.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/PageTabBar.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/EntityRow.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/tabs.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/assets.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ProjectProperties.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/InlineEditor.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/IssuesList.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/sheet.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/scroll-area.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/AgentConfigForm.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/MarkdownBody.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/CopyText.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/AgentIconPicker.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/GoalTree.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/hooks/useProjectOrder.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/LiveRunWidget.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/IssueProperties.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/CommentThread.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/separator.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/collapsible.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/GoalProperties.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ApprovalCard.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/approvals.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/costs.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/card.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ApprovalPayload.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/textarea.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/select.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/access.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/CompanyPatternIcon.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/badge.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/checkbox.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/label.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/command.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/skeleton.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/breadcrumb.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/FilterBar.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/ui/avatar.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/sidebarBadges.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/SidebarSection.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/SidebarProjects.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/SidebarAgents.tsx?t=1773068670613 200[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/recent-assignees.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/MarkdownEditor.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/registry.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/InlineEntitySelector.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/transcript.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/constants.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/api.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/agent-url-key.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-url-key.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-mentions.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/config-schema.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/groupBy.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/components/KanbanBoard.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/api/secrets.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/claude-local/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/lib/project-order.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/claude-local/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/codex-local/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/cursor/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/opencode-local/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/pi-local/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/process/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/http/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company-portability.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/agent.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/project.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/issue.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/goal.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/approval.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/secret.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/cost.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/asset.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/access.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/codex-local/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/cursor/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/opencode-local/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/pi-local/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/index.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/process/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/process/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/process/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/http/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/http/config-fields.tsx 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /src/adapters/http/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/build-config.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/shared/stream.ts 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /site.webmanifest 304[39m
+[15:04:32] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/shared/stream.ts 304[39m
+[15:04:33] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:04:33] [32mINFO[39m: [36mGET / 304[39m
+[15:04:33] [32mINFO[39m: [36mGET / 304[39m
+[15:04:33] [32mINFO[39m: [36mGET /favicon.ico 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /favicon.svg 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /android-chrome-192x192.png 304[39m
+[15:04:34] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:04:36] [32mINFO[39m: [36mGET /sw.js 304[39m
+11:04:40 PM [vite] (client) hmr update /src/pages/BoardClaim.tsx, /src/index.css
+[15:04:40] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068680931 200[39m
+[15:04:40] [32mINFO[39m: [36mGET /src/index.css?t=1773068680931 200[39m
+11:04:46 PM [vite] (client) hmr update /src/pages/InviteLanding.tsx, /src/index.css
+[15:04:46] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068686879 200[39m
+[15:04:46] [32mINFO[39m: [36mGET /src/index.css?t=1773068686879 200[39m
+11:04:55 PM [vite] (client) hmr update /src/pages/NewAgent.tsx, /src/index.css
+[15:04:55] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068695946 200[39m
+[15:04:55] [32mINFO[39m: [36mGET /src/index.css?t=1773068695946 200[39m
+11:05:03 PM [vite] (client) hmr update /src/components/CommandPalette.tsx, /src/index.css
+[15:05:03] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068703478 200[39m
+[15:05:03] [32mINFO[39m: [36mGET /src/index.css?t=1773068703478 200[39m
+11:05:15 PM [vite] (client) hmr update /src/context/I18nContext.tsx, /src/index.css
+11:05:16 PM [vite] (client) warning: Duplicate key "common.noResults" in object literal
+308|      "costs.byProject.none": "No project-attributed run costs yet.",
+309|      "costs.unattributed": "Unattributed",
+310|      "common.noResults": "No results found.",
+   |      ^
+311|  
+312|      // Settings (Company)
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.title" in object literal
+311|  
+312|      // Settings (Company)
+313|      "settings.title": "Company Settings",
+   |      ^
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.sections.general" in object literal
+312|      // Settings (Company)
+313|      "settings.title": "Company Settings",
+314|      "settings.sections.general": "General",
+   |      ^
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.sections.appearance" in object literal
+313|      "settings.title": "Company Settings",
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+   |      ^
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.sections.hiring" in object literal
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+   |      ^
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.sections.invites" in object literal
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+   |      ^
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.general.companyName" in object literal
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+   |      ^
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.general.companyName.hint" in object literal
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+   |      ^
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.general.description" in object literal
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+   |      ^
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.general.description.hint" in object literal
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+   |      ^
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.general.description.placeholder" in object literal
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+   |      ^
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor" in object literal
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+   |      ^
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor.hint" in object literal
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+   |      ^
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.appearance.auto" in object literal
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+   |      ^
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.appearance.clear" in object literal
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+   |      ^
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.save.saving" in object literal
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+   |      ^
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.save.saveChanges" in object literal
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+   |      ^
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.save.saved" in object literal
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+   |      ^
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.save.failed" in object literal
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+   |      ^
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.label" in object literal
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+   |      ^
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.hint" in object literal
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+   |      ^
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.generate" in object literal
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+   |      ^
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.generating" in object literal
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+   |      ^
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.promptTitle" in object literal
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+   |      ^
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.copied" in object literal
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+   |      ^
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.dismiss" in object literal
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+   |      ^
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.generateDesc" in object literal
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+   |      ^
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.hint" in object literal
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+   |      ^
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.copySnippet" in object literal
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+   |      ^
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.invites.copiedSnippet" in object literal
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+   |      ^
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.title" in object literal
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+   |      ^
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.desc" in object literal
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+   |      ^
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.confirm" in object literal
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+   |      ^
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.archiving" in object literal
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+   |      ^
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.already" in object literal
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+   |      ^
+347|      "settings.danger.archive.button": "Archive company",
+348|      "settings.danger.archive.failed": "Failed to archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.button" in object literal
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+   |      ^
+348|      "settings.danger.archive.failed": "Failed to archive company",
+349|  
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) warning: Duplicate key "settings.danger.archive.failed" in object literal
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+348|      "settings.danger.archive.failed": "Failed to archive company",
+   |      ^
+349|  
+350|      // Board claim
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:05:16 PM [vite] (client) hmr invalidate /src/context/I18nContext.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:05:16 PM [vite] (client) page reload src/context/I18nContext.tsx
+[15:05:16] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068715979 200[39m
+[15:05:16] [32mINFO[39m: [36mGET /src/index.css?t=1773068715979 200[39m
+[15:05:16] [32mINFO[39m: [36mGET /index.html 200[39m
+[15:05:16] [32mINFO[39m: [36mGET /@vite/client 304[39m
+[15:05:16] [32mINFO[39m: [36mGET /src/main.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /@react-refresh 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/vite@6.4.1_@types+node@24.12.0_jiti@2.6.1_lightningcss@1.30.2_tsx@4.21.0/node_modules/vite/dist/client/env.mjs 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/router.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/App.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/CompanyContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/LiveUpdatesProvider.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/SidebarContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/BreadcrumbContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/PanelContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/ToastContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/DialogContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/ThemeContext.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/@mdxeditor+editor@3.52.4_@codemirror+language@6.12.1_@lezer+highlight@1.2.3_@types+react-dom@_pzhotnbszb5q3cxok3ldaus4se/node_modules/@mdxeditor/editor/dist/style.css 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068715979 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/tooltip.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/index.css?t=1773068715979 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/company-routes.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/button.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/Layout.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/OnboardingWizard.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/auth.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/health.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Dashboard.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Companies.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Agents.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Projects.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/ProjectDetail.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Issues.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/IssueDetail.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Goals.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/GoalDetail.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Approvals.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Costs.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/ApprovalDetail.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Activity.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Inbox.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/CompanySettings.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/DesignGuide.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/OrgChart.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/queryKeys.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/companies.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/client.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/utils.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/CompanyRail.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/Sidebar.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/SidebarNavItem.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/BreadcrumbBar.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/PropertiesPanel.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/NewIssueDialog.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/NewProjectDialog.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/NewGoalDialog.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/NewAgentDialog.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ToastViewport.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/MobileBottomNav.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/hooks/useKeyboardShortcuts.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/hooks/useCompanyPageMemory.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/goals.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/agents.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/issues.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/dialog.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/popover.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/model-utils.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/agent-config-defaults.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/AsciiArtAnimation.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/PathInstructionsModal.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/agent-config-primitives.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/OpenCodeLogoIcon.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/dashboard.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/activity.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/projects.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/heartbeats.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/MetricCard.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/EmptyState.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/StatusIcon.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/PriorityIcon.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ActivityRow.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/Identity.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/timeAgo.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ActiveAgentsPanel.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ActivityCharts.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/PageSkeleton.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/input.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/dropdown-menu.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/StatusBadge.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/status-colors.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/EntityRow.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/PageTabBar.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/tabs.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/assets.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ProjectProperties.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/InlineEditor.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/IssuesList.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/sheet.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/scroll-area.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/AgentConfigForm.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/MarkdownBody.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/CopyText.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/AgentIconPicker.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/hooks/useProjectOrder.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/GoalTree.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/CommentThread.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/IssueProperties.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/LiveRunWidget.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/separator.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/collapsible.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/approvals.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/GoalProperties.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ApprovalCard.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/costs.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/card.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ApprovalPayload.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/textarea.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/select.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/access.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/CompanyPatternIcon.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/badge.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/checkbox.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/label.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/skeleton.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/command.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/breadcrumb.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/ui/avatar.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/FilterBar.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/sidebarBadges.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/SidebarSection.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/SidebarProjects.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/SidebarAgents.tsx?t=1773068715979 200[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/recent-assignees.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/MarkdownEditor.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/InlineEntitySelector.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/registry.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/transcript.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/constants.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/api.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/agent-url-key.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-url-key.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-mentions.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/config-schema.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/groupBy.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/components/KanbanBoard.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/api/secrets.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/claude-local/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/lib/project-order.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/claude-local/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/codex-local/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/cursor/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/opencode-local/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/pi-local/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/process/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/http/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company-portability.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/agent.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/project.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/issue.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/goal.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/approval.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/secret.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/cost.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/asset.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/access.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/codex-local/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/cursor/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/opencode-local/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/pi-local/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/index.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/process/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/process/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/process/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/http/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/http/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /src/adapters/http/config-fields.tsx 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/build-config.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/shared/stream.ts 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /site.webmanifest 304[39m
+[15:05:17] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/shared/stream.ts 304[39m
+[15:05:18] [32mINFO[39m: [36mGET / 304[39m
+[15:05:18] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:05:18] [32mINFO[39m: [36mGET / 304[39m
+[15:05:18] [32mINFO[39m: [36mGET /favicon.ico 304[39m
+[15:05:18] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /favicon.svg 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /android-chrome-192x192.png 304[39m
+[15:05:19] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:05:21] [32mINFO[39m: [36mGET /sw.js 304[39m
+11:05:29 PM [vite] (client) hmr update /src/pages/AgentDetail.tsx, /src/index.css
+[15:05:29] [32mINFO[39m: [36mGET /src/index.css?t=1773068729027 200[39m
+[15:05:29] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068729027 200[39m
+11:05:38 PM [vite] (client) hmr update /src/pages/Auth.tsx, /src/index.css
+[15:05:38] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068738068 200[39m
+[15:05:38] [32mINFO[39m: [36mGET /src/index.css?t=1773068738068 200[39m
+11:06:13 PM [vite] (client) hmr update /src/pages/AgentDetail.tsx, /src/index.css
+[15:06:13] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068773361 200[39m
+[15:06:13] [32mINFO[39m: [36mGET /src/index.css?t=1773068773361 200[39m
+11:06:58 PM [vite] (client) hmr update /src/context/I18nContext.tsx, /src/index.css
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.title" in object literal
+311|  
+312|      // Settings (Company)
+313|      "settings.title": "Company Settings",
+   |      ^
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.sections.general" in object literal
+312|      // Settings (Company)
+313|      "settings.title": "Company Settings",
+314|      "settings.sections.general": "General",
+   |      ^
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.sections.appearance" in object literal
+313|      "settings.title": "Company Settings",
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+   |      ^
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.sections.hiring" in object literal
+314|      "settings.sections.general": "General",
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+   |      ^
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.sections.invites" in object literal
+315|      "settings.sections.appearance": "Appearance",
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+   |      ^
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.general.companyName" in object literal
+316|      "settings.sections.hiring": "Hiring",
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+   |      ^
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.general.companyName.hint" in object literal
+317|      "settings.sections.invites": "Invites",
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+   |      ^
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.general.description" in object literal
+318|      "settings.general.companyName": "Company name",
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+   |      ^
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.general.description.hint" in object literal
+319|      "settings.general.companyName.hint": "The display name for your company.",
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+   |      ^
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.general.description.placeholder" in object literal
+320|      "settings.general.description": "Description",
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+   |      ^
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor" in object literal
+321|      "settings.general.description.hint": "Optional description shown in the company profile.",
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+   |      ^
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor.hint" in object literal
+322|      "settings.general.description.placeholder": "Optional company description",
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+   |      ^
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.appearance.auto" in object literal
+323|      "settings.appearance.brandColor": "Brand color",
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+   |      ^
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.appearance.clear" in object literal
+324|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+   |      ^
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.save.saving" in object literal
+325|      "settings.appearance.auto": "Auto",
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+   |      ^
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.save.saveChanges" in object literal
+326|      "settings.appearance.clear": "Clear",
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+   |      ^
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.save.saved" in object literal
+327|      "settings.save.saving": "Saving...",
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+   |      ^
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.save.failed" in object literal
+328|      "settings.save.saveChanges": "Save changes",
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+   |      ^
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.label" in object literal
+329|      "settings.save.saved": "Saved",
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+   |      ^
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.hint" in object literal
+330|      "settings.save.failed": "Failed to save",
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+   |      ^
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.generate" in object literal
+331|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+   |      ^
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.generating" in object literal
+332|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+   |      ^
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.promptTitle" in object literal
+333|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+   |      ^
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.copied" in object literal
+334|      "settings.invites.generating": "Generating...",
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+   |      ^
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.dismiss" in object literal
+335|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+   |      ^
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.generateDesc" in object literal
+336|      "settings.invites.copied": "Copied!",
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+   |      ^
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.hint" in object literal
+337|      "settings.invites.dismiss": "Dismiss",
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+   |      ^
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.copySnippet" in object literal
+338|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+   |      ^
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.invites.copiedSnippet" in object literal
+339|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+   |      ^
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.title" in object literal
+340|      "settings.invites.copySnippet": "Copy snippet",
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+   |      ^
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.desc" in object literal
+341|      "settings.invites.copiedSnippet": "Copied snippet",
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+   |      ^
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.confirm" in object literal
+342|      "settings.danger.title": "Danger Zone",
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+   |      ^
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.archiving" in object literal
+343|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+   |      ^
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.already" in object literal
+344|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+   |      ^
+347|      "settings.danger.archive.button": "Archive company",
+348|      "settings.danger.archive.failed": "Failed to archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.button" in object literal
+345|      "settings.danger.archive.archiving": "Archiving...",
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+   |      ^
+348|      "settings.danger.archive.failed": "Failed to archive company",
+349|  
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) warning: Duplicate key "settings.danger.archive.failed" in object literal
+346|      "settings.danger.archive.already": "Already archived",
+347|      "settings.danger.archive.button": "Archive company",
+348|      "settings.danger.archive.failed": "Failed to archive company",
+   |      ^
+349|  
+350|      // Board claim
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:06:58 PM [vite] (client) hmr invalidate /src/context/I18nContext.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:06:58 PM [vite] (client) page reload src/context/I18nContext.tsx
+[15:06:58] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068818592 200[39m
+[15:06:58] [32mINFO[39m: [36mGET /src/index.css?t=1773068818592 200[39m
+[15:06:59] [32mINFO[39m: [36mGET /index.html 200[39m
+[15:06:59] [32mINFO[39m: [36mGET /@vite/client 304[39m
+[15:06:59] [32mINFO[39m: [36mGET /src/main.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /@react-refresh 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/vite@6.4.1_@types+node@24.12.0_jiti@2.6.1_lightningcss@1.30.2_tsx@4.21.0/node_modules/vite/dist/client/env.mjs 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/App.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/router.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/LiveUpdatesProvider.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/CompanyContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/BreadcrumbContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/PanelContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/SidebarContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/DialogContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/ToastContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/ThemeContext.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068818592 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/tooltip.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/@mdxeditor+editor@3.52.4_@codemirror+language@6.12.1_@lezer+highlight@1.2.3_@types+react-dom@_pzhotnbszb5q3cxok3ldaus4se/node_modules/@mdxeditor/editor/dist/style.css 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/index.css?t=1773068818592 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/Layout.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/button.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/health.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/OnboardingWizard.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/auth.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Dashboard.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Agents.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Companies.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Projects.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/ProjectDetail.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Issues.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/IssueDetail.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Goals.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/GoalDetail.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Approvals.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Costs.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/ApprovalDetail.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Activity.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Inbox.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/CompanySettings.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/DesignGuide.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/OrgChart.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/queryKeys.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/company-routes.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/companies.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/client.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/utils.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/CompanyRail.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/Sidebar.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/SidebarNavItem.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/BreadcrumbBar.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/PropertiesPanel.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/NewIssueDialog.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/NewProjectDialog.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/NewGoalDialog.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/NewAgentDialog.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ToastViewport.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/MobileBottomNav.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/hooks/useKeyboardShortcuts.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/hooks/useCompanyPageMemory.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/goals.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/agents.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/issues.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/dialog.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/popover.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/model-utils.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/agent-config-defaults.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/PathInstructionsModal.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/agent-config-primitives.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/AsciiArtAnimation.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/OpenCodeLogoIcon.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/dashboard.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/activity.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/heartbeats.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/projects.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/MetricCard.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/EmptyState.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/StatusIcon.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/PriorityIcon.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ActivityRow.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/Identity.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/timeAgo.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ActiveAgentsPanel.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ActivityCharts.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/PageSkeleton.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/status-colors.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/StatusBadge.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/EntityRow.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/PageTabBar.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/tabs.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/input.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/assets.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/dropdown-menu.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ProjectProperties.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/InlineEditor.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/IssuesList.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/sheet.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/scroll-area.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/AgentConfigForm.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/MarkdownBody.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/CopyText.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/AgentIconPicker.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/GoalTree.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/hooks/useProjectOrder.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/CommentThread.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/LiveRunWidget.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/IssueProperties.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/separator.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/collapsible.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/approvals.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/GoalProperties.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ApprovalCard.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/costs.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/card.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ApprovalPayload.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/textarea.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/select.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/access.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/CompanyPatternIcon.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/badge.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/checkbox.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/label.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/skeleton.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/command.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/breadcrumb.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/ui/avatar.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/FilterBar.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/sidebarBadges.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/SidebarSection.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/SidebarProjects.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/SidebarAgents.tsx?t=1773068818592 200[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/recent-assignees.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/MarkdownEditor.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/InlineEntitySelector.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/registry.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/transcript.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/constants.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/api.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/agent-url-key.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-url-key.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-mentions.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/config-schema.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/groupBy.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/components/KanbanBoard.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/api/secrets.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/claude-local/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/lib/project-order.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/claude-local/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/codex-local/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/cursor/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/opencode-local/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/pi-local/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/process/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/http/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company-portability.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/agent.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/project.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/issue.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/goal.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/approval.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/secret.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/cost.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/asset.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/access.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/codex-local/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/cursor/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/opencode-local/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/index.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/pi-local/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/process/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/process/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/process/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/http/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/http/config-fields.tsx 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /src/adapters/http/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/parse-stdout.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/build-config.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/shared/stream.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/shared/stream.ts 304[39m
+[15:07:00] [32mINFO[39m: [36mGET /site.webmanifest 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:07:01] [32mINFO[39m: [36mGET / 304[39m
+[15:07:01] [32mINFO[39m: [36mGET / 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /favicon.ico 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /favicon.svg 304[39m
+[15:07:01] [32mINFO[39m: [36mGET /android-chrome-192x192.png 304[39m
+[15:07:02] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:07:04] [32mINFO[39m: [36mGET /sw.js 304[39m
+11:07:05 PM [vite] (client) hmr update /src/context/I18nContext.tsx, /src/index.css
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.title" in object literal
+310|  
+311|      // Settings (Company)
+312|      "settings.title": "Company Settings",
+   |      ^
+313|      "settings.sections.general": "General",
+314|      "settings.sections.appearance": "Appearance",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.sections.general" in object literal
+311|      // Settings (Company)
+312|      "settings.title": "Company Settings",
+313|      "settings.sections.general": "General",
+   |      ^
+314|      "settings.sections.appearance": "Appearance",
+315|      "settings.sections.hiring": "Hiring",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.sections.appearance" in object literal
+312|      "settings.title": "Company Settings",
+313|      "settings.sections.general": "General",
+314|      "settings.sections.appearance": "Appearance",
+   |      ^
+315|      "settings.sections.hiring": "Hiring",
+316|      "settings.sections.invites": "Invites",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.sections.hiring" in object literal
+313|      "settings.sections.general": "General",
+314|      "settings.sections.appearance": "Appearance",
+315|      "settings.sections.hiring": "Hiring",
+   |      ^
+316|      "settings.sections.invites": "Invites",
+317|      "settings.general.companyName": "Company name",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.sections.invites" in object literal
+314|      "settings.sections.appearance": "Appearance",
+315|      "settings.sections.hiring": "Hiring",
+316|      "settings.sections.invites": "Invites",
+   |      ^
+317|      "settings.general.companyName": "Company name",
+318|      "settings.general.companyName.hint": "The display name for your company.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.general.companyName" in object literal
+315|      "settings.sections.hiring": "Hiring",
+316|      "settings.sections.invites": "Invites",
+317|      "settings.general.companyName": "Company name",
+   |      ^
+318|      "settings.general.companyName.hint": "The display name for your company.",
+319|      "settings.general.description": "Description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.general.companyName.hint" in object literal
+316|      "settings.sections.invites": "Invites",
+317|      "settings.general.companyName": "Company name",
+318|      "settings.general.companyName.hint": "The display name for your company.",
+   |      ^
+319|      "settings.general.description": "Description",
+320|      "settings.general.description.hint": "Optional description shown in the company profile.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.general.description" in object literal
+317|      "settings.general.companyName": "Company name",
+318|      "settings.general.companyName.hint": "The display name for your company.",
+319|      "settings.general.description": "Description",
+   |      ^
+320|      "settings.general.description.hint": "Optional description shown in the company profile.",
+321|      "settings.general.description.placeholder": "Optional company description",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.general.description.hint" in object literal
+318|      "settings.general.companyName.hint": "The display name for your company.",
+319|      "settings.general.description": "Description",
+320|      "settings.general.description.hint": "Optional description shown in the company profile.",
+   |      ^
+321|      "settings.general.description.placeholder": "Optional company description",
+322|      "settings.appearance.brandColor": "Brand color",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.general.description.placeholder" in object literal
+319|      "settings.general.description": "Description",
+320|      "settings.general.description.hint": "Optional description shown in the company profile.",
+321|      "settings.general.description.placeholder": "Optional company description",
+   |      ^
+322|      "settings.appearance.brandColor": "Brand color",
+323|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor" in object literal
+320|      "settings.general.description.hint": "Optional description shown in the company profile.",
+321|      "settings.general.description.placeholder": "Optional company description",
+322|      "settings.appearance.brandColor": "Brand color",
+   |      ^
+323|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+324|      "settings.appearance.auto": "Auto",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.appearance.brandColor.hint" in object literal
+321|      "settings.general.description.placeholder": "Optional company description",
+322|      "settings.appearance.brandColor": "Brand color",
+323|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+   |      ^
+324|      "settings.appearance.auto": "Auto",
+325|      "settings.appearance.clear": "Clear",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.appearance.auto" in object literal
+322|      "settings.appearance.brandColor": "Brand color",
+323|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+324|      "settings.appearance.auto": "Auto",
+   |      ^
+325|      "settings.appearance.clear": "Clear",
+326|      "settings.save.saving": "Saving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.appearance.clear" in object literal
+323|      "settings.appearance.brandColor.hint": "Sets the hue for the company icon. Leave empty for auto-generated color.",
+324|      "settings.appearance.auto": "Auto",
+325|      "settings.appearance.clear": "Clear",
+   |      ^
+326|      "settings.save.saving": "Saving...",
+327|      "settings.save.saveChanges": "Save changes",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.save.saving" in object literal
+324|      "settings.appearance.auto": "Auto",
+325|      "settings.appearance.clear": "Clear",
+326|      "settings.save.saving": "Saving...",
+   |      ^
+327|      "settings.save.saveChanges": "Save changes",
+328|      "settings.save.saved": "Saved",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.save.saveChanges" in object literal
+325|      "settings.appearance.clear": "Clear",
+326|      "settings.save.saving": "Saving...",
+327|      "settings.save.saveChanges": "Save changes",
+   |      ^
+328|      "settings.save.saved": "Saved",
+329|      "settings.save.failed": "Failed to save",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.save.saved" in object literal
+326|      "settings.save.saving": "Saving...",
+327|      "settings.save.saveChanges": "Save changes",
+328|      "settings.save.saved": "Saved",
+   |      ^
+329|      "settings.save.failed": "Failed to save",
+330|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.save.failed" in object literal
+327|      "settings.save.saveChanges": "Save changes",
+328|      "settings.save.saved": "Saved",
+329|      "settings.save.failed": "Failed to save",
+   |      ^
+330|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+331|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.label" in object literal
+328|      "settings.save.saved": "Saved",
+329|      "settings.save.failed": "Failed to save",
+330|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+   |      ^
+331|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+332|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.hiring.requireApproval.hint" in object literal
+329|      "settings.save.failed": "Failed to save",
+330|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+331|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+   |      ^
+332|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+333|      "settings.invites.generating": "Generating...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.generate" in object literal
+330|      "settings.hiring.requireApproval.label": "Require board approval for new hires",
+331|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+332|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+   |      ^
+333|      "settings.invites.generating": "Generating...",
+334|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.generating" in object literal
+331|      "settings.hiring.requireApproval.hint": "New agent hires stay pending until approved by board.",
+332|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+333|      "settings.invites.generating": "Generating...",
+   |      ^
+334|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+335|      "settings.invites.copied": "Copied!",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.promptTitle" in object literal
+332|      "settings.invites.generate": "Generate OpenClaw Invite Prompt",
+333|      "settings.invites.generating": "Generating...",
+334|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+   |      ^
+335|      "settings.invites.copied": "Copied!",
+336|      "settings.invites.dismiss": "Dismiss",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.copied" in object literal
+333|      "settings.invites.generating": "Generating...",
+334|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+335|      "settings.invites.copied": "Copied!",
+   |      ^
+336|      "settings.invites.dismiss": "Dismiss",
+337|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.dismiss" in object literal
+334|      "settings.invites.promptTitle": "OpenClaw Invite Prompt",
+335|      "settings.invites.copied": "Copied!",
+336|      "settings.invites.dismiss": "Dismiss",
+   |      ^
+337|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+338|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.generateDesc" in object literal
+335|      "settings.invites.copied": "Copied!",
+336|      "settings.invites.dismiss": "Dismiss",
+337|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+   |      ^
+338|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+339|      "settings.invites.copySnippet": "Copy snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.hint" in object literal
+336|      "settings.invites.dismiss": "Dismiss",
+337|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+338|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+   |      ^
+339|      "settings.invites.copySnippet": "Copy snippet",
+340|      "settings.invites.copiedSnippet": "Copied snippet",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.copySnippet" in object literal
+337|      "settings.invites.generateDesc": "Generate an OpenClaw agent invite snippet.",
+338|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+339|      "settings.invites.copySnippet": "Copy snippet",
+   |      ^
+340|      "settings.invites.copiedSnippet": "Copied snippet",
+341|      "settings.danger.title": "Danger Zone",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.invites.copiedSnippet" in object literal
+338|      "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
+339|      "settings.invites.copySnippet": "Copy snippet",
+340|      "settings.invites.copiedSnippet": "Copied snippet",
+   |      ^
+341|      "settings.danger.title": "Danger Zone",
+342|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.title" in object literal
+339|      "settings.invites.copySnippet": "Copy snippet",
+340|      "settings.invites.copiedSnippet": "Copied snippet",
+341|      "settings.danger.title": "Danger Zone",
+   |      ^
+342|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+343|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.desc" in object literal
+340|      "settings.invites.copiedSnippet": "Copied snippet",
+341|      "settings.danger.title": "Danger Zone",
+342|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+   |      ^
+343|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+344|      "settings.danger.archive.archiving": "Archiving...",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.confirm" in object literal
+341|      "settings.danger.title": "Danger Zone",
+342|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+343|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+   |      ^
+344|      "settings.danger.archive.archiving": "Archiving...",
+345|      "settings.danger.archive.already": "Already archived",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.archiving" in object literal
+342|      "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
+343|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+344|      "settings.danger.archive.archiving": "Archiving...",
+   |      ^
+345|      "settings.danger.archive.already": "Already archived",
+346|      "settings.danger.archive.button": "Archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.already" in object literal
+343|      "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
+344|      "settings.danger.archive.archiving": "Archiving...",
+345|      "settings.danger.archive.already": "Already archived",
+   |      ^
+346|      "settings.danger.archive.button": "Archive company",
+347|      "settings.danger.archive.failed": "Failed to archive company",
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.button" in object literal
+344|      "settings.danger.archive.archiving": "Archiving...",
+345|      "settings.danger.archive.already": "Already archived",
+346|      "settings.danger.archive.button": "Archive company",
+   |      ^
+347|      "settings.danger.archive.failed": "Failed to archive company",
+348|  
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) warning: Duplicate key "settings.danger.archive.failed" in object literal
+345|      "settings.danger.archive.already": "Already archived",
+346|      "settings.danger.archive.button": "Archive company",
+347|      "settings.danger.archive.failed": "Failed to archive company",
+   |      ^
+348|  
+349|      // Board claim
+
+  Plugin: vite:esbuild
+  File: /Users/chengjielin/paperclip/ui/src/context/I18nContext.tsx
+11:07:05 PM [vite] (client) hmr invalidate /src/context/I18nContext.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:07:05 PM [vite] (client) page reload src/context/I18nContext.tsx
+[15:07:05] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068825293 200[39m
+[15:07:05] [32mINFO[39m: [36mGET /src/index.css?t=1773068825293 200[39m
+[15:07:05] [32mINFO[39m: [36mGET /index.html 200[39m
+[15:07:05] [32mINFO[39m: [36mGET /src/main.tsx?t=1773068825293 200[39m
+[15:07:05] [32mINFO[39m: [36mGET /@vite/client 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@react-refresh 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/vite@6.4.1_@types+node@24.12.0_jiti@2.6.1_lightningcss@1.30.2_tsx@4.21.0/node_modules/vite/dist/client/env.mjs 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/router.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/App.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/LiveUpdatesProvider.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/CompanyContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/BreadcrumbContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/PanelContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/SidebarContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/ToastContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/DialogContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/ThemeContext.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068825293 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/tooltip.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/@mdxeditor+editor@3.52.4_@codemirror+language@6.12.1_@lezer+highlight@1.2.3_@types+react-dom@_pzhotnbszb5q3cxok3ldaus4se/node_modules/@mdxeditor/editor/dist/style.css 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/index.css?t=1773068825293 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/button.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/company-routes.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/Layout.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/OnboardingWizard.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/auth.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/health.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Dashboard.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Companies.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Agents.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Projects.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/ProjectDetail.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Issues.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/IssueDetail.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Goals.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/GoalDetail.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Approvals.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/ApprovalDetail.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Costs.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Activity.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Inbox.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/CompanySettings.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/DesignGuide.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/OrgChart.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/queryKeys.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/companies.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/client.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/utils.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/CompanyRail.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/Sidebar.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/SidebarNavItem.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/BreadcrumbBar.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/PropertiesPanel.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/NewIssueDialog.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/NewProjectDialog.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/NewGoalDialog.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/NewAgentDialog.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ToastViewport.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/MobileBottomNav.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/hooks/useKeyboardShortcuts.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/hooks/useCompanyPageMemory.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/goals.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/agents.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/issues.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/dialog.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/popover.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/model-utils.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/agent-config-defaults.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/AsciiArtAnimation.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/PathInstructionsModal.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/agent-config-primitives.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/OpenCodeLogoIcon.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/dashboard.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/activity.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/projects.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/heartbeats.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/MetricCard.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/EmptyState.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/StatusIcon.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/PriorityIcon.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ActivityRow.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/Identity.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/timeAgo.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ActiveAgentsPanel.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ActivityCharts.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/PageSkeleton.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/input.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/dropdown-menu.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/StatusBadge.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/status-colors.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/EntityRow.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/PageTabBar.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/tabs.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/assets.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ProjectProperties.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/InlineEditor.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/IssuesList.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/sheet.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/scroll-area.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/AgentConfigForm.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/MarkdownBody.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/CopyText.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/AgentIconPicker.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/CommentThread.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/hooks/useProjectOrder.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/IssueProperties.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/LiveRunWidget.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/separator.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/collapsible.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/GoalTree.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/GoalProperties.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ApprovalCard.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/approvals.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ApprovalPayload.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/costs.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/textarea.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/card.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/select.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/access.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/CompanyPatternIcon.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/badge.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/checkbox.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/label.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/skeleton.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/command.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/breadcrumb.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/ui/avatar.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/FilterBar.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/sidebarBadges.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/SidebarProjects.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/SidebarSection.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/SidebarAgents.tsx?t=1773068825293 200[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/MarkdownEditor.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/recent-assignees.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/InlineEntitySelector.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/transcript.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/registry.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/constants.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/api.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/agent-url-key.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-url-key.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-mentions.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/config-schema.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/groupBy.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/components/KanbanBoard.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/api/secrets.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/claude-local/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/lib/project-order.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/claude-local/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/codex-local/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/cursor/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/opencode-local/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/pi-local/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/process/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/http/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company-portability.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/agent.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/project.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/issue.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/goal.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/approval.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/secret.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/cost.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/asset.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/access.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/codex-local/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/cursor/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/opencode-local/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/pi-local/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/index.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/process/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/process/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/process/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/http/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/http/config-fields.tsx 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /src/adapters/http/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/build-config.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/shared/stream.ts 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /site.webmanifest 304[39m
+[15:07:06] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/shared/stream.ts 304[39m
+[15:07:07] [32mINFO[39m: [36mGET / 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:07:07] [32mINFO[39m: [36mGET / 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /favicon.ico 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /favicon.svg 304[39m
+[15:07:07] [32mINFO[39m: [36mGET /android-chrome-192x192.png 304[39m
+[15:07:08] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:07:10] [32mINFO[39m: [36mGET /sw.js 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:08:25] [32mINFO[39m: [36mGET / 304[39m
+[15:08:25] [32mINFO[39m: [36mGET / 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:08:25] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:08:29] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/org 200[39m
+[15:08:33] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/costs/summary?from=2026-02-28T16%3A00%3A00.000Z&to=2026-03-09T15%3A08%3A33.740Z 200[39m
+[15:08:33] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/costs/by-agent?from=2026-02-28T16%3A00%3A00.000Z&to=2026-03-09T15%3A08%3A33.740Z 200[39m
+[15:08:33] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/costs/by-project?from=2026-02-28T16%3A00%3A00.000Z&to=2026-03-09T15%3A08%3A33.740Z 200[39m
+[15:08:35] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:08:40] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/approvals 200[39m
+[15:08:40] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/join-requests?status=pending_approval 200[39m
+[15:08:40] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues?status=backlog%2Ctodo%2Cin_progress%2Cin_review%2Cblocked%2Cdone&touchedByUserId=me 200[39m
+[15:08:40] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:08:45] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/adapters/claude_local/models 200[39m
+[15:08:45] [32mINFO[39m: [36mGET /brands/opencode-logo-light-square.svg 200[39m
+[15:08:45] [32mINFO[39m: [36mGET /brands/opencode-logo-dark-square.svg 200[39m
+[15:08:45] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+11:08:49 PM [vite] (client) hmr update /src/context/I18nContext.tsx, /src/index.css
+11:08:49 PM [vite] (client) hmr invalidate /src/context/I18nContext.tsx Could not Fast Refresh ("useI18n" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+11:08:49 PM [vite] (client) page reload src/context/I18nContext.tsx
+[15:08:49] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/index.css?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /index.html 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/main.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /@vite/client 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@react-refresh 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/vite@6.4.1_@types+node@24.12.0_jiti@2.6.1_lightningcss@1.30.2_tsx@4.21.0/node_modules/vite/dist/client/env.mjs 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/ToastContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/ThemeContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/App.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/I18nContext.tsx?t=1773068929157 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/SidebarContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/router.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/BreadcrumbContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/PanelContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/DialogContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/LiveUpdatesProvider.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/node_modules/.pnpm/@mdxeditor+editor@3.52.4_@codemirror+language@6.12.1_@lezer+highlight@1.2.3_@types+react-dom@_pzhotnbszb5q3cxok3ldaus4se/node_modules/@mdxeditor/editor/dist/style.css 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/index.css?t=1773068929157 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/button.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/Layout.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/tooltip.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/context/CompanyContext.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Dashboard.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Companies.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Agents.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/OnboardingWizard.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/auth.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/health.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Projects.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Issues.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/IssueDetail.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/ProjectDetail.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Goals.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/GoalDetail.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Approvals.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Costs.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Inbox.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/CompanySettings.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/ApprovalDetail.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Activity.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/Auth.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/BoardClaim.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/OrgChart.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/NewAgent.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/queryKeys.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/company-routes.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/utils.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/InviteLanding.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/pages/DesignGuide.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/Sidebar.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/BreadcrumbBar.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/CommandPalette.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/SidebarNavItem.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/PropertiesPanel.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/CompanyRail.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/NewIssueDialog.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/NewProjectDialog.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/NewGoalDialog.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/NewAgentDialog.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/MobileBottomNav.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ToastViewport.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/hooks/useCompanyPageMemory.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/companies.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/client.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/dashboard.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/hooks/useKeyboardShortcuts.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/activity.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/issues.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/heartbeats.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/agents.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/projects.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ActiveAgentsPanel.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/EmptyState.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/timeAgo.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/MetricCard.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ActivityCharts.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/PageSkeleton.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ActivityRow.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/PriorityIcon.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/Identity.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/dropdown-menu.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/input.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/StatusIcon.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/StatusBadge.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/EntityRow.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/PageTabBar.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/tabs.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/status-colors.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/goals.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/dialog.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/popover.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/model-utils.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/agent-config-defaults.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/AsciiArtAnimation.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/PathInstructionsModal.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/agent-config-primitives.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/OpenCodeLogoIcon.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/IssuesList.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/AgentConfigForm.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/MarkdownBody.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/CopyText.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/AgentIconPicker.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/assets.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ProjectProperties.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/InlineEditor.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/sheet.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/LiveRunWidget.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/scroll-area.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/hooks/useProjectOrder.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/CommentThread.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/separator.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/collapsible.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/GoalTree.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/IssueProperties.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/approvals.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/GoalProperties.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ApprovalCard.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/costs.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/card.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/select.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/access.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ApprovalPayload.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/textarea.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/CompanyPatternIcon.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/SidebarProjects.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/SidebarAgents.tsx?t=1773068929157 200[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/SidebarSection.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/sidebarBadges.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/badge.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/checkbox.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/label.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/skeleton.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/breadcrumb.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/avatar.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/ui/command.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/MarkdownEditor.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/InlineEntitySelector.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/constants.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/FilterBar.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/recent-assignees.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/api.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-url-key.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/agent-url-key.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/project-mentions.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/config-schema.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/registry.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/transcript.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/groupBy.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/components/KanbanBoard.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/api/secrets.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/claude-local/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/lib/project-order.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/company-portability.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/agent.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/project.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/issue.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/cost.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/secret.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/goal.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/asset.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/access.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/shared/src/validators/approval.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/claude-local/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/codex-local/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/opencode-local/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/cursor/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/pi-local/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/process/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/http/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/codex-local/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/opencode-local/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/openclaw-gateway/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/cursor/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/index.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /site.webmanifest 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/pi-local/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/process/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/process/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/process/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/http/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/http/config-fields.tsx 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /src/adapters/http/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/codex-local/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/claude-local/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/opencode-local/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/parse-stdout.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/pi-local/src/ui/build-config.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/openclaw-gateway/src/shared/stream.ts 304[39m
+[15:08:49] [32mINFO[39m: [36mGET /@fs/Users/chengjielin/paperclip/packages/adapters/cursor-local/src/shared/stream.ts 304[39m
+[15:08:50] [32mINFO[39m: [36mGET / 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /api/auth/get-session 304[39m
+[15:08:50] [32mINFO[39m: [36mGET / 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /favicon.ico 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/agents 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/activity 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/projects 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/issues 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/heartbeat-runs 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/dashboard 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /favicon.svg 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /android-chrome-192x192.png 304[39m
+[15:08:50] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs?minCount=4 304[39m
+[15:08:51] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/adapters/claude_local/models 304[39m
+[15:08:51] [32mINFO[39m: [36mGET /brands/opencode-logo-light-square.svg 304[39m
+[15:08:51] [32mINFO[39m: [36mGET /brands/opencode-logo-dark-square.svg 304[39m
+[15:08:52] [32mINFO[39m: [36mGET /sw.js 304[39m
+[15:09:00] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m
+[15:09:05] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/sidebar-badges 304[39m
+[15:09:10] [32mINFO[39m: [36mGET /companies/fe6fcd04-a153-438a-a56f-f0c57a8064bc/live-runs 304[39m

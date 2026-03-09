@@ -849,26 +849,27 @@ function ConfigSummary({
   reportsToAgent: Agent | null;
   directReports: Agent[];
 }) {
+  const { t } = useI18n();
   const config = agent.adapterConfig as Record<string, unknown>;
   const promptText = typeof config?.promptTemplate === "string" ? config.promptTemplate : "";
 
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-medium">Configuration</h3>
+        <h3 className="text-sm font-medium">{t("agentDetail.config.title")}</h3>
         <Link
           to={`/agents/${agentRouteId}/configure`}
           className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors no-underline"
         >
           <Settings className="h-3 w-3" />
-          Manage &rarr;
+          {t("agentDetail.config.manage")} &rarr;
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-border rounded-lg p-4 space-y-3">
-          <h4 className="text-xs text-muted-foreground font-medium">Agent Details</h4>
+          <h4 className="text-xs text-muted-foreground font-medium">{t("agentDetail.config.details")}</h4>
           <div className="space-y-2 text-sm">
-            <SummaryRow label="Adapter">
+            <SummaryRow label={t("agentDetail.config.adapter")}>
               <span className="font-mono">{adapterLabels[agent.adapterType] ?? agent.adapterType}</span>
               {String(config?.model ?? "") !== "" && (
                 <span className="text-muted-foreground ml-1">
@@ -876,7 +877,7 @@ function ConfigSummary({
                 </span>
               )}
             </SummaryRow>
-            <SummaryRow label="Heartbeat">
+            <SummaryRow label={t("agentDetail.config.heartbeat")}>
               {(agent.runtimeConfig as Record<string, unknown>)?.heartbeat
                 ? (() => {
                     const hb = (agent.runtimeConfig as Record<string, unknown>).heartbeat as Record<string, unknown>;
@@ -886,21 +887,18 @@ function ConfigSummary({
                     const intervalLabel = sec >= 60 ? `${Math.round(sec / 60)} min` : `${sec}s`;
                     return (
                       <span>
-                        Every {intervalLabel}
+                        {t("agentDetail.config.every", { interval: intervalLabel })}
                         {maxConcurrentRuns > 1 ? ` (max ${maxConcurrentRuns} concurrent)` : ""}
                       </span>
                     );
                   })()
-                : <span className="text-muted-foreground">Not configured</span>
+                : <span className="text-muted-foreground">{t("agentDetail.config.notConfigured")}</span>
               }
             </SummaryRow>
-            <SummaryRow label="Last heartbeat">
-              {agent.lastHeartbeatAt
-                ? <span>{relativeTime(agent.lastHeartbeatAt)}</span>
-                : <span className="text-muted-foreground">Never</span>
-              }
+            <SummaryRow label={t("agentDetail.config.lastHeartbeat")}>
+              {agent.lastHeartbeatAt ? <span>{relativeTime(agent.lastHeartbeatAt)}</span> : <span className="text-muted-foreground">{t("agentDetail.config.never")}</span>}
             </SummaryRow>
-            <SummaryRow label="Reports to">
+            <SummaryRow label={t("agentDetail.config.reportsTo")}>
               {reportsToAgent ? (
                 <Link
                   to={`/agents/${agentRouteRef(reportsToAgent)}`}
@@ -909,13 +907,13 @@ function ConfigSummary({
                   <Identity name={reportsToAgent.name} size="sm" />
                 </Link>
               ) : (
-                <span className="text-muted-foreground">Nobody (top-level)</span>
+                <span className="text-muted-foreground">{t("agentDetail.config.nobodyTop")}</span>
               )}
             </SummaryRow>
           </div>
           {directReports.length > 0 && (
             <div className="pt-1">
-              <span className="text-xs text-muted-foreground">Direct reports</span>
+              <span className="text-xs text-muted-foreground">{t("agentDetail.config.directReports")}</span>
               <div className="mt-1 space-y-1">
                 {directReports.map((r) => (
                   <Link

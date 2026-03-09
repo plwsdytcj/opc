@@ -80,9 +80,7 @@ export function AuthPage() {
             <span className="text-sm font-medium">Paperclip</span>
           </div>
 
-          <h1 className="text-xl font-semibold">
-            {mode === "sign_in" ? t("auth.signInTitle") : t("auth.createTitle")}
-          </h1>
+          <h1 className="text-xl font-semibold">{mode === "sign_in" ? t("auth.signInTitle") : t("auth.createTitle")}</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "sign_in"
               ? "Use your email and password to access this instance."
@@ -131,11 +129,7 @@ export function AuthPage() {
             </div>
             {error && <p className="text-xs text-destructive">{error}</p>}
             <Button type="submit" disabled={!canSubmit || mutation.isPending} className="w-full">
-              {mutation.isPending
-                ? "Working…"
-                : mode === "sign_in"
-                  ? t("auth.switch.signIn")
-                  : t("auth.createAccount")}
+              {mutation.isPending ? "Working…" : mode === "sign_in" ? t("auth.switch.signIn") : t("auth.createAccount")}
             </Button>
           </form>
 
