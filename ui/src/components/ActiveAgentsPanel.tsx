@@ -8,6 +8,7 @@ import { getUIAdapter } from "../adapters";
 import type { TranscriptEntry } from "../adapters";
 import { queryKeys } from "../lib/queryKeys";
 import { cn, relativeTime } from "../lib/utils";
+import { useI18n } from "../context/I18nContext";
 import { ExternalLink } from "lucide-react";
 import { Identity } from "./Identity";
 
@@ -376,14 +377,15 @@ export function ActiveAgentsPanel({ companyId }: ActiveAgentsPanelProps) {
     };
   }, [activeRunIds, companyId, runById]);
 
+  const { t } = useI18n();
   return (
     <div>
       <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-3">
-        Agents
+        {t("nav.agents")}
       </h3>
       {runs.length === 0 ? (
         <div className="border border-border rounded-lg p-4">
-          <p className="text-sm text-muted-foreground">No recent agent runs.</p>
+          <p className="text-sm text-muted-foreground">{t("agents.noRecentRuns")}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2 sm:gap-4">

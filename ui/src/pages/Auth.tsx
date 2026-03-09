@@ -6,10 +6,12 @@ import { queryKeys } from "../lib/queryKeys";
 import { Button } from "@/components/ui/button";
 import { AsciiArtAnimation } from "@/components/AsciiArtAnimation";
 import { Sparkles } from "lucide-react";
+import { useI18n } from "../context/I18nContext";
 
 type AuthMode = "sign_in" | "sign_up";
 
 export function AuthPage() {
+  const { t } = useI18n();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -79,12 +81,12 @@ export function AuthPage() {
           </div>
 
           <h1 className="text-xl font-semibold">
-            {mode === "sign_in" ? "Sign in to Paperclip" : "Create your Paperclip account"}
+            {mode === "sign_in" ? t("auth.signInTitle") : t("auth.createTitle")}
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "sign_in"
               ? "Use your email and password to access this instance."
-              : "Create an account for this instance. Email confirmation is not required in v1."}
+              : t("auth.createDesc")}
           </p>
 
           <form
@@ -132,8 +134,8 @@ export function AuthPage() {
               {mutation.isPending
                 ? "Working…"
                 : mode === "sign_in"
-                  ? "Sign In"
-                  : "Create Account"}
+                  ? t("auth.switch.signIn")
+                  : t("auth.createAccount")}
             </Button>
           </form>
 
@@ -147,7 +149,7 @@ export function AuthPage() {
                 setMode(mode === "sign_in" ? "sign_up" : "sign_in");
               }}
             >
-              {mode === "sign_in" ? "Create one" : "Sign in"}
+              {mode === "sign_in" ? t("auth.switch.createOne") : t("auth.switch.signIn")}
             </button>
           </div>
         </div>

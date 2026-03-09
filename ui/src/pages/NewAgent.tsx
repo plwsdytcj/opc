@@ -17,6 +17,7 @@ import { cn, agentUrl } from "../lib/utils";
 import { roleLabels } from "../components/agent-config-primitives";
 import { AgentConfigForm, type CreateConfigValues } from "../components/AgentConfigForm";
 import { defaultCreateValues } from "../components/agent-config-defaults";
+import { useI18n } from "../context/I18nContext";
 import { getUIAdapter } from "../adapters";
 import { AgentIcon } from "../components/AgentIconPicker";
 import {
@@ -88,6 +89,7 @@ export function NewAgent() {
   });
 
   const isFirstAgent = !agents || agents.length === 0;
+  const { t } = useI18n();
   const effectiveRole = isFirstAgent ? "ceo" : role;
 
   useEffect(() => {
@@ -159,7 +161,7 @@ export function NewAgent() {
       if (!discovered.some((entry) => entry.id === selectedModel)) {
         setFormError(
           discovered.length === 0
-            ? "No OpenCode models discovered. Run `opencode models` and authenticate providers."
+            ? t("newAgent.noModels")
             : `Configured OpenCode model is unavailable: ${selectedModel}`,
         );
         return;
@@ -279,7 +281,7 @@ export function NewAgent() {
                 )}
                 onClick={() => { setReportsTo(""); setReportsToOpen(false); }}
               >
-                No manager
+                {t("newAgent.noManager")}
               </button>
               {(agents ?? []).map((a) => (
                 <button
@@ -324,7 +326,7 @@ export function NewAgent() {
               disabled={!name.trim() || createAgent.isPending}
               onClick={handleSubmit}
             >
-              {createAgent.isPending ? "Creating…" : "Create agent"}
+              {createAgent.isPending ? t("actions.creating") : t("actions.createAgent")}
             </Button>
           </div>
         </div>

@@ -10,6 +10,7 @@ import { agentsApi } from "../api/agents";
 import { heartbeatsApi } from "../api/heartbeats";
 import { useCompany } from "../context/CompanyContext";
 import { useBreadcrumbs } from "../context/BreadcrumbContext";
+import { useI18n } from "../context/I18nContext";
 import { queryKeys } from "../lib/queryKeys";
 import { StatusIcon } from "../components/StatusIcon";
 import { PriorityIcon } from "../components/PriorityIcon";
@@ -94,11 +95,11 @@ function useDismissedItems() {
   return { dismissed, dismiss };
 }
 
-const RUN_SOURCE_LABELS: Record<string, string> = {
-  timer: "Scheduled",
-  assignment: "Assignment",
-  on_demand: "Manual",
-  automation: "Automation",
+const RUN_SOURCE_KEYS: Record<string, string> = {
+  timer: "inbox.source.scheduled",
+  assignment: "inbox.source.assignment",
+  on_demand: "inbox.source.manual",
+  automation: "inbox.source.automation",
 };
 
 function getStaleIssues(issues: Issue[]): Issue[] {
@@ -180,9 +181,10 @@ function FailedRunCard({
 }) {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+  const { t } = useI18n();
   const issueId = readIssueIdFromRun(run);
   const issue = issueId ? issueById.get(issueId) ?? null : null;
-  const sourceLabel = RUN_SOURCE_LABELS[run.invocationSource] ?? "Manual";
+  const sourceLabel = t(RUN_SOURCE_KEYS[run.invocationSource] ?? "inbox.source.manual");
   const displayError = runFailureMessage(run);
 
   const retryRun = useMutation({
@@ -219,7 +221,7 @@ function FailedRunCard({
         type="button"
         onClick={onDismiss}
         className="absolute right-2 top-2 z-10 rounded-md p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover:opacity-100"
-        aria-label="Dismiss"
+        aria-label={t("inbox.actions.dismiss")}
       >
         <X className="h-4 w-4" />
       </button>
@@ -236,7 +238,7 @@ function FailedRunCard({
           </Link>
         ) : (
           <span className="block text-sm text-muted-foreground">
-            {run.errorCode ? `Error code: ${run.errorCode}` : "No linked issue"}
+            {run.errorCode ? t("inbox.errorCode", { code: run.errorCode }) : t("inbox.noLinkedIssue")}
           </span>
         )}
 
@@ -249,12 +251,12 @@ function FailedRunCard({
               {linkedAgentName ? (
                 <Identity name={linkedAgentName} size="sm" />
               ) : (
-                <span className="text-sm font-medium">Agent {run.agentId.slice(0, 8)}</span>
+                <span className="text-sm font-medium">{t("inbox.agent")} {run.agentId.slice(0, 8)}</span>
               )}
               <StatusBadge status={run.status} />
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              {sourceLabel} run failed {timeAgo(run.createdAt)}
+              {t("inbox.failedRun.subtitle", { source: sourceLabel, time: timeAgo(run.createdAt) })}
             </p>
           </div>
           <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto sm:justify-end">
@@ -267,7 +269,7 @@ function FailedRunCard({
               disabled={retryRun.isPending}
             >
               <RotateCcw className="mr-1.5 h-3.5 w-3.5" />
-              {retryRun.isPending ? "Retrying…" : "Retry"}
+              {retryRun.isPending ? t("inbox.actions.retrying") : t("inbox.actions.retry")}
             </Button>
             <Button
               type="button"
@@ -277,7 +279,7 @@ function FailedRunCard({
               asChild
             >
               <Link to={`/agents/${run.agentId}/runs/${run.id}`}>
-                Open run
+                {t("inbox.actions.openRun")}
                 <ArrowUpRight className="ml-1.5 h-3.5 w-3.5" />
               </Link>
             </Button>
@@ -294,7 +296,7 @@ function FailedRunCard({
 
         {retryRun.isError && (
           <div className="text-xs text-destructive">
-            {retryRun.error instanceof Error ? retryRun.error.message : "Failed to retry run"}
+            {retryRun.error instanceof Error ? retryRun.error.message : t("inbox.error.retryFailed")}
           </div>
         )}
       </div>
@@ -305,6 +307,7 @@ function FailedRunCard({
 export function Inbox() {
   const { selectedCompanyId } = useCompany();
   const { setBreadcrumbs } = useBreadcrumbs();
+  const { t } = useI18n();
   const navigate = useNavigate();
   const location = useLocation();
   const queryClient = useQueryClient();
@@ -323,8 +326,8 @@ export function Inbox() {
   });
 
   useEffect(() => {
-    setBreadcrumbs([{ label: "Inbox" }]);
-  }, [setBreadcrumbs]);
+    setBreadcrumbs([{ label: t("nav.inbox") }]);
+  }, [setBreadcrumbs, t]);
 
   const {
     data: approvals,
@@ -524,7 +527,7 @@ export function Inbox() {
   });
 
   if (!selectedCompanyId) {
-    return <EmptyState icon={InboxIcon} message="Select a company to view inbox." />;
+    return <EmptyState icon={InboxIcon} message={t("inbox.selectCompany")} />;
   }
 
   const hasRunFailures = failedRuns.length > 0;
@@ -597,7 +600,7 @@ export function Inbox() {
                 value: "new",
                 label: (
                   <>
-                    New
+                    {t("inbox.tabs.new")}
                     {newItemCount > 0 && (
                       <span className="ml-1.5 rounded-full bg-blue-500/20 px-1.5 py-0.5 text-[10px] font-medium text-blue-500">
                         {newItemCount}
@@ -606,7 +609,7 @@ export function Inbox() {
                   </>
                 ),
               },
-              { value: "all", label: "All" },
+              { value: "all", label: t("inbox.tabs.all") },
             ]}
           />
         </Tabs>
@@ -617,19 +620,19 @@ export function Inbox() {
               value={allCategoryFilter}
               onValueChange={(value) => setAllCategoryFilter(value as InboxCategoryFilter)}
             >
-              <SelectTrigger className="h-8 w-[170px] text-xs">
-                <SelectValue placeholder="Category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="everything">All categories</SelectItem>
-                <SelectItem value="issues_i_touched">My recent issues</SelectItem>
-                <SelectItem value="join_requests">Join requests</SelectItem>
-                <SelectItem value="approvals">Approvals</SelectItem>
-                <SelectItem value="failed_runs">Failed runs</SelectItem>
-                <SelectItem value="alerts">Alerts</SelectItem>
-                <SelectItem value="stale_work">Stale work</SelectItem>
-              </SelectContent>
-            </Select>
+                <SelectTrigger className="h-8 w-[170px] text-xs">
+                <SelectValue placeholder={t("inbox.filter.category")} />
+                </SelectTrigger>
+                <SelectContent>
+                <SelectItem value="everything">{t("inbox.filter.allCategories")}</SelectItem>
+                <SelectItem value="issues_i_touched">{t("inbox.filter.myRecentIssues")}</SelectItem>
+                <SelectItem value="join_requests">{t("inbox.filter.joinRequests")}</SelectItem>
+                <SelectItem value="approvals">{t("inbox.filter.approvals")}</SelectItem>
+                <SelectItem value="failed_runs">{t("inbox.filter.failedRuns")}</SelectItem>
+                <SelectItem value="alerts">{t("inbox.filter.alerts")}</SelectItem>
+                <SelectItem value="stale_work">{t("inbox.filter.staleWork")}</SelectItem>
+                </SelectContent>
+              </Select>
 
             {showApprovalsCategory && (
               <Select
@@ -637,12 +640,12 @@ export function Inbox() {
                 onValueChange={(value) => setAllApprovalFilter(value as InboxApprovalFilter)}
               >
                 <SelectTrigger className="h-8 w-[170px] text-xs">
-                  <SelectValue placeholder="Approval status" />
+                  <SelectValue placeholder={t("inbox.filter.approvalStatus.placeholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All approval statuses</SelectItem>
-                  <SelectItem value="actionable">Needs action</SelectItem>
-                  <SelectItem value="resolved">Resolved</SelectItem>
+                  <SelectItem value="all">{t("inbox.filter.approvalStatus.all")}</SelectItem>
+                  <SelectItem value="actionable">{t("inbox.filter.approvalStatus.needsAction")}</SelectItem>
+                  <SelectItem value="resolved">{t("inbox.filter.approvalStatus.resolved")}</SelectItem>
                 </SelectContent>
               </Select>
             )}
@@ -661,9 +664,7 @@ export function Inbox() {
         <EmptyState
           icon={InboxIcon}
           message={
-            tab === "new"
-              ? "No issues you're involved in yet."
-              : "No inbox items match these filters."
+            tab === "new" ? t("inbox.empty.new") : t("inbox.empty.all")
           }
         />
       )}
@@ -673,7 +674,7 @@ export function Inbox() {
           {showSeparatorBefore("approvals") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              {tab === "new" ? "Approvals Needing Action" : "Approvals"}
+              {tab === "new" ? t("inbox.section.approvals.actionable") : t("inbox.section.approvals.all")}
             </h3>
             <div className="grid gap-3">
               {approvalsToRender.map((approval) => (
@@ -701,7 +702,7 @@ export function Inbox() {
           {showSeparatorBefore("join_requests") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Join Requests
+              {t("inbox.section.joinRequests")}
             </h3>
             <div className="grid gap-3">
               {joinRequests.map((joinRequest) => (
@@ -710,19 +711,23 @@ export function Inbox() {
                     <div className="space-y-1">
                       <p className="text-sm font-medium">
                         {joinRequest.requestType === "human"
-                          ? "Human join request"
-                          : `Agent join request${joinRequest.agentName ? `: ${joinRequest.agentName}` : ""}`}
+                          ? t("inbox.joinRequest.human")
+                          : t("inbox.joinRequest.agent", {
+                              suffix: joinRequest.agentName
+                                ? t("inbox.joinRequest.agent.nameSuffix", { name: joinRequest.agentName })
+                                : "",
+                            })}
                       </p>
                       <p className="text-xs text-muted-foreground">
-                        requested {timeAgo(joinRequest.createdAt)} from IP {joinRequest.requestIp}
+                        {t("inbox.joinRequest.requestedFromIp", { time: timeAgo(joinRequest.createdAt), ip: joinRequest.requestIp })}
                       </p>
                       {joinRequest.requestEmailSnapshot && (
                         <p className="text-xs text-muted-foreground">
-                          email: {joinRequest.requestEmailSnapshot}
+                          {t("inbox.joinRequest.email", { email: joinRequest.requestEmailSnapshot })}
                         </p>
                       )}
                       {joinRequest.adapterType && (
-                        <p className="text-xs text-muted-foreground">adapter: {joinRequest.adapterType}</p>
+                        <p className="text-xs text-muted-foreground">{t("inbox.joinRequest.adapter", { adapter: joinRequest.adapterType })}</p>
                       )}
                     </div>
                     <div className="flex items-center gap-2">
@@ -732,14 +737,14 @@ export function Inbox() {
                         disabled={approveJoinMutation.isPending || rejectJoinMutation.isPending}
                         onClick={() => rejectJoinMutation.mutate(joinRequest)}
                       >
-                        Reject
+                        {t("inbox.actions.reject")}
                       </Button>
                       <Button
                         size="sm"
                         disabled={approveJoinMutation.isPending || rejectJoinMutation.isPending}
                         onClick={() => approveJoinMutation.mutate(joinRequest)}
                       >
-                        Approve
+                        {t("inbox.actions.approve")}
                       </Button>
                     </div>
                   </div>
@@ -755,7 +760,7 @@ export function Inbox() {
           {showSeparatorBefore("failed_runs") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Failed Runs
+              {t("inbox.section.failedRuns")}
             </h3>
             <div className="grid gap-3">
               {failedRuns.map((run) => (
@@ -777,7 +782,7 @@ export function Inbox() {
           {showSeparatorBefore("alerts") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Alerts
+              {t("inbox.section.alerts")}
             </h3>
             <div className="divide-y divide-border border border-border">
               {showAggregateAgentError && (
@@ -789,14 +794,14 @@ export function Inbox() {
                     <AlertTriangle className="h-4 w-4 shrink-0 text-red-600 dark:text-red-400" />
                     <span className="text-sm">
                       <span className="font-medium">{dashboard!.agents.error}</span>{" "}
-                      {dashboard!.agents.error === 1 ? "agent has" : "agents have"} errors
+                      {dashboard!.agents.error === 1 ? t("inbox.alerts.agentErrors.one") : t("inbox.alerts.agentErrors.many")}
                     </span>
                   </Link>
                   <button
                     type="button"
                     onClick={() => dismiss("alert:agent-errors")}
                     className="rounded-md p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover/alert:opacity-100"
-                    aria-label="Dismiss"
+                    aria-label={t("inbox.actions.dismiss")}
                   >
                     <X className="h-3.5 w-3.5" />
                   </button>
@@ -810,16 +815,14 @@ export function Inbox() {
                   >
                     <AlertTriangle className="h-4 w-4 shrink-0 text-yellow-400" />
                     <span className="text-sm">
-                      Budget at{" "}
-                      <span className="font-medium">{dashboard!.costs.monthUtilizationPercent}%</span>{" "}
-                      utilization this month
+                      {t("inbox.alerts.budget", { percent: dashboard!.costs.monthUtilizationPercent })}
                     </span>
                   </Link>
                   <button
                     type="button"
                     onClick={() => dismiss("alert:budget")}
                     className="rounded-md p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover/alert:opacity-100"
-                    aria-label="Dismiss"
+                    aria-label={t("inbox.actions.dismiss")}
                   >
                     <X className="h-3.5 w-3.5" />
                   </button>
@@ -835,7 +838,7 @@ export function Inbox() {
           {showSeparatorBefore("stale_work") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Stale Work
+              {t("inbox.section.staleWork")}
             </h3>
             <div className="divide-y divide-border border border-border">
               {staleIssues.map((issue) => (
@@ -866,14 +869,14 @@ export function Inbox() {
                         );
                       })()}
                     <span className="shrink-0 text-xs text-muted-foreground">
-                      updated {timeAgo(issue.updatedAt)}
+                      {t("inbox.updated", { time: timeAgo(issue.updatedAt) })}
                     </span>
                   </Link>
                   <button
                     type="button"
                     onClick={() => dismiss(`stale:${issue.id}`)}
                     className="rounded-md p-1 text-muted-foreground opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover/stale:opacity-100"
-                    aria-label="Dismiss"
+                    aria-label={t("inbox.actions.dismiss")}
                   >
                     <X className="h-3.5 w-3.5" />
                   </button>
@@ -889,7 +892,7 @@ export function Inbox() {
           {showSeparatorBefore("issues_i_touched") && <Separator />}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              My Recent Issues
+              {t("inbox.filter.myRecentIssues")}
             </h3>
             <div className="divide-y divide-border border border-border">
               {touchedIssues.map((issue) => {
@@ -910,7 +913,7 @@ export function Inbox() {
                             markReadMutation.mutate(issue.id);
                           }}
                           className="group/dot flex h-4 w-4 items-center justify-center rounded-full transition-colors hover:bg-blue-500/20"
-                          aria-label="Mark as read"
+                          aria-label={t("inbox.markAsRead")}
                         >
                           <span
                             className={`h-2.5 w-2.5 rounded-full bg-blue-600 dark:bg-blue-400 transition-opacity duration-300 ${
@@ -932,10 +935,10 @@ export function Inbox() {
                       <span className="flex-1 truncate text-sm">{issue.title}</span>
                       <span className="shrink-0 text-xs text-muted-foreground">
                         {issue.lastExternalCommentAt
-                          ? `commented ${timeAgo(issue.lastExternalCommentAt)}`
-                          : `updated ${timeAgo(issue.updatedAt)}`}
+                          ? t("inbox.commented", { time: timeAgo(issue.lastExternalCommentAt) })
+                          : t("inbox.updated", { time: timeAgo(issue.updatedAt) })}
                       </span>
-                    </Link>
+                      </Link>
                   </div>
                 );
               })}

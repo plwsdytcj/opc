@@ -5,8 +5,10 @@ import { accessApi } from "../api/access";
 import { authApi } from "../api/auth";
 import { queryKeys } from "../lib/queryKeys";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "../context/I18nContext";
 
 export function BoardClaimPage() {
+  const { t } = useI18n();
   const queryClient = useQueryClient();
   const params = useParams();
   const [searchParams] = useSearchParams();
@@ -91,7 +93,7 @@ export function BoardClaimPage() {
             Sign in or create an account, then return to this page to claim Board ownership.
           </p>
           <Button asChild className="mt-4">
-            <Link to={`/auth?next=${encodeURIComponent(currentPath)}`}>Sign in / Create account</Link>
+            <Link to={`/auth?next=${encodeURIComponent(currentPath)}`}>{t("auth.signInOrCreate")}</Link>
           </Button>
         </div>
       </div>

@@ -8,6 +8,7 @@ import type { TranscriptEntry } from "../adapters";
 import { queryKeys } from "../lib/queryKeys";
 import { cn, relativeTime, formatDateTime } from "../lib/utils";
 import { ExternalLink, Square } from "lucide-react";
+import { useI18n } from "../context/I18nContext";
 import { Identity } from "./Identity";
 import { StatusBadge } from "./StatusBadge";
 
@@ -232,6 +233,7 @@ function parsePersistedLogContent(
 }
 
 export function LiveRunWidget({ issueId, companyId }: LiveRunWidgetProps) {
+  const { t } = useI18n();
   const queryClient = useQueryClient();
   const [feed, setFeed] = useState<FeedItem[]>([]);
   const [cancellingRunIds, setCancellingRunIds] = useState(new Set<string>());
@@ -557,7 +559,7 @@ export function LiveRunWidget({ issueId, companyId }: LiveRunWidgetProps) {
               </span>
             </div>
             <div className="flex items-center gap-2 text-xs">
-              <span className="text-muted-foreground">Run</span>
+              <span className="text-muted-foreground">{t("runs.label")}</span>
               <Link
                 to={`/agents/${run.agentId}/runs/${run.id}`}
                 className="inline-flex items-center rounded-md border border-border bg-accent/40 px-2 py-1 font-mono text-muted-foreground hover:text-foreground hover:bg-accent/60 transition-colors"
@@ -572,13 +574,13 @@ export function LiveRunWidget({ issueId, companyId }: LiveRunWidgetProps) {
                   className="inline-flex items-center gap-1 text-[10px] text-red-600 hover:text-red-500 dark:text-red-400 dark:hover:text-red-300 disabled:opacity-50"
                 >
                   <Square className="h-2 w-2" fill="currentColor" />
-                  {cancellingRunIds.has(run.id) ? "Stopping…" : "Stop"}
+                  {cancellingRunIds.has(run.id) ? t("runs.stopping") : t("runs.stop")}
                 </button>
                 <Link
                   to={`/agents/${run.agentId}/runs/${run.id}`}
                   className="inline-flex items-center gap-1 text-[10px] text-cyan-600 hover:text-cyan-500 dark:text-cyan-300 dark:hover:text-cyan-200"
                 >
-                  Open run
+                  {t("inbox.actions.openRun")}
                   <ExternalLink className="h-2.5 w-2.5" />
                 </Link>
               </div>
@@ -587,13 +589,13 @@ export function LiveRunWidget({ issueId, companyId }: LiveRunWidgetProps) {
         ))
       ) : (
         <div className="flex items-center px-3 py-2 border-b border-border/50">
-          <span className="text-xs font-medium text-muted-foreground">Recent run updates</span>
+          <span className="text-xs font-medium text-muted-foreground">{t("runs.recentUpdates")}</span>
         </div>
       )}
 
       <div ref={bodyRef} className="max-h-[220px] overflow-y-auto p-2 font-mono text-[11px] space-y-1">
         {recent.length === 0 && (
-          <div className="text-xs text-muted-foreground">Waiting for run output...</div>
+          <div className="text-xs text-muted-foreground">{t("runs.waitingOutput")}</div>
         )}
         {recent.map((item, index) => (
           <div

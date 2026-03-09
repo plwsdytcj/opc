@@ -26,6 +26,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import type { Project } from "@paperclipai/shared";
+import { useI18n } from "../context/I18nContext";
 
 function SortableProjectItem({
   activeProjectRef,
@@ -84,6 +85,7 @@ function SortableProjectItem({
 }
 
 export function SidebarProjects() {
+  const { t } = useI18n();
   const [open, setOpen] = useState(true);
   const { selectedCompanyId } = useCompany();
   const { openNewProject } = useDialog();
@@ -147,7 +149,7 @@ export function SidebarProjects() {
               )}
             />
             <span className="text-[10px] font-medium uppercase tracking-widest font-mono text-muted-foreground/60">
-              Projects
+              {t("nav.projects")}
             </span>
           </CollapsibleTrigger>
           <button
@@ -156,7 +158,7 @@ export function SidebarProjects() {
               openNewProject();
             }}
             className="flex items-center justify-center h-4 w-4 rounded text-muted-foreground/60 hover:text-foreground hover:bg-accent/50 transition-colors"
-            aria-label="New project"
+            aria-label={t("actions.newProject")}
           >
             <Plus className="h-3 w-3" />
           </button>

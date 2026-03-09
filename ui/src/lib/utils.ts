@@ -10,8 +10,18 @@ export function formatCents(cents: number): string {
   return `$${(cents / 100).toFixed(2)}`;
 }
 
+function currentLocale(): string {
+  if (typeof document !== "undefined" && document.documentElement.lang) {
+    return document.documentElement.lang;
+  }
+  if (typeof navigator !== "undefined" && (navigator as any).language) {
+    return (navigator as any).language;
+  }
+  return "en-US";
+}
+
 export function formatDate(date: Date | string): string {
-  return new Date(date).toLocaleDateString("en-US", {
+  return new Date(date).toLocaleDateString(currentLocale(), {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -19,7 +29,7 @@ export function formatDate(date: Date | string): string {
 }
 
 export function formatDateTime(date: Date | string): string {
-  return new Date(date).toLocaleString("en-US", {
+  return new Date(date).toLocaleString(currentLocale(), {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -32,13 +42,14 @@ export function relativeTime(date: Date | string): string {
   const now = Date.now();
   const then = new Date(date).getTime();
   const diffSec = Math.round((now - then) / 1000);
-  if (diffSec < 60) return "just now";
+  const lang = currentLocale().toLowerCase();
+  if (diffSec < 60) return lang.startsWith("zh") ? "刚刚" : "just now";
   const diffMin = Math.round(diffSec / 60);
-  if (diffMin < 60) return `${diffMin}m ago`;
+  if (diffMin < 60) return lang.startsWith("zh") ? `${diffMin} 分钟前` : `${diffMin}m ago`;
   const diffHr = Math.round(diffMin / 60);
-  if (diffHr < 24) return `${diffHr}h ago`;
+  if (diffHr < 24) return lang.startsWith("zh") ? `${diffHr} 小时前` : `${diffHr}h ago`;
   const diffDay = Math.round(diffHr / 24);
-  if (diffDay < 30) return `${diffDay}d ago`;
+  if (diffDay < 30) return lang.startsWith("zh") ? `${diffDay} 天前` : `${diffDay}d ago`;
   return formatDate(date);
 }
 

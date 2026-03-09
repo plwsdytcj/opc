@@ -31,16 +31,15 @@ import { InviteLandingPage } from "./pages/InviteLanding";
 import { queryKeys } from "./lib/queryKeys";
 import { useCompany } from "./context/CompanyContext";
 import { useDialog } from "./context/DialogContext";
+import { useI18n } from "./context/I18nContext";
 
 function BootstrapPendingPage() {
+  const { t } = useI18n();
   return (
     <div className="mx-auto max-w-xl py-10">
       <div className="rounded-lg border border-border bg-card p-6">
-        <h1 className="text-xl font-semibold">Instance setup required</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          No instance admin exists yet. Run this command in your Paperclip environment to generate
-          the first admin invite URL:
-        </p>
+        <h1 className="text-xl font-semibold">{t("app.bootstrap.title")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("app.bootstrap.text")}</p>
         <pre className="mt-4 overflow-x-auto rounded-md border border-border bg-muted/30 p-3 text-xs">
 {`pnpm paperclipai auth bootstrap-ceo`}
         </pre>
@@ -66,13 +65,15 @@ function CloudAccessGate() {
   });
 
   if (healthQuery.isLoading || (isAuthenticatedMode && sessionQuery.isLoading)) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">Loading...</div>;
+    const { t } = useI18n();
+    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">{t("common.loading")}</div>;
   }
 
   if (healthQuery.error) {
+    const { t } = useI18n();
     return (
       <div className="mx-auto max-w-xl py-10 text-sm text-destructive">
-        {healthQuery.error instanceof Error ? healthQuery.error.message : "Failed to load app state"}
+        {healthQuery.error instanceof Error ? healthQuery.error.message : t("common.loading")}
       </div>
     );
   }
@@ -139,7 +140,8 @@ function CompanyRootRedirect() {
   const { onboardingOpen } = useDialog();
 
   if (loading) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">Loading...</div>;
+    const { t } = useI18n();
+    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">{t("common.loading")}</div>;
   }
 
   // Keep the first-run onboarding mounted until it completes.
@@ -160,7 +162,8 @@ function UnprefixedBoardRedirect() {
   const { companies, selectedCompany, loading } = useCompany();
 
   if (loading) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">Loading...</div>;
+    const { t } = useI18n();
+    return <div className="mx-auto max-w-xl py-10 text-sm text-muted-foreground">{t("common.loading")}</div>;
   }
 
   const targetCompany = selectedCompany ?? companies[0] ?? null;
@@ -177,6 +180,7 @@ function UnprefixedBoardRedirect() {
 }
 
 function NoCompaniesStartPage({ autoOpen = true }: { autoOpen?: boolean }) {
+  const { t } = useI18n();
   const { openOnboarding } = useDialog();
   const opened = useRef(false);
 
@@ -190,12 +194,10 @@ function NoCompaniesStartPage({ autoOpen = true }: { autoOpen?: boolean }) {
   return (
     <div className="mx-auto max-w-xl py-10">
       <div className="rounded-lg border border-border bg-card p-6">
-        <h1 className="text-xl font-semibold">Create your first company</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Get started by creating a company.
-        </p>
+        <h1 className="text-xl font-semibold">{t("app.nocompany.title")}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t("app.nocompany.text")}</p>
         <div className="mt-4">
-          <Button onClick={() => openOnboarding()}>New Company</Button>
+          <Button onClick={() => openOnboarding()}>{t("app.nocompany.newCompany")}</Button>
         </div>
       </div>
     </div>

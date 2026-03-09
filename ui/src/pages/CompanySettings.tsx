@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useCompany } from "../context/CompanyContext";
 import { useBreadcrumbs } from "../context/BreadcrumbContext";
+import { useI18n } from "../context/I18nContext";
 import { companiesApi } from "../api/companies";
 import { accessApi } from "../api/access";
 import { queryKeys } from "../lib/queryKeys";
@@ -29,6 +30,7 @@ export function CompanySettings() {
   } = useCompany();
   const { setBreadcrumbs } = useBreadcrumbs();
   const queryClient = useQueryClient();
+  const { t } = useI18n();
 
   // General settings local state
   const [companyName, setCompanyName] = useState("");
@@ -165,7 +167,7 @@ export function CompanySettings() {
   if (!selectedCompany) {
     return (
       <div className="text-sm text-muted-foreground">
-        No company selected. Select a company from the switcher above.
+        {t("companySettings.noSelection")}
       </div>
     );
   }
@@ -314,10 +316,8 @@ export function CompanySettings() {
         </div>
         <div className="space-y-3 rounded-md border border-border px-4 py-4">
           <div className="flex items-center gap-1.5">
-            <span className="text-xs text-muted-foreground">
-              Generate an OpenClaw agent invite snippet.
-            </span>
-            <HintIcon text="Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt." />
+            <span className="text-xs text-muted-foreground">{t("settings.invites.generateDesc")}</span>
+            <HintIcon text={t("settings.invites.hint")} />
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <Button
@@ -325,9 +325,7 @@ export function CompanySettings() {
               onClick={() => inviteMutation.mutate()}
               disabled={inviteMutation.isPending}
             >
-              {inviteMutation.isPending
-                ? "Generating..."
-                : "Generate OpenClaw Invite Prompt"}
+              {inviteMutation.isPending ? t("settings.invites.generating") : t("settings.invites.generate")}
             </Button>
           </div>
           {inviteError && (
@@ -336,16 +334,14 @@ export function CompanySettings() {
           {inviteSnippet && (
             <div className="rounded-md border border-border bg-muted/30 p-2">
               <div className="flex items-center justify-between gap-2">
-                <div className="text-xs text-muted-foreground">
-                  OpenClaw Invite Prompt
-                </div>
+                <div className="text-xs text-muted-foreground">{t("settings.invites.promptTitle")}</div>
                 {snippetCopied && (
                   <span
                     key={snippetCopyDelightId}
                     className="flex items-center gap-1 text-xs text-green-600 animate-pulse"
                   >
                     <Check className="h-3 w-3" />
-                    Copied
+                    {t("settings.invites.copied")}
                   </span>
                 )}
               </div>
@@ -370,7 +366,7 @@ export function CompanySettings() {
                       }
                     }}
                   >
-                    {snippetCopied ? "Copied snippet" : "Copy snippet"}
+                    {snippetCopied ? t("settings.invites.copiedSnippet") : t("settings.invites.copySnippet")}
                   </Button>
                 </div>
               </div>
@@ -382,13 +378,10 @@ export function CompanySettings() {
       {/* Danger Zone */}
       <div className="space-y-4">
         <div className="text-xs font-medium text-destructive uppercase tracking-wide">
-          Danger Zone
+          {t("settings.danger.title")}
         </div>
         <div className="space-y-3 rounded-md border border-destructive/40 bg-destructive/5 px-4 py-4">
-          <p className="text-sm text-muted-foreground">
-            Archive this company to hide it from the sidebar. This persists in
-            the database.
-          </p>
+          <p className="text-sm text-muted-foreground">{t("settings.danger.archive.desc")}</p>
           <div className="flex items-center gap-2">
             <Button
               size="sm"
@@ -400,7 +393,7 @@ export function CompanySettings() {
               onClick={() => {
                 if (!selectedCompanyId) return;
                 const confirmed = window.confirm(
-                  `Archive company "${selectedCompany.name}"? It will be hidden from the sidebar.`
+                  t("settings.danger.archive.confirm", { name: selectedCompany.name })
                 );
                 if (!confirmed) return;
                 const nextCompanyId =
@@ -416,16 +409,16 @@ export function CompanySettings() {
               }}
             >
               {archiveMutation.isPending
-                ? "Archiving..."
+                ? t("settings.danger.archive.archiving")
                 : selectedCompany.status === "archived"
-                ? "Already archived"
-                : "Archive company"}
+                ? t("settings.danger.archive.already")
+                : t("settings.danger.archive.button")}
             </Button>
             {archiveMutation.isError && (
               <span className="text-xs text-destructive">
                 {archiveMutation.error instanceof Error
                   ? archiveMutation.error.message
-                  : "Failed to archive company"}
+                  : t("settings.danger.archive.failed")}
               </span>
             )}
           </div>
