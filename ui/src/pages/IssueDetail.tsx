@@ -51,26 +51,10 @@ type CommentReassignment = {
   assigneeUserId: string | null;
 };
 
-const ACTION_LABELS: Record<string, string> = {
-  "issue.created": "created the issue",
-  "issue.updated": "updated the issue",
-  "issue.checked_out": "checked out the issue",
-  "issue.released": "released the issue",
-  "issue.comment_added": "added a comment",
-  "issue.attachment_added": "added an attachment",
-  "issue.attachment_removed": "removed an attachment",
-  "issue.deleted": "deleted the issue",
-  "agent.created": "created an agent",
-  "agent.updated": "updated the agent",
-  "agent.paused": "paused the agent",
-  "agent.resumed": "resumed the agent",
-  "agent.terminated": "terminated the agent",
-  "heartbeat.invoked": "invoked a heartbeat",
-  "heartbeat.cancelled": "cancelled a heartbeat",
-  "approval.created": "requested approval",
-  "approval.approved": "approved",
-  "approval.rejected": "rejected",
-};
+function actionLabel(t: (k: string, vars?: Record<string, string | number>) => string, key: string): string {
+  const v = t(key);
+  return v === key ? key.replace(/[._]/g, " ") : v;
+}
 
 function humanizeValue(value: unknown): string {
   if (typeof value !== "string") return String(value ?? "none");
@@ -96,7 +80,11 @@ function truncate(text: string, max: number): string {
   return text.slice(0, max - 1) + "\u2026";
 }
 
-function formatAction(action: string, details?: Record<string, unknown> | null): string {
+function formatAction(
+  t: (k: string, vars?: Record<string, string | number>) => string,
+  action: string,
+  details?: Record<string, unknown> | null,
+): string {
   if (action === "issue.updated" && details) {
     const previous = (details._previous ?? {}) as Record<string, unknown>;
     const parts: string[] = [];
@@ -105,42 +93,42 @@ function formatAction(action: string, details?: Record<string, unknown> | null):
       const from = previous.status;
       parts.push(
         from
-          ? `changed the status from ${humanizeValue(from)} to ${humanizeValue(details.status)}`
-          : `changed the status to ${humanizeValue(details.status)}`
+          ? t("issueAction.status.fromTo", { from: humanizeValue(from), to: humanizeValue(details.status) })
+          : t("issueAction.status.to", { to: humanizeValue(details.status) })
       );
     }
     if (details.priority !== undefined) {
       const from = previous.priority;
       parts.push(
         from
-          ? `changed the priority from ${humanizeValue(from)} to ${humanizeValue(details.priority)}`
-          : `changed the priority to ${humanizeValue(details.priority)}`
+          ? t("issueAction.priority.fromTo", { from: humanizeValue(from), to: humanizeValue(details.priority) })
+          : t("issueAction.priority.to", { to: humanizeValue(details.priority) })
       );
     }
     if (details.assigneeAgentId !== undefined || details.assigneeUserId !== undefined) {
       parts.push(
         details.assigneeAgentId || details.assigneeUserId
-          ? "assigned the issue"
-          : "unassigned the issue",
+          ? t("issueAction.assigned")
+          : t("issueAction.unassigned"),
       );
     }
-    if (details.title !== undefined) parts.push("updated the title");
-    if (details.description !== undefined) parts.push("updated the description");
+    if (details.title !== undefined) parts.push(t("issueAction.titleUpdated"));
+    if (details.description !== undefined) parts.push(t("issueAction.descriptionUpdated"));
 
     if (parts.length > 0) return parts.join(", ");
   }
-  return ACTION_LABELS[action] ?? action.replace(/[._]/g, " ");
+  return actionLabel(t, action);
 }
 
-function ActorIdentity({ evt, agentMap }: { evt: ActivityEvent; agentMap: Map<string, Agent> }) {
+function ActorIdentity({ evt, agentMap, t }: { evt: ActivityEvent; agentMap: Map<string, Agent>; t: (k: string)=>string }) {
   const id = evt.actorId;
   if (evt.actorType === "agent") {
     const agent = agentMap.get(id);
     return <Identity name={agent?.name ?? id.slice(0, 8)} size="sm" />;
   }
-  if (evt.actorType === "system") return <Identity name="System" size="sm" />;
-  if (evt.actorType === "user") return <Identity name="Board" size="sm" />;
-  return <Identity name={id || "Unknown"} size="sm" />;
+  if (evt.actorType === "system") return <Identity name={t("identity.system")} size="sm" />;
+  if (evt.actorType === "user") return <Identity name={t("identity.board")} size="sm" />;
+  return <Identity name={id || t("identity.unknown")} size="sm" />;
 }
 
 export function IssueDetail() {
@@ -751,15 +739,15 @@ export function IssueDetail() {
         <TabsList variant="line" className="w-full justify-start gap-1">
           <TabsTrigger value="comments" className="gap-1.5">
             <MessageSquare className="h-3.5 w-3.5" />
-            Comments
+            {t("issueDetail.tabs.comments")}
           </TabsTrigger>
           <TabsTrigger value="subissues" className="gap-1.5">
             <ListTree className="h-3.5 w-3.5" />
-            Sub-issues
+            {t("issueDetail.tabs.subissues")}
           </TabsTrigger>
           <TabsTrigger value="activity" className="gap-1.5">
             <ActivityIcon className="h-3.5 w-3.5" />
-            Activity
+            {t("issueDetail.tabs.activity")}
           </TabsTrigger>
         </TabsList>
 
@@ -830,8 +818,8 @@ export function IssueDetail() {
             <div className="space-y-1.5">
               {activity.slice(0, 20).map((evt) => (
                 <div key={evt.id} className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <ActorIdentity evt={evt} agentMap={agentMap} />
-                  <span>{formatAction(evt.action, evt.details)}</span>
+                  <ActorIdentity evt={evt} agentMap={agentMap} t={t} />
+                  <span>{formatAction(t, evt.action, evt.details)}</span>
                   <span className="ml-auto shrink-0">{relativeTime(evt.createdAt)}</span>
                 </div>
               ))}
@@ -884,7 +872,7 @@ export function IssueDetail() {
           className="rounded-lg border border-border"
         >
           <CollapsibleTrigger className="flex w-full items-center justify-between px-3 py-2 text-left">
-            <span className="text-sm font-medium text-muted-foreground">Cost Summary</span>
+            <span className="text-sm font-medium text-muted-foreground">{t("issueDetail.costSummary")}</span>
             <ChevronDown
               className={cn("h-4 w-4 text-muted-foreground transition-transform", secondaryOpen.cost && "rotate-180")}
             />
@@ -902,10 +890,10 @@ export function IssueDetail() {
                   )}
                   {issueCostSummary.hasTokens && (
                     <span>
-                      Tokens {formatTokens(issueCostSummary.totalTokens)}
+                      {t("issueDetail.tokens.label", { count: formatTokens(issueCostSummary.totalTokens) })}
                       {issueCostSummary.cached > 0
-                        ? ` (in ${formatTokens(issueCostSummary.input)}, out ${formatTokens(issueCostSummary.output)}, cached ${formatTokens(issueCostSummary.cached)})`
-                        : ` (in ${formatTokens(issueCostSummary.input)}, out ${formatTokens(issueCostSummary.output)})`}
+                        ? ` ${t("issueDetail.tokens.detail.withCache", { in: formatTokens(issueCostSummary.input), out: formatTokens(issueCostSummary.output), cached: formatTokens(issueCostSummary.cached) })}`
+                        : ` ${t("issueDetail.tokens.detail.noCache", { in: formatTokens(issueCostSummary.input), out: formatTokens(issueCostSummary.output) })}`}
                     </span>
                   )}
                 </div>
@@ -919,7 +907,7 @@ export function IssueDetail() {
       <Sheet open={mobilePropsOpen} onOpenChange={setMobilePropsOpen}>
         <SheetContent side="bottom" className="max-h-[85dvh] pb-[env(safe-area-inset-bottom)]">
           <SheetHeader>
-            <SheetTitle className="text-sm">Properties</SheetTitle>
+            <SheetTitle className="text-sm">{t("common.properties")}</SheetTitle>
           </SheetHeader>
           <ScrollArea className="flex-1 overflow-y-auto">
             <div className="px-4 pb-4">

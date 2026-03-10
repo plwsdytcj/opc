@@ -222,6 +222,50 @@ const resources: Record<Language, Dict> = {
     "goals.subGoals": "Sub-Goals",
     "goals.addSubGoal": "Sub Goal",
 
+    // Issue detail tabs & labels
+    "issueDetail.tabs.comments": "Comments",
+    "issueDetail.tabs.subissues": "Sub-issues",
+    "issueDetail.tabs.activity": "Activity",
+    "issueDetail.costSummary": "Cost Summary",
+    "issueDetail.tokens.label": "Tokens {count}",
+    "issueDetail.tokens.detail.withCache": "(in {in}, out {out}, cached {cached})",
+    "issueDetail.tokens.detail.noCache": "(in {in}, out {out})",
+
+    // Identities
+    "identity.system": "System",
+    "identity.board": "Board",
+    "identity.unknown": "Unknown",
+
+    // Issue activity simple labels
+    "issue.created": "created the issue",
+    "issue.updated": "updated the issue",
+    "issue.checked_out": "checked out the issue",
+    "issue.released": "released the issue",
+    "issue.comment_added": "added a comment",
+    "issue.attachment_added": "added an attachment",
+    "issue.attachment_removed": "removed an attachment",
+    "issue.deleted": "deleted the issue",
+    "agent.created": "created an agent",
+    "agent.updated": "updated the agent",
+    "agent.paused": "paused the agent",
+    "agent.resumed": "resumed the agent",
+    "agent.terminated": "terminated the agent",
+    "heartbeat.invoked": "invoked a heartbeat",
+    "heartbeat.cancelled": "cancelled a heartbeat",
+    "approval.created": "requested approval",
+    "approval.approved": "approved",
+    "approval.rejected": "rejected",
+
+    // Issue activity composed messages
+    "issueAction.status.fromTo": "changed the status from {from} to {to}",
+    "issueAction.status.to": "changed the status to {to}",
+    "issueAction.priority.fromTo": "changed the priority from {from} to {to}",
+    "issueAction.priority.to": "changed the priority to {to}",
+    "issueAction.assigned": "assigned the issue",
+    "issueAction.unassigned": "unassigned the issue",
+    "issueAction.titleUpdated": "updated the title",
+    "issueAction.descriptionUpdated": "updated the description",
+
     // Issue detail
     "issueDetail.attachments": "Attachments",
     "issueDetail.uploading": "Uploading...",
@@ -934,6 +978,50 @@ const resources: Record<Language, Dict> = {
     "goals.noLinkedProjects": "暂无关联项目。",
     "goals.subGoals": "子目标",
     "goals.addSubGoal": "新增子目标",
+
+    // Issue detail tabs & labels
+    "issueDetail.tabs.comments": "评论",
+    "issueDetail.tabs.subissues": "子问题",
+    "issueDetail.tabs.activity": "活动",
+    "issueDetail.costSummary": "成本汇总",
+    "issueDetail.tokens.label": "Tokens {count}",
+    "issueDetail.tokens.detail.withCache": "(入 {in}，出 {out}，缓存 {cached})",
+    "issueDetail.tokens.detail.noCache": "(入 {in}，出 {out})",
+
+    // Identities
+    "identity.system": "系统",
+    "identity.board": "看板",
+    "identity.unknown": "未知",
+
+    // Issue activity simple labels
+    "issue.created": "创建了问题",
+    "issue.updated": "更新了问题",
+    "issue.checked_out": "签出了问题",
+    "issue.released": "释放了问题",
+    "issue.comment_added": "添加了评论",
+    "issue.attachment_added": "添加了附件",
+    "issue.attachment_removed": "移除了附件",
+    "issue.deleted": "删除了问题",
+    "agent.created": "创建了智能体",
+    "agent.updated": "更新了智能体",
+    "agent.paused": "暂停了智能体",
+    "agent.resumed": "恢复了智能体",
+    "agent.terminated": "终止了智能体",
+    "heartbeat.invoked": "触发了心跳",
+    "heartbeat.cancelled": "取消了心跳",
+    "approval.created": "发起了审批请求",
+    "approval.approved": "通过了审批",
+    "approval.rejected": "拒绝了审批",
+
+    // Issue activity composed messages
+    "issueAction.status.fromTo": "将状态从 {from} 改为 {to}",
+    "issueAction.status.to": "将状态改为 {to}",
+    "issueAction.priority.fromTo": "将优先级从 {from} 改为 {to}",
+    "issueAction.priority.to": "将优先级改为 {to}",
+    "issueAction.assigned": "分配了该问题",
+    "issueAction.unassigned": "取消了该问题的分配",
+    "issueAction.titleUpdated": "更新了标题",
+    "issueAction.descriptionUpdated": "更新了描述",
 
     // Issue detail
     "issues.noProject": "无项目",
