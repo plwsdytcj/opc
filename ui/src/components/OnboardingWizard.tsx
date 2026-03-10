@@ -26,6 +26,7 @@ import {
 } from "@paperclipai/adapter-codex-local";
 import { DEFAULT_CURSOR_LOCAL_MODEL } from "@paperclipai/adapter-cursor-local";
 import { AsciiArtAnimation } from "./AsciiArtAnimation";
+import { useI18n } from "../context/I18nContext";
 import { ChoosePathButton } from "./PathInstructionsModal";
 import { HintIcon } from "./agent-config-primitives";
 import { OpenCodeLogoIcon } from "./OpenCodeLogoIcon";
@@ -65,6 +66,7 @@ Ensure you have a folder agents/ceo and then download this AGENTS.md as well as 
 And after you've finished that, hire yourself a Founding Engineer agent`;
 
 export function OnboardingWizard() {
+  const { t } = useI18n();
   const { onboardingOpen, onboardingOptions, closeOnboarding } = useDialog();
   const { selectedCompanyId, companies, setSelectedCompanyId } = useCompany();
   const queryClient = useQueryClient();
@@ -542,7 +544,7 @@ export function OnboardingWizard() {
             className="absolute top-4 left-4 z-10 rounded-sm p-1.5 text-muted-foreground/60 hover:text-foreground transition-colors"
           >
             <X className="h-5 w-5" />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{t("common.close")}</span>
           </button>
 
           {/* Left half — form */}
@@ -551,9 +553,9 @@ export function OnboardingWizard() {
               {/* Progress indicators */}
               <div className="flex items-center gap-2 mb-8">
                 <Sparkles className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm font-medium">Get Started</span>
+                <span className="text-sm font-medium">{t("dashboard.empty.noCompany.action")}</span>
                 <span className="text-sm text-muted-foreground/60">
-                  Step {step} of 4
+                  {t("onboarding.stepOf", { current: step, total: 4 })}
                 </span>
                 <div className="flex items-center gap-1.5 ml-auto">
                   {[1, 2, 3, 4].map((s) => (
@@ -580,19 +582,19 @@ export function OnboardingWizard() {
                       <Building2 className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Name your company</h3>
+                      <h3 className="font-medium">{t("onboarding.nameCompany")}</h3>
                       <p className="text-xs text-muted-foreground">
-                        This is the organization your agents will work for.
+                        {t("onboarding.nameCompany.help")}
                       </p>
                     </div>
                   </div>
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">
-                      Company name
+                      {t("settings.general.companyName")}
                     </label>
                     <input
                       className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
-                      placeholder="Acme Corp"
+                      placeholder={t("onboarding.company.placeholder")}
                       value={companyName}
                       onChange={(e) => setCompanyName(e.target.value)}
                       autoFocus
@@ -604,7 +606,7 @@ export function OnboardingWizard() {
                     </label>
                     <textarea
                       className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50 resize-none min-h-[60px]"
-                      placeholder="What is this company trying to achieve?"
+                      placeholder={t("onboarding.companyGoal.placeholder")}
                       value={companyGoal}
                       onChange={(e) => setCompanyGoal(e.target.value)}
                     />
@@ -619,7 +621,7 @@ export function OnboardingWizard() {
                       <Bot className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Create your first agent</h3>
+                      <h3 className="font-medium">{t("onboarding.createFirstAgent")}</h3>
                       <p className="text-xs text-muted-foreground">
                         Choose how this agent will run tasks.
                       </p>
@@ -627,11 +629,11 @@ export function OnboardingWizard() {
                   </div>
                   <div>
                     <label className="text-xs text-muted-foreground mb-1 block">
-                      Agent name
+                      {t("invite.agentName")}
                     </label>
                     <input
                       className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
-                      placeholder="CEO"
+                      placeholder={t("onboarding.agent.placeholder")}
                       value={agentName}
                       onChange={(e) => setAgentName(e.target.value)}
                       autoFocus
@@ -717,7 +719,7 @@ export function OnboardingWizard() {
                         >
                           {opt.recommended && (
                             <span className="absolute -top-1.5 right-1.5 bg-green-500 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded-full leading-none">
-                              Recommended
+                              {t("newAgent.recommended")}
                             </span>
                           )}
                           <opt.icon className="h-4 w-4" />
@@ -743,7 +745,7 @@ export function OnboardingWizard() {
                       <div>
                         <div className="flex items-center gap-1.5 mb-1">
                           <label className="text-xs text-muted-foreground">
-                            Working directory
+                            {t("agentConfig.cwd")}
                           </label>
                           <HintIcon text="Paperclip works best if you create a new folder for your agents to keep their memories and stay organized. Create a new folder and put the path here." />
                         </div>
@@ -790,13 +792,13 @@ export function OnboardingWizard() {
                             className="w-[var(--radix-popover-trigger-width)] p-1"
                             align="start"
                           >
-                            <input
-                              className="w-full px-2 py-1.5 text-xs bg-transparent outline-none border-b border-border mb-1 placeholder:text-muted-foreground/50"
-                              placeholder="Search models..."
-                              value={modelSearch}
-                              onChange={(e) => setModelSearch(e.target.value)}
-                              autoFocus
-                            />
+          <input
+            className="w-full px-2 py-1.5 text-xs bg-transparent outline-none border-b border-border mb-1 placeholder:text-muted-foreground/50"
+            placeholder={t("agentConfig.model.search")}
+            value={modelSearch}
+            onChange={(e) => setModelSearch(e.target.value)}
+            autoFocus
+          />
                             {adapterType !== "opencode_local" && (
                               <button
                                 className={cn(
@@ -886,7 +888,7 @@ export function OnboardingWizard() {
                       {shouldSuggestUnsetAnthropicApiKey && (
                         <div className="rounded-md border border-amber-300/60 bg-amber-50/40 px-2.5 py-2 space-y-2">
                           <p className="text-[11px] text-amber-900/90 leading-relaxed">
-                            Claude failed while <span className="font-mono">ANTHROPIC_API_KEY</span> is set.
+                            {t("onboarding.claudeFailedApiKey")} <span className="font-mono">ANTHROPIC_API_KEY</span>.
                             You can clear it in this CEO adapter config and retry the probe.
                           </p>
                           <Button
@@ -902,7 +904,7 @@ export function OnboardingWizard() {
                       )}
 
                       <div className="rounded-md border border-border/70 bg-muted/20 px-2.5 py-2 text-[11px] space-y-1.5">
-                        <p className="font-medium">Manual debug</p>
+                        <p className="font-medium">{t("onboarding.manualDebug")}</p>
                         <p className="text-muted-foreground font-mono break-all">
                           {adapterType === "cursor"
                             ? `${effectiveAdapterCommand} -p --mode ask --output-format json \"Respond with hello.\"`
@@ -914,7 +916,7 @@ export function OnboardingWizard() {
                         </p>
                         <p className="text-muted-foreground">
                           Prompt:{" "}
-                          <span className="font-mono">Respond with hello.</span>
+                          <span className="font-mono">{t("onboarding.respondWithHello")}</span>
                         </p>
                         {adapterType === "cursor" || adapterType === "codex_local" || adapterType === "opencode_local" ? (
                           <p className="text-muted-foreground">
@@ -951,7 +953,7 @@ export function OnboardingWizard() {
                         </label>
                         <input
                           className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm font-mono outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
-                          placeholder="e.g. node, python"
+                          placeholder={t("onboarding.command.placeholder")}
                           value={command}
                           onChange={(e) => setCommand(e.target.value)}
                         />
@@ -962,7 +964,7 @@ export function OnboardingWizard() {
                         </label>
                         <input
                           className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm font-mono outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
-                          placeholder="e.g. script.js, --flag"
+                          placeholder={t("onboarding.args.placeholder")}
                           value={args}
                           onChange={(e) => setArgs(e.target.value)}
                         />
@@ -993,7 +995,7 @@ export function OnboardingWizard() {
                       <ListTodo className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Give it something to do</h3>
+                      <h3 className="font-medium">{t("onboarding.giveItSomething")}</h3>
                       <p className="text-xs text-muted-foreground">
                         Give your agent a small task to start with — a bug fix,
                         a research question, writing a script.
@@ -1006,7 +1008,7 @@ export function OnboardingWizard() {
                     </label>
                     <input
                       className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50"
-                      placeholder="e.g. Research competitor pricing"
+                      placeholder={t("onboarding.task.title.placeholder")}
                       value={taskTitle}
                       onChange={(e) => setTaskTitle(e.target.value)}
                       autoFocus
@@ -1019,7 +1021,7 @@ export function OnboardingWizard() {
                     <textarea
                       ref={textareaRef}
                       className="w-full rounded-md border border-border bg-transparent px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-ring placeholder:text-muted-foreground/50 resize-none min-h-[120px] max-h-[300px] overflow-y-auto"
-                      placeholder="Add more detail about what the agent should do..."
+                      placeholder={t("onboarding.task.desc.placeholder")}
                       value={taskDescription}
                       onChange={(e) => setTaskDescription(e.target.value)}
                     />
@@ -1034,7 +1036,7 @@ export function OnboardingWizard() {
                       <Rocket className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-medium">Ready to launch</h3>
+                      <h3 className="font-medium">{t("onboarding.readyToLaunch")}</h3>
                       <p className="text-xs text-muted-foreground">
                         Everything is set up. Your assigned task already woke
                         the agent, so you can jump straight to the issue.
@@ -1048,7 +1050,7 @@ export function OnboardingWizard() {
                         <p className="text-sm font-medium truncate">
                           {companyName}
                         </p>
-                        <p className="text-xs text-muted-foreground">Company</p>
+                        <p className="text-xs text-muted-foreground">{t("onboarding.summary.company")}</p>
                       </div>
                       <Check className="h-4 w-4 text-green-500 shrink-0" />
                     </div>
@@ -1070,7 +1072,7 @@ export function OnboardingWizard() {
                         <p className="text-sm font-medium truncate">
                           {taskTitle}
                         </p>
-                        <p className="text-xs text-muted-foreground">Task</p>
+                        <p className="text-xs text-muted-foreground">{t("onboarding.summary.task")}</p>
                       </div>
                       <Check className="h-4 w-4 text-green-500 shrink-0" />
                     </div>
@@ -1096,7 +1098,7 @@ export function OnboardingWizard() {
                       disabled={loading}
                     >
                       <ArrowLeft className="h-3.5 w-3.5 mr-1" />
-                      Back
+                      {t("common.back")}
                     </Button>
                   )}
                 </div>

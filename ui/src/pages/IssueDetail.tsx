@@ -663,7 +663,7 @@ export function IssueDetail() {
           onSave={(description) => updateIssue.mutate({ description })}
           as="p"
           className="text-sm text-muted-foreground"
-          placeholder="Add a description..."
+          placeholder={t("common.addDescriptionPlaceholder")}
           multiline
           mentions={mentionOptions}
           imageUploadHandler={async (file) => {

@@ -19,6 +19,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { CircleDot, Plus, Filter, ArrowUpDown, Layers, Check, X, ChevronRight, List, Columns3, User, Search, ArrowDown } from "lucide-react";
 import { KanbanBoard } from "./KanbanBoard";
+import { useI18n } from "../context/I18nContext";
 import type { Issue } from "@paperclipai/shared";
 
 /* ── Helpers ── */
@@ -56,12 +57,12 @@ const defaultViewState: IssueViewState = {
   collapsedGroups: [],
 };
 
-const quickFilterPresets = [
-  { label: "All", statuses: [] as string[] },
-  { label: "Active", statuses: ["todo", "in_progress", "in_review", "blocked"] },
-  { label: "Backlog", statuses: ["backlog"] },
-  { label: "Done", statuses: ["done", "cancelled"] },
-];
+const quickFilterPresets = (t: (k: string)=>string) => ([
+  { label: t("approvals.all"), statuses: [] as string[] },
+  { label: t("agents.tabs.active"), statuses: ["todo", "in_progress", "in_review", "blocked"] },
+  { label: t("status.backlog"), statuses: ["backlog"] },
+  { label: t("status.done"), statuses: ["done", "cancelled"] },
+]);
 
 function getViewState(key: string): IssueViewState {
   try {
@@ -231,7 +232,9 @@ export function IssuesList({
     enabled: !!selectedCompanyId,
   });
 
+  const { t } = useI18n();
   const activeFilterCount = countActiveFilters(viewState);
+  const quickPresets = quickFilterPresets(t);
 
   const [showScrollBottom, setShowScrollBottom] = useState(false);
   useEffect(() => {
@@ -359,22 +362,22 @@ export function IssuesList({
             <PopoverContent align="end" className="w-[min(480px,calc(100vw-2rem))] p-0">
               <div className="p-3 space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">Filters</span>
+                  <span className="text-sm font-medium">{t("issues.filters")}</span>
                   {activeFilterCount > 0 && (
                     <button
                       className="text-xs text-muted-foreground hover:text-foreground"
                       onClick={() => updateView({ statuses: [], priorities: [], assignees: [], labels: [] })}
                     >
-                      Clear
+                      {t("actions.cancel")}
                     </button>
                   )}
                 </div>
 
                 {/* Quick filters */}
                 <div className="space-y-1.5">
-                  <span className="text-xs text-muted-foreground">Quick filters</span>
+                  <span className="text-xs text-muted-foreground">{t("issues.quickFilters")}</span>
                   <div className="flex flex-wrap gap-1.5">
-                    {quickFilterPresets.map((preset) => {
+                    {quickPresets.map((preset) => {
                       const isActive = arraysEqual(viewState.statuses, preset.statuses);
                       return (
                         <button
@@ -399,7 +402,7 @@ export function IssuesList({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
                   {/* Status */}
                   <div className="space-y-1">
-                    <span className="text-xs text-muted-foreground">Status</span>
+                    <span className="text-xs text-muted-foreground">{t("issues.status")}</span>
                     <div className="space-y-0.5">
                       {statusOrder.map((s) => (
                         <label key={s} className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-accent/50 cursor-pointer">

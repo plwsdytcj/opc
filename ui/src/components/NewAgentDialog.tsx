@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { OpenCodeLogoIcon } from "./OpenCodeLogoIcon";
+import { useI18n } from "../context/I18nContext";
 
 type AdvancedAdapterType =
   | "claude_local"
@@ -77,6 +78,7 @@ const ADVANCED_ADAPTER_OPTIONS: Array<{
 ];
 
 export function NewAgentDialog() {
+  const { t } = useI18n();
   const { newAgentOpen, closeNewAgent, openNewIssue } = useDialog();
   const { selectedCompanyId } = useCompany();
   const navigate = useNavigate();
@@ -125,7 +127,7 @@ export function NewAgentDialog() {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-2.5 border-b border-border">
-          <span className="text-sm text-muted-foreground">Add a new agent</span>
+          <span className="text-sm text-muted-foreground">{t("newAgent.header")}</span>
           <Button
             variant="ghost"
             size="icon-xs"
@@ -148,15 +150,13 @@ export function NewAgentDialog() {
                   <Sparkles className="h-6 w-6 text-foreground" />
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  We recommend letting your CEO handle agent setup — they know the
-                  org structure and can configure reporting, permissions, and
-                  adapters.
+                  {t("newAgent.recommendation")}
                 </p>
               </div>
 
               <Button className="w-full" size="lg" onClick={handleAskCeo}>
                 <Bot className="h-4 w-4 mr-2" />
-                Ask the CEO to create a new agent
+                {t("newAgent.askCeoCta")}
               </Button>
 
               {/* Advanced link */}
@@ -165,7 +165,7 @@ export function NewAgentDialog() {
                   className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2 transition-colors"
                   onClick={handleAdvancedConfig}
                 >
-                  I want advanced configuration myself
+                  {t("newAgent.advancedLink")}
                 </button>
               </div>
             </>
@@ -177,10 +177,10 @@ export function NewAgentDialog() {
                   onClick={() => setShowAdvancedCards(false)}
                 >
                   <ArrowLeft className="h-3.5 w-3.5" />
-                  Back
+                  {t("newAgent.back")}
                 </button>
                 <p className="text-sm text-muted-foreground">
-                  Choose your adapter type for advanced setup.
+                  {t("newAgent.chooseAdapter")}
                 </p>
               </div>
 
@@ -195,7 +195,7 @@ export function NewAgentDialog() {
                   >
                     {opt.recommended && (
                       <span className="absolute -top-1.5 right-1.5 bg-green-500 text-white text-[9px] font-semibold px-1.5 py-0.5 rounded-full leading-none">
-                        Recommended
+                        {t("newAgent.recommended")}
                       </span>
                     )}
                     <opt.icon className="h-4 w-4" />

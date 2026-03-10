@@ -51,7 +51,7 @@ export function Approvals() {
       navigate(`/approvals/${id}?resolved=approved`);
     },
     onError: (err) => {
-      setActionError(err instanceof Error ? err.message : "Failed to approve");
+      setActionError(err instanceof Error ? err.message : t("approvals.error.approveFailed"));
     },
   });
 
@@ -62,7 +62,7 @@ export function Approvals() {
       queryClient.invalidateQueries({ queryKey: queryKeys.approvals.list(selectedCompanyId!) });
     },
     onError: (err) => {
-      setActionError(err instanceof Error ? err.message : "Failed to reject");
+      setActionError(err instanceof Error ? err.message : t("approvals.error.rejectFailed"));
     },
   });
 
@@ -77,7 +77,7 @@ export function Approvals() {
   ).length;
 
   if (!selectedCompanyId) {
-    return <p className="text-sm text-muted-foreground">Select a company first.</p>;
+    return <p className="text-sm text-muted-foreground">{t("approvals.selectCompany")}</p>;
   }
 
   if (isLoading) {

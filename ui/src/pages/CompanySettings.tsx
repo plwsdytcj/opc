@@ -159,10 +159,10 @@ export function CompanySettings() {
 
   useEffect(() => {
     setBreadcrumbs([
-      { label: selectedCompany?.name ?? "Company", href: "/dashboard" },
-      { label: "Settings" }
+      { label: selectedCompany?.name ?? t("nav.companies"), href: "/dashboard" },
+      { label: t("nav.settings") }
     ]);
-  }, [setBreadcrumbs, selectedCompany?.name]);
+  }, [setBreadcrumbs, selectedCompany?.name, t]);
 
   if (!selectedCompany) {
     return (
@@ -184,16 +184,16 @@ export function CompanySettings() {
     <div className="max-w-2xl space-y-6">
       <div className="flex items-center gap-2">
         <Settings className="h-5 w-5 text-muted-foreground" />
-        <h1 className="text-lg font-semibold">Company Settings</h1>
+        <h1 className="text-lg font-semibold">{t("settings.title")}</h1>
       </div>
 
       {/* General */}
       <div className="space-y-4">
         <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-          General
+          {t("settings.sections.general")}
         </div>
         <div className="space-y-3 rounded-md border border-border px-4 py-4">
-          <Field label="Company name" hint="The display name for your company.">
+          <Field label={t("settings.general.companyName")} hint={t("settings.general.companyName.hint")}>
             <input
               className="w-full rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm outline-none"
               type="text"
@@ -202,14 +202,14 @@ export function CompanySettings() {
             />
           </Field>
           <Field
-            label="Description"
-            hint="Optional description shown in the company profile."
+            label={t("settings.general.description")}
+            hint={t("settings.general.description.hint")}
           >
             <input
               className="w-full rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm outline-none"
               type="text"
               value={description}
-              placeholder="Optional company description"
+              placeholder={t("settings.general.description.placeholder")}
               onChange={(e) => setDescription(e.target.value)}
             />
           </Field>
@@ -282,7 +282,7 @@ export function CompanySettings() {
             {generalMutation.isPending ? "Saving..." : "Save changes"}
           </Button>
           {generalMutation.isSuccess && (
-            <span className="text-xs text-muted-foreground">Saved</span>
+            <span className="text-xs text-muted-foreground">{t("settings.save.saved")}</span>
           )}
           {generalMutation.isError && (
             <span className="text-xs text-destructive">

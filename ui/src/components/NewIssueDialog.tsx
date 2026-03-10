@@ -151,13 +151,8 @@ function clearDraft() {
   localStorage.removeItem(DRAFT_KEY);
 }
 
-const statuses = [
-  { value: "backlog", label: "Backlog", color: issueStatusText.backlog ?? issueStatusTextDefault },
-  { value: "todo", label: "Todo", color: issueStatusText.todo ?? issueStatusTextDefault },
-  { value: "in_progress", label: "In Progress", color: issueStatusText.in_progress ?? issueStatusTextDefault },
-  { value: "in_review", label: "In Review", color: issueStatusText.in_review ?? issueStatusTextDefault },
-  { value: "done", label: "Done", color: issueStatusText.done ?? issueStatusTextDefault },
-];
+import { useI18n } from "../context/I18nContext";
+const STATUS_VALUES = ["backlog", "todo", "in_progress", "in_review", "done"] as const;
 
 const priorities = [
   { value: "critical", label: "Critical", icon: AlertTriangle, color: priorityColor.critical ?? priorityColorDefault },
@@ -167,6 +162,7 @@ const priorities = [
 ];
 
 export function NewIssueDialog() {
+  const { t } = useI18n();
   const { newIssueOpen, newIssueDefaults, closeNewIssue } = useDialog();
   const { companies, selectedCompanyId, selectedCompany } = useCompany();
   const queryClient = useQueryClient();
@@ -463,7 +459,8 @@ export function NewIssueDialog() {
   }
 
   const hasDraft = title.trim().length > 0 || description.trim().length > 0;
-  const currentStatus = statuses.find((s) => s.value === status) ?? statuses[1]!;
+  const statusesLocal = STATUS_VALUES.map((v) => ({ value: v, label: t(`status.${v}`), color: (issueStatusText as any)[v] ?? issueStatusTextDefault }));
+  const currentStatus = statusesLocal.find((s) => s.value === status) ?? statusesLocal[1]!;
   const currentPriority = priorities.find((p) => p.value === priority);
   const currentAssignee = (agents ?? []).find((a) => a.id === assigneeId);
   const currentProject = orderedProjects.find((project) => project.id === projectId);
@@ -850,7 +847,7 @@ export function NewIssueDialog() {
               </button>
             </PopoverTrigger>
             <PopoverContent className="w-36 p-1" align="start">
-              {statuses.map((s) => (
+              {statusesLocal.map((s) => (
                 <button
                   key={s.value}
                   className={cn(

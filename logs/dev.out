@@ -3847,3 +3847,4 @@
 11:18:40 PM [vite] (client) hmr update /src/pages/AgentDetail.tsx, /src/index.css
 [15:18:40] [32mINFO[39m: [36mGET /src/index.css?t=1773069520593 200[39m
 [15:18:40] [32mINFO[39m: [36mGET /src/pages/AgentDetail.tsx?t=1773069520593 200[39m
+11:34:26 PM [tsx] Previous process hasn't exited yet. Force killing...

@@ -461,7 +461,7 @@ export function AgentDetail() {
             onClick={() => openNewIssue({ assigneeAgentId: agent.id })}
           >
             <Plus className="h-3.5 w-3.5 sm:mr-1" />
-            <span className="hidden sm:inline">Assign Task</span>
+            <span className="hidden sm:inline">{t("agentDetail.assignTask")}</span>
           </Button>
           <Button
             variant="outline"
@@ -480,7 +480,7 @@ export function AgentDetail() {
               disabled={agentAction.isPending || isPendingApproval}
             >
               <Play className="h-3.5 w-3.5 sm:mr-1" />
-              <span className="hidden sm:inline">Resume</span>
+              <span className="hidden sm:inline">{t("agentDetail.resume")}</span>
             </Button>
           ) : (
             <Button
@@ -490,7 +490,7 @@ export function AgentDetail() {
               disabled={agentAction.isPending || isPendingApproval}
             >
               <Pause className="h-3.5 w-3.5 sm:mr-1" />
-              <span className="hidden sm:inline">Pause</span>
+              <span className="hidden sm:inline">{t("agentDetail.pause")}</span>
             </Button>
           )}
           <span className="hidden sm:inline"><StatusBadge status={agent.status} /></span>
@@ -503,7 +503,7 @@ export function AgentDetail() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
               </span>
-              <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">Live</span>
+              <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">{t("agentDetail.live")}</span>
             </Link>
           )}
 
@@ -523,7 +523,7 @@ export function AgentDetail() {
                 }}
               >
                 <Settings className="h-3 w-3" />
-                Configure Agent
+                {t("agentDetail.menu.configure")}
               </button>
               <button
                 className="flex items-center gap-2 w-full px-2 py-1.5 text-xs rounded hover:bg-accent/50"
@@ -533,7 +533,7 @@ export function AgentDetail() {
                 }}
               >
                 <Copy className="h-3 w-3" />
-                Copy Agent ID
+                {t("agentDetail.menu.copyId")}
               </button>
               <button
                 className="flex items-center gap-2 w-full px-2 py-1.5 text-xs rounded hover:bg-accent/50"
@@ -543,7 +543,7 @@ export function AgentDetail() {
                 }}
               >
                 <RotateCcw className="h-3 w-3" />
-                Reset Sessions
+                {t("agentDetail.menu.resetSessions")}
               </button>
               <button
                 className="flex items-center gap-2 w-full px-2 py-1.5 text-xs rounded hover:bg-accent/50 text-destructive"
@@ -553,7 +553,7 @@ export function AgentDetail() {
                 }}
               >
                 <Trash2 className="h-3 w-3" />
-                Terminate
+                {t("agentDetail.menu.terminate")}
               </button>
             </PopoverContent>
           </Popover>
@@ -934,14 +934,14 @@ function ConfigSummary({
           )}
           {agent.capabilities && (
             <div className="pt-1">
-              <span className="text-xs text-muted-foreground">Capabilities</span>
+              <span className="text-xs text-muted-foreground">{t("agentDetail.capabilities")}</span>
               <p className="text-sm mt-0.5">{agent.capabilities}</p>
             </div>
           )}
         </div>
         {promptText && (
           <div className="border border-border rounded-lg p-4 space-y-2">
-            <h4 className="text-xs text-muted-foreground font-medium">Prompt Template</h4>
+            <h4 className="text-xs text-muted-foreground font-medium">{t("agentDetail.promptTemplate")}</h4>
             <pre className="text-xs text-muted-foreground line-clamp-[12] font-mono whitespace-pre-wrap">{promptText}</pre>
           </div>
         )}
@@ -959,6 +959,7 @@ function CostsSection({
   runtimeState?: AgentRuntimeState;
   runs: HeartbeatRun[];
 }) {
+  const { t } = useI18n();
   const runsWithCost = runs
     .filter((r) => {
       const u = r.usageJson as Record<string, unknown> | null;
@@ -972,19 +973,19 @@ function CostsSection({
         <div className="border border-border rounded-lg p-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <span className="text-xs text-muted-foreground block">Input tokens</span>
+              <span className="text-xs text-muted-foreground block">{t("agentDetail.tokens.input")}</span>
               <span className="text-lg font-semibold">{formatTokens(runtimeState.totalInputTokens)}</span>
             </div>
             <div>
-              <span className="text-xs text-muted-foreground block">Output tokens</span>
+              <span className="text-xs text-muted-foreground block">{t("agentDetail.tokens.output")}</span>
               <span className="text-lg font-semibold">{formatTokens(runtimeState.totalOutputTokens)}</span>
             </div>
             <div>
-              <span className="text-xs text-muted-foreground block">Cached tokens</span>
+              <span className="text-xs text-muted-foreground block">{t("agentDetail.tokens.cached")}</span>
               <span className="text-lg font-semibold">{formatTokens(runtimeState.totalCachedInputTokens)}</span>
             </div>
             <div>
-              <span className="text-xs text-muted-foreground block">Total cost</span>
+              <span className="text-xs text-muted-foreground block">{t("agentDetail.tokens.totalCost")}</span>
               <span className="text-lg font-semibold">{formatCents(runtimeState.totalCostCents)}</span>
             </div>
           </div>
@@ -995,11 +996,11 @@ function CostsSection({
           <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-border bg-accent/20">
-                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Date</th>
-                <th className="text-left px-3 py-2 font-medium text-muted-foreground">Run</th>
-                <th className="text-right px-3 py-2 font-medium text-muted-foreground">Input</th>
-                <th className="text-right px-3 py-2 font-medium text-muted-foreground">Output</th>
-                <th className="text-right px-3 py-2 font-medium text-muted-foreground">Cost</th>
+                <th className="text-left px-3 py-2 font-medium text-muted-foreground">{t("agentDetail.table.date")}</th>
+                <th className="text-left px-3 py-2 font-medium text-muted-foreground">{t("agentDetail.table.run")}</th>
+                <th className="text-right px-3 py-2 font-medium text-muted-foreground">{t("agentDetail.table.input")}</th>
+                <th className="text-right px-3 py-2 font-medium text-muted-foreground">{t("agentDetail.table.output")}</th>
+                <th className="text-right px-3 py-2 font-medium text-muted-foreground">{t("agentDetail.table.cost")}</th>
               </tr>
             </thead>
             <tbody>
@@ -1311,7 +1312,7 @@ function RunsTab({
             className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline"
           >
             <ArrowLeft className="h-3.5 w-3.5" />
-            Back to runs
+            {t("agentDetail.backToRuns")}
           </Link>
           <RunDetail key={selectedRun.id} run={selectedRun} agentRouteId={agentRouteId} adapterType={adapterType} />
         </div>
@@ -1669,13 +1670,13 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
               <div className="px-4 pb-3 space-y-1 text-xs">
                 {run.sessionIdBefore && (
                   <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground w-12">{sessionChanged ? "Before" : "ID"}</span>
+                    <span className="text-muted-foreground w-12">{sessionChanged ? t("common.before") : t("common.id")}</span>
                     <CopyText text={run.sessionIdBefore} className="font-mono" />
                   </div>
                 )}
                 {sessionChanged && run.sessionIdAfter && (
                   <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground w-12">After</span>
+                    <span className="text-muted-foreground w-12">{t("common.after")}</span>
                     <CopyText text={run.sessionIdAfter} className="font-mono" />
                   </div>
                 )}
@@ -1687,22 +1688,20 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
                       disabled={clearSessionsForTouchedIssues.isPending}
                       onClick={() => {
                         const issueCount = touchedIssueIds.length;
-                        const confirmed = window.confirm(
-                          `Clear session for ${issueCount} issue${issueCount === 1 ? "" : "s"} touched by this run?`,
-                        );
+                        const confirmed = window.confirm(t("agentDetail.clearSessions.confirm", { count: issueCount }));
                         if (!confirmed) return;
                         clearSessionsForTouchedIssues.mutate();
                       }}
                     >
                       {clearSessionsForTouchedIssues.isPending
-                        ? "clearing session..."
-                        : "clear session for these issues"}
+                        ? t("agentDetail.clearSessions.clearing")
+                        : t("agentDetail.clearSessions.clearForIssues")}
                     </button>
                     {clearSessionsForTouchedIssues.isError && (
                       <p className="text-[11px] text-destructive mt-1">
                         {clearSessionsForTouchedIssues.error instanceof Error
                           ? clearSessionsForTouchedIssues.error.message
-                          : "Failed to clear sessions"}
+                          : t("agentDetail.clearSessions.failed")}
                       </p>
                     )}
                   </div>
@@ -1716,7 +1715,7 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
       {/* Issues touched by this run */}
       {touchedIssues && touchedIssues.length > 0 && (
         <div className="space-y-2">
-          <span className="text-xs font-medium text-muted-foreground">Issues Touched ({touchedIssues.length})</span>
+          <span className="text-xs font-medium text-muted-foreground">{t("agentDetail.issuesTouched")} ({touchedIssues.length})</span>
           <div className="border border-border rounded-lg divide-y divide-border">
             {touchedIssues.map((issue) => (
               <Link
@@ -1738,7 +1737,7 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
       {/* stderr excerpt for failed runs */}
       {run.stderrExcerpt && (
         <div className="space-y-1">
-          <span className="text-xs font-medium text-red-600 dark:text-red-400">stderr</span>
+          <span className="text-xs font-medium text-red-600 dark:text-red-400">{t("agentDetail.stderr")}</span>
           <pre className="bg-neutral-100 dark:bg-neutral-950 rounded-md p-3 text-xs font-mono text-red-700 dark:text-red-300 overflow-x-auto whitespace-pre-wrap">{run.stderrExcerpt}</pre>
         </div>
       )}
@@ -1746,7 +1745,7 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
       {/* stdout excerpt when no log is available */}
       {run.stdoutExcerpt && !run.logRef && (
         <div className="space-y-1">
-          <span className="text-xs font-medium text-muted-foreground">stdout</span>
+          <span className="text-xs font-medium text-muted-foreground">{t("agentDetail.stdout")}</span>
           <pre className="bg-neutral-100 dark:bg-neutral-950 rounded-md p-3 text-xs font-mono text-foreground overflow-x-auto whitespace-pre-wrap">{run.stdoutExcerpt}</pre>
         </div>
       )}
@@ -2362,7 +2361,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
 
       {(run.status === "failed" || run.status === "timed_out") && (
         <div className="rounded-lg border border-red-300 dark:border-red-500/30 bg-red-50 dark:bg-red-950/20 p-3 space-y-2">
-          <div className="text-xs font-medium text-red-700 dark:text-red-300">Failure details</div>
+          <div className="text-xs font-medium text-red-700 dark:text-red-300">{t("agentDetail.failureDetails")}</div>
           {run.error && (
             <div className="text-xs text-red-600 dark:text-red-200">
               <span className="text-red-700 dark:text-red-300">Error: </span>
@@ -2371,7 +2370,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {run.stderrExcerpt && run.stderrExcerpt.trim() && (
             <div>
-              <div className="text-xs text-red-700 dark:text-red-300 mb-1">stderr excerpt</div>
+              <div className="text-xs text-red-700 dark:text-red-300 mb-1">{t("agentDetail.stderrExcerpt")}</div>
               <pre className="bg-red-50 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap text-red-800 dark:text-red-100">
                 {run.stderrExcerpt}
               </pre>
@@ -2379,7 +2378,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {run.resultJson && (
             <div>
-              <div className="text-xs text-red-700 dark:text-red-300 mb-1">adapter result JSON</div>
+              <div className="text-xs text-red-700 dark:text-red-300 mb-1">{t("agentDetail.adapterResultJson")}</div>
               <pre className="bg-red-50 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap text-red-800 dark:text-red-100">
                 {JSON.stringify(run.resultJson, null, 2)}
               </pre>
@@ -2387,7 +2386,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {run.stdoutExcerpt && run.stdoutExcerpt.trim() && !run.resultJson && (
             <div>
-              <div className="text-xs text-red-700 dark:text-red-300 mb-1">stdout excerpt</div>
+              <div className="text-xs text-red-700 dark:text-red-300 mb-1">{t("agentDetail.stdoutExcerpt")}</div>
               <pre className="bg-red-50 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap text-red-800 dark:text-red-100">
                 {run.stdoutExcerpt}
               </pre>
@@ -2398,7 +2397,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
 
       {events.length > 0 && (
         <div>
-          <div className="mb-2 text-xs font-medium text-muted-foreground">Events ({events.length})</div>
+          <div className="mb-2 text-xs font-medium text-muted-foreground">{t("agentDetail.events")} ({events.length})</div>
           <div className="bg-neutral-100 dark:bg-neutral-950 rounded-lg p-3 font-mono text-xs space-y-0.5">
             {events.map((evt) => {
               const color = evt.color

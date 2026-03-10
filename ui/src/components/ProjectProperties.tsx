@@ -15,14 +15,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { ExternalLink, Github, Plus, Trash2, X } from "lucide-react";
 import { ChoosePathButton } from "./PathInstructionsModal";
+import { useI18n } from "../context/I18nContext";
 
-const PROJECT_STATUSES = [
-  { value: "backlog", label: "Backlog" },
-  { value: "planned", label: "Planned" },
-  { value: "in_progress", label: "In Progress" },
-  { value: "completed", label: "Completed" },
-  { value: "cancelled", label: "Cancelled" },
-];
+const PROJECT_STATUS_VALUES = ["backlog", "planned", "in_progress", "completed", "cancelled"] as const;
 
 interface ProjectPropertiesProps {
   project: Project;
@@ -41,8 +36,12 @@ function PropertyRow({ label, children }: { label: string; children: React.React
 }
 
 function ProjectStatusPicker({ status, onChange }: { status: string; onChange: (status: string) => void }) {
+  const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const colorClass = statusBadge[status] ?? statusBadgeDefault;
+  const statusOptions = PROJECT_STATUS_VALUES.map((v) => ({ value: v, label: t(
+    v === "planned" ? "status.todo" : v === "completed" || v === "cancelled" ? "status.done" : `status.${v}`
+  ) }));
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -57,7 +56,7 @@ function ProjectStatusPicker({ status, onChange }: { status: string; onChange: (
         </button>
       </PopoverTrigger>
       <PopoverContent className="w-40 p-1" align="start">
-        {PROJECT_STATUSES.map((s) => (
+        {statusOptions.map((s) => (
           <Button
             key={s.value}
             variant="ghost"
@@ -77,6 +76,7 @@ function ProjectStatusPicker({ status, onChange }: { status: string; onChange: (
 }
 
 export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps) {
+  const { t } = useI18n();
   const { selectedCompanyId } = useCompany();
   const queryClient = useQueryClient();
   const [goalOpen, setGoalOpen] = useState(false);
@@ -379,7 +379,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                         variant="ghost"
                         size="icon-xs"
                         onClick={() => clearLocalWorkspace(workspace)}
-                        aria-label="Delete local folder"
+                        aria-label={t("projects.workspace.deleteLocal")}
                       >
                         <Trash2 className="h-3 w-3" />
                       </Button>
@@ -401,7 +401,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                         variant="ghost"
                         size="icon-xs"
                         onClick={() => clearRepoWorkspace(workspace)}
-                        aria-label="Delete workspace repo"
+                        aria-label={t("projects.workspace.deleteRepo")}
                       >
                         <Trash2 className="h-3 w-3" />
                       </Button>
@@ -421,7 +421,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                 setWorkspaceError(null);
               }}
             >
-              Add workspace local folder
+              {t("projects.workspace.addLocal")}
             </Button>
             <Button
               variant="outline"
@@ -432,7 +432,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                 setWorkspaceError(null);
               }}
             >
-              Add workspace repo
+              {t("projects.workspace.addRepo")}
             </Button>
           </div>
           {workspaceMode === "local" && (
@@ -454,7 +454,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                   disabled={!workspaceCwd.trim() || createWorkspace.isPending}
                   onClick={submitLocalWorkspace}
                 >
-                  Save
+                  {t("common.save")}
                 </Button>
                 <Button
                   variant="ghost"
@@ -466,7 +466,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                     setWorkspaceError(null);
                   }}
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
               </div>
             </div>
@@ -477,7 +477,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                 className="w-full rounded border border-border bg-transparent px-2 py-1 text-xs outline-none"
                 value={workspaceRepoUrl}
                 onChange={(e) => setWorkspaceRepoUrl(e.target.value)}
-                placeholder="https://github.com/org/repo"
+                placeholder={t("projects.workspace.repo.url.placeholder")}
               />
               <div className="flex items-center gap-2">
                 <Button
@@ -487,7 +487,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                   disabled={!workspaceRepoUrl.trim() || createWorkspace.isPending}
                   onClick={submitRepoWorkspace}
                 >
-                  Save
+                  {t("common.save")}
                 </Button>
                 <Button
                   variant="ghost"
@@ -499,7 +499,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                     setWorkspaceError(null);
                   }}
                 >
-                  Cancel
+                  {t("actions.cancel")}
                 </Button>
               </div>
             </div>
@@ -508,13 +508,13 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
             <p className="text-xs text-destructive">{workspaceError}</p>
           )}
           {createWorkspace.isError && (
-            <p className="text-xs text-destructive">Failed to save workspace.</p>
+            <p className="text-xs text-destructive">{t("projects.workspace.error.save")}</p>
           )}
           {removeWorkspace.isError && (
-            <p className="text-xs text-destructive">Failed to delete workspace.</p>
+            <p className="text-xs text-destructive">{t("projects.workspace.error.delete")}</p>
           )}
           {updateWorkspace.isError && (
-            <p className="text-xs text-destructive">Failed to update workspace.</p>
+            <p className="text-xs text-destructive">{t("projects.workspace.error.update")}</p>
           )}
         </div>
 

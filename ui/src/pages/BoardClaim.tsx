@@ -54,9 +54,9 @@ export function BoardClaimPage() {
     return (
       <div className="mx-auto max-w-xl py-10">
         <div className="rounded-lg border border-border bg-card p-6">
-          <h1 className="text-lg font-semibold">Claim challenge unavailable</h1>
+          <h1 className="text-lg font-semibold">{t("board.claimUnavailable.title")}</h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            {statusQuery.error instanceof Error ? statusQuery.error.message : "Challenge is invalid or expired."}
+            {statusQuery.error instanceof Error ? statusQuery.error.message : t("board.claimUnavailable.desc")}
           </p>
         </div>
       </div>
@@ -65,7 +65,7 @@ export function BoardClaimPage() {
 
   const status = statusQuery.data;
   if (!status) {
-    return <div className="mx-auto max-w-xl py-10 text-sm text-destructive">Claim challenge unavailable.</div>;
+    return <div className="mx-auto max-w-xl py-10 text-sm text-destructive">{t("board.claimUnavailable.short")}</div>;
   }
 
   if (status.status === "claimed") {

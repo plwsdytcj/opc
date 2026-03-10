@@ -167,17 +167,19 @@ const statusColors: Record<string, string> = {
   backlog: "#64748b",
 };
 
-const statusLabels: Record<string, string> = {
-  todo: "To Do",
-  in_progress: "In Progress",
-  in_review: "In Review",
-  done: "Done",
-  blocked: "Blocked",
-  cancelled: "Cancelled",
-  backlog: "Backlog",
-};
+import { useI18n } from "../context/I18nContext";
 
 export function IssueStatusChart({ issues }: { issues: { status: string; createdAt: Date }[] }) {
+  const { t } = useI18n();
+  const statusLabels: Record<string, string> = {
+    todo: t("status.todo"),
+    in_progress: t("status.in_progress"),
+    in_review: t("status.in_review"),
+    done: t("status.done"),
+    blocked: t("status.blocked"),
+    cancelled: t("status.cancelled"),
+    backlog: t("status.backlog"),
+  };
   const days = getLast14Days();
   const allStatuses = new Set<string>();
   const grouped = new Map<string, Record<string, number>>();

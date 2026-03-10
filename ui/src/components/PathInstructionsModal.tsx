@@ -8,40 +8,41 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { useI18n } from "../context/I18nContext";
 
 type Platform = "mac" | "windows" | "linux";
 
-const platforms: { id: Platform; label: string; icon: typeof Apple }[] = [
-  { id: "mac", label: "macOS", icon: Apple },
-  { id: "windows", label: "Windows", icon: Monitor },
-  { id: "linux", label: "Linux", icon: Terminal },
+const platforms: { id: Platform; labelKey: string; icon: typeof Apple }[] = [
+  { id: "mac", labelKey: "pathModal.platform.mac", icon: Apple },
+  { id: "windows", labelKey: "pathModal.platform.windows", icon: Monitor },
+  { id: "linux", labelKey: "pathModal.platform.linux", icon: Terminal },
 ];
 
-const instructions: Record<Platform, { steps: string[]; tip?: string }> = {
+const instructionsKeys: Record<Platform, { steps: string[]; tip?: string }> = {
   mac: {
     steps: [
-      "Open Finder and navigate to the folder.",
-      "Right-click (or Control-click) the folder.",
-      "Hold the Option (⌥) key — \"Copy\" changes to \"Copy as Pathname\".",
-      "Click \"Copy as Pathname\", then paste here.",
+      "pathModal.mac.step1",
+      "pathModal.mac.step2",
+      "pathModal.mac.step3",
+      "pathModal.mac.step4",
     ],
-    tip: "You can also open Terminal, type cd, drag the folder into the terminal window, and press Enter. Then type pwd to see the full path.",
+    tip: "pathModal.mac.tip",
   },
   windows: {
     steps: [
-      "Open File Explorer and navigate to the folder.",
-      "Click in the address bar at the top — the full path will appear.",
-      "Copy the path, then paste here.",
+      "pathModal.windows.step1",
+      "pathModal.windows.step2",
+      "pathModal.windows.step3",
     ],
-    tip: "Alternatively, hold Shift and right-click the folder, then select \"Copy as path\".",
+    tip: "pathModal.windows.tip",
   },
   linux: {
     steps: [
-      "Open a terminal and navigate to the directory with cd.",
-      "Run pwd to print the full path.",
-      "Copy the output and paste here.",
+      "pathModal.linux.step1",
+      "pathModal.linux.step2",
+      "pathModal.linux.step3",
     ],
-    tip: "In most file managers, Ctrl+L reveals the full path in the address bar.",
+    tip: "pathModal.linux.tip",
   },
 };
 
@@ -61,19 +62,19 @@ export function PathInstructionsModal({
   open,
   onOpenChange,
 }: PathInstructionsModalProps) {
+  const { t } = useI18n();
   const [platform, setPlatform] = useState<Platform>(detectPlatform);
-
-  const current = instructions[platform];
+  const current = instructionsKeys[platform];
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-base">How to get a full path</DialogTitle>
+          <DialogTitle className="text-base">{t("pathModal.title")}</DialogTitle>
           <DialogDescription>
-            Paste the absolute path (e.g.{" "}
+            {t("pathModal.description.start")} {" "}
             <code className="text-xs bg-muted px-1 py-0.5 rounded">/Users/you/project</code>
-            ) into the input field.
+            {" "}{t("pathModal.description.end")}
           </DialogDescription>
         </DialogHeader>
 
@@ -92,26 +93,26 @@ export function PathInstructionsModal({
               onClick={() => setPlatform(p.id)}
             >
               <p.icon className="h-3.5 w-3.5" />
-              {p.label}
+              {t(p.labelKey)}
             </button>
           ))}
         </div>
 
         {/* Steps */}
         <ol className="space-y-2 text-sm">
-          {current.steps.map((step, i) => (
+          {current.steps.map((key, i) => (
             <li key={i} className="flex gap-2">
               <span className="text-muted-foreground font-mono text-xs mt-0.5 shrink-0">
                 {i + 1}.
               </span>
-              <span>{step}</span>
+              <span>{t(key)}</span>
             </li>
           ))}
         </ol>
 
         {current.tip && (
           <p className="text-xs text-muted-foreground border-l-2 border-border pl-3">
-            {current.tip}
+            {t(current.tip)}
           </p>
         )}
       </DialogContent>
@@ -124,6 +125,7 @@ export function PathInstructionsModal({
  * Drop-in replacement for the old showDirectoryPicker buttons.
  */
 export function ChoosePathButton({ className }: { className?: string }) {
+  const { t } = useI18n();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -135,7 +137,7 @@ export function ChoosePathButton({ className }: { className?: string }) {
         )}
         onClick={() => setOpen(true)}
       >
-        Choose
+        {t("pathModal.choose")}
       </button>
       <PathInstructionsModal open={open} onOpenChange={setOpen} />
     </>

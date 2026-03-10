@@ -12,8 +12,10 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Fragment } from "react";
+import { useI18n } from "../context/I18nContext";
 
 export function BreadcrumbBar() {
+  const { t } = useI18n();
   const { breadcrumbs } = useBreadcrumbs();
   const { toggleSidebar, isMobile } = useSidebar();
 
@@ -25,7 +27,7 @@ export function BreadcrumbBar() {
       size="icon-sm"
       className="mr-2 shrink-0"
       onClick={toggleSidebar}
-      aria-label="Open sidebar"
+      aria-label={t("layout.openSidebar")}
     >
       <Menu className="h-5 w-5" />
     </Button>
