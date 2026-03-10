@@ -163,7 +163,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
   const deriveWorkspaceNameFromPath = (value: string) => {
     const normalized = value.trim().replace(/[\\/]+$/, "");
     const segments = normalized.split(/[\\/]/).filter(Boolean);
-    return segments[segments.length - 1] ?? "Local folder";
+    return segments[segments.length - 1] ?? t("projects.workspace.local");
   };
 
   const deriveWorkspaceNameFromRepo = (value: string) => {
@@ -171,9 +171,9 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
       const parsed = new URL(value);
       const segments = parsed.pathname.split("/").filter(Boolean);
       const repo = segments[segments.length - 1]?.replace(/\.git$/i, "") ?? "";
-      return repo || "GitHub repo";
+      return repo || t("projects.workspace.repo");
     } catch {
-      return "GitHub repo";
+      return t("projects.workspace.repo");
     }
   };
 
@@ -194,7 +194,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
   const submitLocalWorkspace = () => {
     const cwd = workspaceCwd.trim();
     if (!isAbsolutePath(cwd)) {
-      setWorkspaceError("Local folder must be a full absolute path.");
+      setWorkspaceError(t("projects.workspace.local.errorFullPath"));
       return;
     }
     setWorkspaceError(null);
@@ -207,7 +207,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
   const submitRepoWorkspace = () => {
     const repoUrl = workspaceRepoUrl.trim();
     if (!isGitHubRepoUrl(repoUrl)) {
-      setWorkspaceError("Repo workspace must use a valid GitHub repo URL.");
+      setWorkspaceError(t("projects.workspace.repo.errorUrl"));
       return;
     }
     setWorkspaceError(null);
@@ -221,8 +221,8 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
   const clearLocalWorkspace = (workspace: Project["workspaces"][number]) => {
     const confirmed = window.confirm(
       workspace.repoUrl
-        ? "Clear local folder from this workspace?"
-        : "Delete this workspace local folder?",
+        ? t("projects.workspace.clearLocalFromWorkspace")
+        : t("projects.workspace.deleteLocalFolder"),
     );
     if (!confirmed) return;
     if (workspace.repoUrl) {
@@ -239,8 +239,8 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
     const hasLocalFolder = Boolean(workspace.cwd && workspace.cwd !== REPO_ONLY_CWD_SENTINEL);
     const confirmed = window.confirm(
       hasLocalFolder
-        ? "Clear GitHub repo from this workspace?"
-        : "Delete this workspace repo?",
+        ? t("projects.workspace.clearRepoFromWorkspace")
+        : t("projects.workspace.deleteWorkspaceRepo"),
     );
     if (!confirmed) return;
     if (hasLocalFolder) {
@@ -256,7 +256,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
   return (
     <div className="space-y-4">
       <div className="space-y-1">
-        <PropertyRow label="Status">
+        <PropertyRow label={t("projectDetail.status")}>
           {onUpdate ? (
             <ProjectStatusPicker
               status={project.status}
@@ -267,16 +267,16 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
           )}
         </PropertyRow>
         {project.leadAgentId && (
-          <PropertyRow label="Lead">
+          <PropertyRow label={t("projectDetail.lead")}>
             <span className="text-sm font-mono">{project.leadAgentId.slice(0, 8)}</span>
           </PropertyRow>
         )}
         <div className="py-1.5">
           <div className="flex items-start justify-between gap-2">
-            <span className="text-xs text-muted-foreground">Goals</span>
+            <span className="text-xs text-muted-foreground">{t("projectDetail.goals")}</span>
             <div className="flex flex-col items-end gap-1.5">
               {linkedGoals.length === 0 ? (
-                <span className="text-sm text-muted-foreground">None</span>
+                <span className="text-sm text-muted-foreground">{t("projectDetail.none")}</span>
               ) : (
                 <div className="flex flex-wrap justify-end gap-1.5 max-w-[220px]">
                   {linkedGoals.map((goal) => (
@@ -292,7 +292,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                           className="text-muted-foreground hover:text-foreground"
                           type="button"
                           onClick={() => removeGoal(goal.id)}
-                          aria-label={`Remove goal ${goal.title}`}
+                          aria-label={t("projectDetail.removeGoal", { title: goal.title })}
                         >
                           <X className="h-3 w-3" />
                         </button>
@@ -311,13 +311,13 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                       disabled={availableGoals.length === 0}
                     >
                       <Plus className="h-3 w-3 mr-1" />
-                      Goal
+                      {t("projectDetail.addGoal")}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-56 p-1" align="end">
                     {availableGoals.length === 0 ? (
                       <div className="px-2 py-1.5 text-xs text-muted-foreground">
-                        All goals linked.
+                        {t("projectDetail.allGoalsLinked")}
                       </div>
                     ) : (
                       availableGoals.map((goal) => (
@@ -442,7 +442,7 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
                   className="w-full rounded border border-border bg-transparent px-2 py-1 text-xs font-mono outline-none"
                   value={workspaceCwd}
                   onChange={(e) => setWorkspaceCwd(e.target.value)}
-                  placeholder="/absolute/path/to/workspace"
+                  placeholder={t("projects.workspace.local.placeholder")}
                 />
                 <ChoosePathButton />
               </div>
@@ -520,10 +520,10 @@ export function ProjectProperties({ project, onUpdate }: ProjectPropertiesProps)
 
         <Separator />
 
-        <PropertyRow label="Created">
+        <PropertyRow label={t("common.created")}>
           <span className="text-sm">{formatDate(project.createdAt)}</span>
         </PropertyRow>
-        <PropertyRow label="Updated">
+        <PropertyRow label={t("common.updated")}>
           <span className="text-sm">{formatDate(project.updatedAt)}</span>
         </PropertyRow>
       </div>

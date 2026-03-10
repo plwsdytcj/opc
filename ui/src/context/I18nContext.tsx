@@ -207,6 +207,8 @@ const resources: Record<Language, Dict> = {
     "common.id": "ID",
     "common.back": "Back",
     "common.close": "Close",
+    "common.created": "Created",
+    "common.updated": "Updated",
 
     // Org chart controls
     "org.zoomIn": "Zoom in",
@@ -346,6 +348,10 @@ const resources: Record<Language, Dict> = {
     "projects.workspace.repo.url.placeholder": "https://github.com/org/repo",
     "projects.workspace.local.errorFullPath": "Local folder must be a full absolute path.",
     "projects.workspace.repo.errorUrl": "Repo workspace must use a valid GitHub repo URL.",
+    "projects.workspace.clearLocalFromWorkspace": "Clear local folder from this workspace?",
+    "projects.workspace.deleteLocalFolder": "Delete this workspace local folder?",
+    "projects.workspace.clearRepoFromWorkspace": "Clear GitHub repo from this workspace?",
+    "projects.workspace.deleteWorkspaceRepo": "Delete this workspace repo?",
     "projects.workspace.deleteLocal": "Delete local folder",
     "projects.workspace.deleteRepo": "Delete workspace repo",
     "projects.workspace.addLocal": "Add workspace local folder",
@@ -532,6 +538,12 @@ const resources: Record<Language, Dict> = {
     // Project detail
     "projectDetail.status": "Status",
     "projectDetail.targetDate": "Target Date",
+    "projectDetail.lead": "Lead",
+    "projectDetail.goals": "Goals",
+    "projectDetail.none": "None",
+    "projectDetail.allGoalsLinked": "All goals linked.",
+    "projectDetail.addGoal": "Goal",
+    "projectDetail.removeGoal": "Remove goal {title}",
     // Agent config / common
     "common.save": "Save",
     
@@ -723,6 +735,12 @@ const resources: Record<Language, Dict> = {
     // Project detail
     "projectDetail.status": "状态",
     "projectDetail.targetDate": "目标日期",
+    "projectDetail.lead": "负责人",
+    "projectDetail.goals": "目标",
+    "projectDetail.none": "无",
+    "projectDetail.allGoalsLinked": "全部目标已关联。",
+    "projectDetail.addGoal": "目标",
+    "projectDetail.removeGoal": "移除目标 {title}",
 
     // Agent config / common
     "common.save": "保存",
@@ -781,6 +799,8 @@ const resources: Record<Language, Dict> = {
     "common.id": "ID",
     "common.back": "返回",
     "common.close": "关闭",
+    "common.created": "创建时间",
+    "common.updated": "更新时间",
 
     // Activity page
     "activity.selectCompany": "请选择公司以查看活动。",
@@ -1006,6 +1026,10 @@ const resources: Record<Language, Dict> = {
     "projects.workspace.repo.url.placeholder": "https://github.com/org/repo",
     "projects.workspace.local.errorFullPath": "本地文件夹必须是完整的绝对路径。",
     "projects.workspace.repo.errorUrl": "仓库工作区必须是有效的 GitHub 仓库 URL。",
+    "projects.workspace.clearLocalFromWorkspace": "从此工作区清除本地文件夹？",
+    "projects.workspace.deleteLocalFolder": "删除此工作区的本地文件夹？",
+    "projects.workspace.clearRepoFromWorkspace": "从此工作区清除 GitHub 仓库？",
+    "projects.workspace.deleteWorkspaceRepo": "删除此工作区的仓库？",
     "projects.workspace.deleteLocal": "删除本地文件夹",
     "projects.workspace.deleteRepo": "删除仓库工作区",
     "projects.workspace.addLocal": "添加本地工作区",
