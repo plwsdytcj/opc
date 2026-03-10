@@ -67,10 +67,10 @@ export function ApprovalDetail() {
 
   useEffect(() => {
     setBreadcrumbs([
-      { label: "Approvals", href: "/approvals" },
-      { label: approval?.id?.slice(0, 8) ?? approvalId ?? "Approval" },
+      { label: t("nav.approvals"), href: "/approvals" },
+      { label: approval?.id?.slice(0, 8) ?? approvalId ?? t("nav.approvals") },
     ]);
-  }, [setBreadcrumbs, approval, approvalId]);
+  }, [setBreadcrumbs, approval, approvalId, t]);
 
   const refresh = () => {
     if (!approvalId) return;
@@ -93,7 +93,7 @@ export function ApprovalDetail() {
       refresh();
       navigate(`/approvals/${approvalId}?resolved=approved`, { replace: true });
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Approve failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvals.error.approveFailed")),
   });
 
   const rejectMutation = useMutation({
@@ -102,7 +102,7 @@ export function ApprovalDetail() {
       setError(null);
       refresh();
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Reject failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvals.error.rejectFailed")),
   });
 
   const revisionMutation = useMutation({
@@ -111,7 +111,7 @@ export function ApprovalDetail() {
       setError(null);
       refresh();
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Revision request failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvalDetail.error.revisionFailed")),
   });
 
   const resubmitMutation = useMutation({
@@ -120,7 +120,7 @@ export function ApprovalDetail() {
       setError(null);
       refresh();
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Resubmit failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvalDetail.error.resubmitFailed")),
   });
 
   const addCommentMutation = useMutation({
@@ -130,7 +130,7 @@ export function ApprovalDetail() {
       setError(null);
       refresh();
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Comment failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvalDetail.error.commentFailed")),
   });
 
   const deleteAgentMutation = useMutation({
@@ -140,7 +140,7 @@ export function ApprovalDetail() {
       refresh();
       navigate("/approvals");
     },
-    onError: (err) => setError(err instanceof Error ? err.message : "Delete failed"),
+    onError: (err) => setError(err instanceof Error ? err.message : t("approvalDetail.error.deleteFailed")),
   });
 
   if (isLoading) return <PageSkeleton variant="detail" />;
@@ -308,7 +308,7 @@ export function ApprovalDetail() {
               variant="outline"
               className="text-destructive border-destructive/40"
               onClick={() => {
-                if (!window.confirm("Delete this disapproved agent? This cannot be undone.")) return;
+                if (!window.confirm(t("approvalDetail.deleteDisapprovedConfirm"))) return;
                 deleteAgentMutation.mutate(linkedAgentId);
               }}
               disabled={deleteAgentMutation.isPending}
@@ -355,7 +355,7 @@ export function ApprovalDetail() {
             onClick={() => addCommentMutation.mutate()}
             disabled={!commentBody.trim() || addCommentMutation.isPending}
           >
-            {addCommentMutation.isPending ? "Posting…" : "Post comment"}
+            {addCommentMutation.isPending ? t("common.posting") : t("common.postComment")}
           </Button>
         </div>
       </div>

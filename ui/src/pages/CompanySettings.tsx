@@ -219,7 +219,7 @@ export function CompanySettings() {
       {/* Appearance */}
       <div className="space-y-4">
         <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-          Appearance
+          {t("settings.sections.appearance")}
         </div>
         <div className="space-y-3 rounded-md border border-border px-4 py-4">
           <div className="flex items-start gap-4">
@@ -232,8 +232,8 @@ export function CompanySettings() {
             </div>
             <div className="flex-1 space-y-2">
               <Field
-                label="Brand color"
-                hint="Sets the hue for the company icon. Leave empty for auto-generated color."
+                label={t("settings.appearance.brandColor")}
+                hint={t("settings.appearance.brandColor.hint")}
               >
                 <div className="flex items-center gap-2">
                   <input

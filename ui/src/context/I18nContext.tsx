@@ -32,6 +32,8 @@ const resources: Record<Language, Dict> = {
 
     // Sidebar / actions / labels
     "sidebar.selectCompany": "Select company",
+    "sidebar.noCompanies": "No companies",
+    "sidebar.manageCompanies": "Manage Companies",
     "actions.newIssue": "New Issue",
     "actions.newProject": "New project",
     "actions.newGoal": "New goal",
@@ -199,6 +201,8 @@ const resources: Record<Language, Dict> = {
     "runs.stop": "Stop",
     "runs.recentUpdates": "Recent run updates",
     "runs.waitingOutput": "Waiting for run output...",
+    "runs.startedAt": "Started {time}",
+    "runs.finishedAt": "Finished {time}",
     
     // Generic
     "common.addDescriptionPlaceholder": "Add a description...",
@@ -579,6 +583,11 @@ const resources: Record<Language, Dict> = {
     "approvalDetail.confirmed": "Approval confirmed",
     "approvalDetail.requestedBy": "Requested by",
     "approvalDetail.linkedIssues": "Linked Issues",
+    "approvalDetail.deleteDisapprovedConfirm": "Delete this disapproved agent? This cannot be undone.",
+    "approvalDetail.error.revisionFailed": "Revision request failed",
+    "approvalDetail.error.resubmitFailed": "Resubmit failed",
+    "approvalDetail.error.commentFailed": "Comment failed",
+    "approvalDetail.error.deleteFailed": "Delete failed",
     // Project detail
     "projectDetail.status": "Status",
     "projectDetail.targetDate": "Target Date",
@@ -629,6 +638,8 @@ const resources: Record<Language, Dict> = {
 
     // Sidebar / actions / labels
     "sidebar.selectCompany": "选择公司",
+    "sidebar.noCompanies": "暂无公司",
+    "sidebar.manageCompanies": "管理公司",
     "actions.newIssue": "新建问题",
     "actions.newProject": "新建项目",
     "actions.newGoal": "新建目标",
@@ -775,6 +786,11 @@ const resources: Record<Language, Dict> = {
     "approvalDetail.reviewLinkedIssue": "查看关联问题",
     "approvalDetail.openHiredAgent": "打开已入职的智能体",
     "approvalDetail.back": "返回审批列表",
+    "approvalDetail.deleteDisapprovedConfirm": "删除该被拒绝的智能体？该操作无法撤销。",
+    "approvalDetail.error.revisionFailed": "请求复审失败",
+    "approvalDetail.error.resubmitFailed": "重新提交失败",
+    "approvalDetail.error.commentFailed": "评论失败",
+    "approvalDetail.error.deleteFailed": "删除失败",
 
     // Project detail
     "projectDetail.status": "状态",
@@ -966,6 +982,8 @@ const resources: Record<Language, Dict> = {
     "runs.stop": "停止",
     "runs.recentUpdates": "近期运行更新",
     "runs.waitingOutput": "等待运行输出...",
+    "runs.startedAt": "开始于 {time}",
+    "runs.finishedAt": "完成于 {time}",
 
     // Org chart controls
     "org.zoomIn": "放大",

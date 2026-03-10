@@ -415,6 +415,7 @@ function AgentRunCard({
   feed: FeedItem[];
   isActive: boolean;
 }) {
+  const { t } = useI18n();
   const bodyRef = useRef<HTMLDivElement>(null);
   const recent = feed.slice(-20);
 
@@ -477,11 +478,13 @@ function AgentRunCard({
       {/* Feed body */}
       <div ref={bodyRef} className="flex-1 max-h-[140px] overflow-y-auto p-2 font-mono text-[11px] space-y-1">
         {isActive && recent.length === 0 && (
-          <div className="text-xs text-muted-foreground">Waiting for output...</div>
+          <div className="text-xs text-muted-foreground">{t("runs.waitingOutput")}</div>
         )}
         {!isActive && recent.length === 0 && (
           <div className="text-xs text-muted-foreground">
-            {run.finishedAt ? `Finished ${relativeTime(run.finishedAt)}` : `Started ${relativeTime(run.createdAt)}`}
+            {run.finishedAt
+              ? t("runs.finishedAt", { time: relativeTime(run.finishedAt) })
+              : t("runs.startedAt", { time: relativeTime(run.createdAt) })}
           </div>
         )}
         {recent.map((item, index) => (
