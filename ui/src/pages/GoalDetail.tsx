@@ -95,10 +95,10 @@ export function GoalDetail() {
 
   useEffect(() => {
     setBreadcrumbs([
-      { label: "Goals", href: "/goals" },
-      { label: goal?.title ?? goalId ?? "Goal" }
+      { label: t("nav.goals"), href: "/goals" },
+      { label: goal?.title ?? goalId ?? t("nav.goals") }
     ]);
-  }, [setBreadcrumbs, goal, goalId]);
+  }, [setBreadcrumbs, goal, goalId, t]);
 
   useEffect(() => {
     if (goal) {
@@ -150,10 +150,10 @@ export function GoalDetail() {
       <Tabs defaultValue="children">
         <TabsList>
           <TabsTrigger value="children">
-            Sub-Goals ({childGoals.length})
+            {t("goals.subGoals")} ({childGoals.length})
           </TabsTrigger>
           <TabsTrigger value="projects">
-            Projects ({linkedProjects.length})
+            {t("nav.projects")} ({linkedProjects.length})
           </TabsTrigger>
         </TabsList>
 
@@ -165,7 +165,7 @@ export function GoalDetail() {
               onClick={() => openNewGoal({ parentId: goalId })}
             >
               <Plus className="h-3.5 w-3.5 mr-1.5" />
-              Sub Goal
+              {t("goals.addSubGoal")}
             </Button>
           </div>
           {childGoals.length === 0 ? (

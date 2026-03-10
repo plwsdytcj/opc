@@ -217,6 +217,8 @@ const resources: Record<Language, Dict> = {
     // Goal detail
     "goals.noSubGoals": "No sub-goals.",
     "goals.noLinkedProjects": "No linked projects.",
+    "goals.subGoals": "Sub-Goals",
+    "goals.addSubGoal": "Sub Goal",
 
     // Issue detail
     "issueDetail.attachments": "Attachments",
@@ -425,6 +427,7 @@ const resources: Record<Language, Dict> = {
     "settings.invites.hint": "Creates a short-lived OpenClaw agent invite and renders a copy-ready prompt.",
     "settings.invites.copySnippet": "Copy snippet",
     "settings.invites.copiedSnippet": "Copied snippet",
+    "settings.invites.errorFailed": "Failed to create invite",
     "settings.danger.title": "Danger Zone",
     "settings.danger.archive.desc": "Archive this company to hide it from the sidebar. This persists in the database.",
     "settings.danger.archive.confirm": "Archive company \"{name}\"? It will be hidden from the sidebar.",
@@ -658,6 +661,18 @@ const resources: Record<Language, Dict> = {
     "board.claimUnavailable.title": "领取挑战不可用",
     "board.claimUnavailable.desc": "挑战无效或已过期。",
     "board.claimUnavailable.short": "领取挑战不可用。",
+    "board.invalidUrl": "无效的看板领取链接。",
+    "board.loading": "正在加载领取挑战...",
+    "board.claimed.title": "已领取看板所有权",
+    "board.claimed.desc": "此实例已关联到你当前登录的用户。",
+    "board.open": "打开看板",
+    "board.signInRequired": "需要登录",
+    "board.signInPrompt": "请先登录或创建账户，然后返回此页领取看板所有权。",
+    "board.claim.title": "领取看板所有权",
+    "board.claim.desc": "这将把你的用户提升为实例管理员，并将公司所有权从本地信任模式迁移过来。",
+    "board.claim.claiming": "正在领取...",
+    "board.claim.button": "领取所有权",
+    "board.claim.failed": "领取看板所有权失败",
     // AgentConfig
     "agentConfig.unsavedChanges": "未保存的更改",
     "agentConfig.identity": "身份",
@@ -738,6 +753,7 @@ const resources: Record<Language, Dict> = {
     // Invite Landing
     "invite.invalidToken": "无效的邀请码。",
     "invite.loading": "正在加载邀请…",
+    "settings.invites.errorFailed": "创建邀请失败",
     "invite.error.acceptFailed": "接受邀请失败",
     "invite.notAvailable.title": "邀请不可用",
     "invite.notAvailable.desc": "该邀请可能已过期、被撤销或已被使用。",
@@ -896,6 +912,8 @@ const resources: Record<Language, Dict> = {
     // Goal detail
     "goals.noSubGoals": "暂无子目标。",
     "goals.noLinkedProjects": "暂无关联项目。",
+    "goals.subGoals": "子目标",
+    "goals.addSubGoal": "新增子目标",
 
     // Issue detail
     "issues.noProject": "无项目",

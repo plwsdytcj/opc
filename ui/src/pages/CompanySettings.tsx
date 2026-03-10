@@ -125,7 +125,7 @@ export function CompanySettings() {
     },
     onError: (err) => {
       setInviteError(
-        err instanceof Error ? err.message : "Failed to create invite"
+        err instanceof Error ? err.message : t("settings.invites.errorFailed")
       );
     }
   });
@@ -251,7 +251,7 @@ export function CompanySettings() {
                         setBrandColor(v);
                       }
                     }}
-                    placeholder="Auto"
+                    placeholder={t("settings.appearance.auto")}
                     className="w-28 rounded-md border border-border bg-transparent px-2.5 py-1.5 text-sm font-mono outline-none"
                   />
                   {brandColor && (
@@ -261,7 +261,7 @@ export function CompanySettings() {
                       onClick={() => setBrandColor("")}
                       className="text-xs text-muted-foreground"
                     >
-                      Clear
+                      {t("settings.appearance.clear")}
                     </Button>
                   )}
                 </div>
@@ -279,7 +279,7 @@ export function CompanySettings() {
             onClick={handleSaveGeneral}
             disabled={generalMutation.isPending || !companyName.trim()}
           >
-            {generalMutation.isPending ? "Saving..." : "Save changes"}
+            {generalMutation.isPending ? t("settings.save.saving") : t("settings.save.saveChanges")}
           </Button>
           {generalMutation.isSuccess && (
             <span className="text-xs text-muted-foreground">{t("settings.save.saved")}</span>
@@ -288,7 +288,7 @@ export function CompanySettings() {
             <span className="text-xs text-destructive">
               {generalMutation.error instanceof Error
                 ? generalMutation.error.message
-                : "Failed to save"}
+                : t("settings.save.failed")}
             </span>
           )}
         </div>
@@ -297,12 +297,12 @@ export function CompanySettings() {
       {/* Hiring */}
       <div className="space-y-4">
         <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-          Hiring
+          {t("settings.sections.hiring")}
         </div>
         <div className="rounded-md border border-border px-4 py-3">
           <ToggleField
-            label="Require board approval for new hires"
-            hint="New agent hires stay pending until approved by board."
+            label={t("settings.hiring.requireApproval.label")}
+            hint={t("settings.hiring.requireApproval.hint")}
             checked={!!selectedCompany.requireBoardApprovalForNewAgents}
             onChange={(v) => settingsMutation.mutate(v)}
           />
@@ -312,7 +312,7 @@ export function CompanySettings() {
       {/* Invites */}
       <div className="space-y-4">
         <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-          Invites
+          {t("settings.sections.invites")}
         </div>
         <div className="space-y-3 rounded-md border border-border px-4 py-4">
           <div className="flex items-center gap-1.5">

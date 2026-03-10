@@ -104,7 +104,7 @@ export function BoardClaimPage() {
 
         {claimMutation.error && (
           <p className="mt-3 text-sm text-destructive">
-            {claimMutation.error instanceof Error ? claimMutation.error.message : "Failed to claim board ownership"}
+            {claimMutation.error instanceof Error ? claimMutation.error.message : t("board.claim.failed")}
           </p>
         )}
 
