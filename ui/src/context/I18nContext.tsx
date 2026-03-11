@@ -214,6 +214,13 @@ const resources: Record<Language, Dict> = {
     "common.close": "Close",
     "common.created": "Created",
     "common.updated": "Updated",
+    "common.name": "Name",
+    "common.role": "Role",
+    "common.icon": "Icon",
+    "common.copied": "Copied!",
+    "actions.copy": "Copy",
+    "actions.show": "Show",
+    "actions.hide": "Hide",
     "common.disabled": "Disabled",
     "common.for": "For",
     "common.model": "Model",
@@ -259,9 +266,14 @@ const resources: Record<Language, Dict> = {
     "comments.addPlaceholder": "Add a comment...",
     "comments.post": "Post comment",
     "comments.posting": "Posting…",
+    "comments.none": "No comments or runs yet.",
 
     // Agents search
     "agents.searchPlaceholder": "Search agents...",
+    
+    // Comments utils
+    "comments.copyAsMarkdown": "Copy as markdown",
+    "comments.attachImage": "Attach image",
     // Icons
     "icons.searchPlaceholder": "Search icons...",
     "icons.noMatch": "No icons match",
@@ -985,9 +997,16 @@ const resources: Record<Language, Dict> = {
     "common.close": "关闭",
     "common.created": "创建时间",
     "common.updated": "更新时间",
+    "common.name": "名称",
+    "common.copied": "已复制！",
+    "actions.copy": "复制",
+    "actions.show": "显示",
+    "actions.hide": "隐藏",
     "common.disabled": "已禁用",
     "common.for": "用于",
     "common.model": "模型",
+    "common.role": "角色",
+    "common.icon": "图标",
     "common.title": "标题",
     "common.none": "无",
     "common.scrollToBottom": "滚动到底部",
@@ -1039,6 +1058,16 @@ const resources: Record<Language, Dict> = {
     "agents.noHierarchy": "尚未定义组织结构。",
     "agents.noRecentRuns": "暂无近期运行。",
     "agents.searchPlaceholder": "搜索智能体...",
+    
+    // Comments common
+    "comments.addPlaceholder": "写点什么...",
+    "comments.post": "发表评论",
+    "comments.posting": "正在发表…",
+    "comments.none": "暂无评论或运行。",
+    
+    // Comments utils
+    "comments.copyAsMarkdown": "复制为 Markdown",
+    "comments.attachImage": "附加图片",
     // Icons
     "icons.searchPlaceholder": "搜索图标...",
     "icons.noMatch": "没有匹配的图标",
