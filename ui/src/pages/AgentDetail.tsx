@@ -404,7 +404,7 @@ export function AgentDetail() {
       crumbs.push({ label: agentName, href: `/agents/${canonicalAgentRef}` });
       if (urlRunId) {
         crumbs.push({ label: "Runs", href: `/agents/${canonicalAgentRef}/runs` });
-        crumbs.push({ label: `Run ${urlRunId.slice(0, 8)}` });
+        crumbs.push({ label: `${t("runs.label")} ${urlRunId.slice(0, 8)}` });
       } else if (activeView === "configure") {
         crumbs.push({ label: "Configure" });
       } else if (activeView === "runs") {

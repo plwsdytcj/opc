@@ -204,6 +204,7 @@ const resources: Record<Language, Dict> = {
     "runs.waitingOutput": "Waiting for run output...",
     "runs.startedAt": "Started {time}",
     "runs.finishedAt": "Finished {time}",
+    "runs.error.generic": "Run exited with an error.",
     
     // Generic
     "common.addDescriptionPlaceholder": "Add a description...",
@@ -227,6 +228,34 @@ const resources: Record<Language, Dict> = {
     "common.title": "Title",
     "common.none": "None",
     "common.scrollToBottom": "Scroll to bottom",
+    "common.ok": "OK",
+    "common.choose": "Choose",
+    
+    // Breadcrumb
+    "breadcrumb.label": "Breadcrumb",
+    "breadcrumb.more": "More",
+    
+    // Path modal
+    "pathModal.title": "Specify path manually",
+    "pathModal.description.start": "Copy the absolute path (e.g.",
+    "pathModal.description.end": ") into the input.",
+    "pathModal.platform.mac": "macOS",
+    "pathModal.platform.windows": "Windows",
+    "pathModal.platform.linux": "Linux",
+    "pathModal.mac.step1": "Find the folder in Finder.",
+    "pathModal.mac.step2": "Hold Option and right‑click the folder.",
+    "pathModal.mac.step3": "Click 'Copy as Pathname'.",
+    "pathModal.mac.step4": "Paste into the path input.",
+    "pathModal.mac.tip": "Or open Terminal, cd into the folder and run pwd.",
+    "pathModal.windows.step1": "Open File Explorer and go to the folder.",
+    "pathModal.windows.step2": "Click the address bar to show the full path.",
+    "pathModal.windows.step3": "Copy the path and paste it here.",
+    "pathModal.windows.tip": "Or hold Shift and right‑click, then select 'Copy as path'.",
+    "pathModal.linux.step1": "Open a terminal and cd to the folder.",
+    "pathModal.linux.step2": "Run pwd to print the full path.",
+    "pathModal.linux.step3": "Copy the output and paste it here.",
+    "pathModal.linux.tip": "In many file managers, Ctrl+L shows the full path.",
+    "pathModal.terminal.title": "Terminal fallback (macOS/Linux)",
 
     // Org chart controls
     "org.zoomIn": "Zoom in",
@@ -1010,6 +1039,15 @@ const resources: Record<Language, Dict> = {
     "common.title": "标题",
     "common.none": "无",
     "common.scrollToBottom": "滚动到底部",
+    "common.ok": "确定",
+    "common.choose": "选择",
+
+    // Breadcrumb
+    "breadcrumb.label": "面包屑导航",
+    "breadcrumb.more": "更多",
+
+    // Path modal
+    "pathModal.terminal.title": "终端方法（macOS/Linux）",
 
     // Activity page
     "activity.selectCompany": "请选择公司以查看活动。",

@@ -135,7 +135,7 @@ function firstNonEmptyLine(value: string | null | undefined): string | null {
 }
 
 function runFailureMessage(run: HeartbeatRun): string {
-  return firstNonEmptyLine(run.error) ?? firstNonEmptyLine(run.stderrExcerpt) ?? "Run exited with an error.";
+  return firstNonEmptyLine(run.error) ?? firstNonEmptyLine(run.stderrExcerpt) ?? "runs.error.generic";
 }
 
 function normalizeTimestamp(value: string | Date | null | undefined): number {
@@ -185,7 +185,8 @@ function FailedRunCard({
   const issueId = readIssueIdFromRun(run);
   const issue = issueId ? issueById.get(issueId) ?? null : null;
   const sourceLabel = t(RUN_SOURCE_KEYS[run.invocationSource] ?? "inbox.source.manual");
-  const displayError = runFailureMessage(run);
+  const displayErrorKeyOrText = runFailureMessage(run);
+  const displayError = displayErrorKeyOrText === "runs.error.generic" ? t("runs.error.generic") : displayErrorKeyOrText;
 
   const retryRun = useMutation({
     mutationFn: async () => {
