@@ -2123,7 +2123,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
   const transcript = useMemo(() => buildTranscript(logLines, adapter.parseStdoutLine), [logLines, adapter]);
 
   if (loading && logLoading) {
-    return <p className="text-xs text-muted-foreground">Loading run logs...</p>;
+    return <p className="text-xs text-muted-foreground">{t("runs.loadingLogs")}</p>;
   }
 
   if (events.length === 0 && logLines.length === 0 && !logError) {
@@ -2148,14 +2148,14 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
         <div className="rounded-lg border border-border bg-background/60 p-3 space-y-2">
           <div className="text-xs font-medium text-muted-foreground">{t("agentDetail.invocation")}</div>
           {typeof adapterInvokePayload.adapterType === "string" && (
-            <div className="text-xs"><span className="text-muted-foreground">Adapter: </span>{adapterInvokePayload.adapterType}</div>
+            <div className="text-xs"><span className="text-muted-foreground">{t("agentDetail.config.adapter")}: </span>{adapterInvokePayload.adapterType}</div>
           )}
           {typeof adapterInvokePayload.cwd === "string" && (
-            <div className="text-xs break-all"><span className="text-muted-foreground">Working dir: </span><span className="font-mono">{adapterInvokePayload.cwd}</span></div>
+            <div className="text-xs break-all"><span className="text-muted-foreground">{t("agentConfig.cwd")}: </span><span className="font-mono">{adapterInvokePayload.cwd}</span></div>
           )}
           {typeof adapterInvokePayload.command === "string" && (
             <div className="text-xs break-all">
-              <span className="text-muted-foreground">Command: </span>
+              <span className="text-muted-foreground">{t("agentDetail.command")}: </span>
               <span className="font-mono">
                 {[
                   adapterInvokePayload.command,
@@ -2365,7 +2365,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           <div className="text-xs font-medium text-red-700 dark:text-red-300">{t("agentDetail.failureDetails")}</div>
           {run.error && (
             <div className="text-xs text-red-600 dark:text-red-200">
-              <span className="text-red-700 dark:text-red-300">Error: </span>
+              <span className="text-red-700 dark:text-red-300">{t("common.error")}: </span>
               {run.error}
             </div>
           )}
@@ -2541,7 +2541,7 @@ function KeysTab({ agentId, companyId }: { agentId: string; companyId?: string }
       </div>
 
       {/* Active keys */}
-      {isLoading && <p className="text-sm text-muted-foreground">Loading keys...</p>}
+      {isLoading && <p className="text-sm text-muted-foreground">{t("common.loading")}</p>}
 
       {!isLoading && activeKeys.length === 0 && !newToken && (
         <p className="text-sm text-muted-foreground">{t("agentDetail.apiKeys.none")}</p>

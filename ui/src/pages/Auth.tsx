@@ -65,7 +65,7 @@ export function AuthPage() {
   if (isSessionLoading) {
     return (
       <div className="fixed inset-0 flex items-center justify-center">
-        <p className="text-sm text-muted-foreground">Loading…</p>
+        <p className="text-sm text-muted-foreground">{t("common.loading")}</p>
       </div>
     );
   }

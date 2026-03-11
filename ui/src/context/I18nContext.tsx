@@ -298,6 +298,7 @@ const resources: Record<Language, Dict> = {
     "comments.post": "Post comment",
     "comments.posting": "Posting…",
     "comments.none": "No comments or runs yet.",
+    "comments.header": "Comments & Runs",
 
     // Agents search
     "agents.searchPlaceholder": "Search agents...",
@@ -389,6 +390,9 @@ const resources: Record<Language, Dict> = {
     "agentDetail.environment": "Environment",
     "agentDetail.apiKeys.namePlaceholder": "Key name (e.g. production)",
     "agentDetail.noLogEvents": "No log events.",
+    "agentDetail.commandNotes": "Command notes",
+    "agentDetail.command": "Command",
+    "runs.loadingLogs": "Loading run logs...",
     "agentDetail.noPersistedTranscript": "No persisted transcript for this run.",
     "agentDetail.create": "Create",
     "agentDetail.apiKeys.createTitle": "Create API Key",
@@ -692,6 +696,7 @@ const resources: Record<Language, Dict> = {
     "agentConfig.model.none": "No models found.",
     "agentConfig.thinkingEffort": "Thinking effort",
     "agentConfig.thinkingEffort.auto": "Auto",
+    "agentConfig.permsAndConfig": "Permissions & Configuration",
     "newAgent.error.noOpenCodeModels": "No OpenCode models discovered. Run `opencode models` and authenticate providers.",
     "newAgent.error.modelUnavailable": "Configured OpenCode model is unavailable: {id}",
     "newIssue.useProjectWorkspace": "Use project workspace",
@@ -706,6 +711,7 @@ const resources: Record<Language, Dict> = {
     "approvalDetail.error.resubmitFailed": "Resubmit failed",
     "approvalDetail.error.commentFailed": "Comment failed",
     "approvalDetail.error.deleteFailed": "Delete failed",
+    "approvalDetail.decisionNote": "Decision note",
     // Project detail
     "projectDetail.status": "Status",
     "projectDetail.targetDate": "Target Date",
@@ -1112,6 +1118,7 @@ const resources: Record<Language, Dict> = {
     "comments.post": "发表评论",
     "comments.posting": "正在发表…",
     "comments.none": "暂无评论或运行。",
+    "comments.header": "评论与运行",
     
     // Comments utils
     "comments.copyAsMarkdown": "复制为 Markdown",

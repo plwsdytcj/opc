@@ -184,7 +184,7 @@ export function InviteLandingPage() {
               <p className="font-medium text-foreground">{t("invite.joinSubmitted.skillBootstrap")}</p>
               {onboardingSkillUrl && <p className="font-mono break-all">GET {onboardingSkillUrl}</p>}
               {!onboardingSkillUrl && onboardingSkillPath && <p className="font-mono break-all">GET {onboardingSkillPath}</p>}
-              {onboardingInstallPath && <p className="font-mono break-all">Install to {onboardingInstallPath}</p>}
+              {onboardingInstallPath && <p className="font-mono break-all">{t("invite.installTo", { path: onboardingInstallPath })}</p>}
             </div>
           )}
           {(onboardingTextUrl || onboardingTextPath) && (

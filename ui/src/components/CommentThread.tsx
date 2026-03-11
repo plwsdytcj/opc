@@ -353,7 +353,7 @@ export function CommentThread({
 
   return (
     <div className="space-y-4">
-      <h3 className="text-sm font-semibold">Comments &amp; Runs ({timeline.length})</h3>
+      <h3 className="text-sm font-semibold">{t("comments.header") as any} ({timeline.length})</h3>
 
       <TimelineList timeline={timeline} agentMap={agentMap} highlightCommentId={highlightCommentId} />
 

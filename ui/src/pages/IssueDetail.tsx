@@ -485,7 +485,7 @@ export function IssueDetail() {
     return () => closePanel();
   }, [issue]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (isLoading) return <p className="text-sm text-muted-foreground">Loading...</p>;
+  if (isLoading) return <p className="text-sm text-muted-foreground">{t("common.loading")}</p>;
   if (error) return <p className="text-sm text-destructive">{error.message}</p>;
   if (!issue) return null;
 
