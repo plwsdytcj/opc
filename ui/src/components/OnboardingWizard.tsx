@@ -726,8 +726,7 @@ export function OnboardingWizard() {
                           <span className="font-medium">{opt.label}</span>
                           <span className="text-muted-foreground text-[10px]">
                             {opt.comingSoon
-                              ? (opt as { disabledLabel?: string }).disabledLabel ??
-                                "Coming soon"
+                              ? (opt as { disabledLabel?: string }).disabledLabel ?? t("common.comingSoon")
                               : opt.desc}
                           </span>
                         </button>
@@ -747,13 +746,13 @@ export function OnboardingWizard() {
                           <label className="text-xs text-muted-foreground">
                             {t("agentConfig.cwd")}
                           </label>
-                          <HintIcon text="Paperclip works best if you create a new folder for your agents to keep their memories and stay organized. Create a new folder and put the path here." />
+                          <HintIcon text={t("onboarding.cwd.hint")} />
                         </div>
                         <div className="flex items-center gap-2 rounded-md border border-border px-2.5 py-1.5">
                           <FolderOpen className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
                           <input
                             className="w-full bg-transparent outline-none text-sm font-mono placeholder:text-muted-foreground/50"
-                            placeholder="/path/to/project"
+                            placeholder={t("agentConfig.cwd.placeholder")}
                             value={cwd}
                             onChange={(e) => setCwd(e.target.value)}
                           />
@@ -761,9 +760,7 @@ export function OnboardingWizard() {
                         </div>
                       </div>
                       <div>
-                        <label className="text-xs text-muted-foreground mb-1 block">
-                          Model
-                        </label>
+                        <label className="text-xs text-muted-foreground mb-1 block">{t("common.model")}</label>
                         <Popover
                           open={modelOpen}
                           onOpenChange={(next) => {
@@ -780,10 +777,7 @@ export function OnboardingWizard() {
                               >
                                 {selectedModel
                                   ? selectedModel.label
-                                  : model ||
-                                    (adapterType === "opencode_local"
-                                      ? "Select model (required)"
-                                      : "Default")}
+                                  : model || (adapterType === "opencode_local" ? t("agentConfig.model.selectRequired") : t("agentConfig.model.default"))}
                               </span>
                               <ChevronDown className="h-3 w-3 text-muted-foreground" />
                             </button>
@@ -810,7 +804,7 @@ export function OnboardingWizard() {
                                   setModelOpen(false);
                                 }}
                               >
-                                  Default
+                                  {t("agentConfig.model.default")}
                                 </button>
                             )}
                             <div className="max-h-[240px] overflow-y-auto">

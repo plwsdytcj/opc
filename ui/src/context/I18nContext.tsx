@@ -12,6 +12,7 @@ const resources: Record<Language, Dict> = {
     "layout.switchToLight": "Switch to light mode",
     "layout.switchToDark": "Switch to dark mode",
     "layout.switchLanguage": "Switch language",
+    "layout.mobileNav": "Mobile navigation",
 
     // Navigation & sections
     "nav.dashboard": "Dashboard",
@@ -696,6 +697,10 @@ const resources: Record<Language, Dict> = {
     "newAgent.error.modelRequired": "OpenCode requires an explicit model in provider/model format.",
     "newAgent.error.loadModelsFailed": "Failed to load OpenCode models.",
     "newAgent.error.modelsLoading": "OpenCode models are still loading. Please wait and try again.",
+    // Onboarding cwd hint
+    "onboarding.cwd.hint": "Create a new folder for agent memory and organization, then paste the absolute path here.",
+    // Agent permissions
+    "agentDetail.permissions.canCreateAgents": "Can create new agents",
     // Command palette
     "command.createProject": "Create new project",
     "command.pages": "Pages",
@@ -730,6 +735,7 @@ const resources: Record<Language, Dict> = {
     "layout.switchToLight": "切换到亮色模式",
     "layout.switchToDark": "切换到暗色模式",
     "layout.switchLanguage": "切换语言",
+    "layout.mobileNav": "移动导航",
 
     // Navigation & sections
     "nav.dashboard": "仪表盘",
@@ -1380,6 +1386,10 @@ const resources: Record<Language, Dict> = {
     "newAgent.error.modelRequired": "OpenCode 需要以 provider/model 格式显式选择模型。",
     "newAgent.error.loadModelsFailed": "加载 OpenCode 模型失败。",
     "newAgent.error.modelsLoading": "OpenCode 模型仍在加载，请稍后重试。",
+    // Onboarding cwd hint
+    "onboarding.cwd.hint": "建议为智能体创建单独的工作文件夹以保存记忆和保持组织有序，然后在此粘贴该文件夹的绝对路径。",
+    // Agent permissions
+    "agentDetail.permissions.canCreateAgents": "可创建新智能体",
     
     // Adapter config extras
     "agentConfig.promptTemplate.placeholder": "你是智能体 {{ agent.name }}，你的角色是 {{ agent.role }}...",
