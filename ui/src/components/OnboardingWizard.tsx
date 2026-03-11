@@ -363,27 +363,27 @@ export function OnboardingWizard() {
       if (adapterType === "opencode_local") {
         const selectedModelId = model.trim();
         if (!selectedModelId) {
-          setError("OpenCode requires an explicit model in provider/model format.");
+          setError(t("newAgent.error.modelRequired"));
           return;
         }
         if (adapterModelsError) {
           setError(
             adapterModelsError instanceof Error
               ? adapterModelsError.message
-              : "Failed to load OpenCode models.",
+              : t("newAgent.error.loadModelsFailed"),
           );
           return;
         }
         if (adapterModelsLoading || adapterModelsFetching) {
-          setError("OpenCode models are still loading. Please wait and try again.");
+          setError(t("newAgent.error.modelsLoading"));
           return;
         }
         const discoveredModels = adapterModels ?? [];
         if (!discoveredModels.some((entry) => entry.id === selectedModelId)) {
           setError(
             discoveredModels.length === 0
-              ? "No OpenCode models discovered. Run `opencode models` and authenticate providers."
-              : `Configured OpenCode model is unavailable: ${selectedModelId}`,
+              ? t("newAgent.error.noOpenCodeModels")
+              : t("newAgent.error.modelUnavailable", { id: selectedModelId }),
           );
           return;
         }

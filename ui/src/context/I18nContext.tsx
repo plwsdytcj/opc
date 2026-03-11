@@ -689,6 +689,8 @@ const resources: Record<Language, Dict> = {
     "agentConfig.model.none": "No models found.",
     "agentConfig.thinkingEffort": "Thinking effort",
     "agentConfig.thinkingEffort.auto": "Auto",
+    "newAgent.error.noOpenCodeModels": "No OpenCode models discovered. Run `opencode models` and authenticate providers.",
+    "newAgent.error.modelUnavailable": "Configured OpenCode model is unavailable: {id}",
     // Approval detail
     "approvalDetail.notFound": "Approval not found.",
     "approvalDetail.confirmed": "Approval confirmed",
@@ -939,6 +941,8 @@ const resources: Record<Language, Dict> = {
     "agentConfig.model.none": "未找到模型。",
     "agentConfig.thinkingEffort": "思考强度",
     "agentConfig.thinkingEffort.auto": "自动",
+    "newAgent.error.noOpenCodeModels": "未发现 OpenCode 模型。请运行 `opencode models` 并完成供应商认证。",
+    "newAgent.error.modelUnavailable": "配置的 OpenCode 模型不可用：{id}",
 
     // Approval detail
     "approvalDetail.notFound": "未找到审批。",
