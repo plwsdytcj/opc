@@ -562,8 +562,8 @@ export function IssuesList({
       {!isLoading && filtered.length === 0 && viewState.viewMode === "list" && (
         <EmptyState
           icon={CircleDot}
-          message="No issues match the current filters or search."
-          action="Create Issue"
+          message={t("issues.noMatchFilters")}
+          action={t("actions.newIssue")}
           onAction={() => openNewIssue(newIssueDefaults())}
         />
       )}

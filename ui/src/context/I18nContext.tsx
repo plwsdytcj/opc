@@ -331,6 +331,7 @@ const resources: Record<Language, Dict> = {
     "comments.posting": "Posting…",
     "comments.none": "No comments or runs yet.",
     "comments.header": "Comments & Runs",
+    "comments.reopen": "Re-open",
 
     // Agents search
     "agents.searchPlaceholder": "Search agents...",
@@ -405,6 +406,7 @@ const resources: Record<Language, Dict> = {
     "issues.created": "Created",
     "issues.quickFilters": "Quick filters",
     "issues.none": "No issues",
+    "issues.noMatchFilters": "No issues match the current filters or search.",
 
     // Agent detail
     "agentDetail.noAssignedIssues": "No assigned issues.",
@@ -1151,6 +1153,7 @@ const resources: Record<Language, Dict> = {
     "comments.posting": "正在发表…",
     "comments.none": "暂无评论或运行。",
     "comments.header": "评论与运行",
+    "comments.reopen": "重新打开",
     
     // Comments utils
     "comments.copyAsMarkdown": "复制为 Markdown",
@@ -1492,6 +1495,7 @@ const resources: Record<Language, Dict> = {
     "issues.assignee": "负责人",
     "issues.created": "创建时间",
     "issues.none": "暂无问题",
+    "issues.noMatchFilters": "没有符合当前筛选或搜索条件的问题。",
     
     
     // Issue detail (more)

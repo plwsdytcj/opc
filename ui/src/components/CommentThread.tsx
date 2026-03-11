@@ -399,7 +399,7 @@ export function CommentThread({
                 onChange={(e) => setReopen(e.target.checked)}
                 className="rounded border-border"
               />
-              Re-open
+              {t("comments.reopen")}
             </label>
           )}
           {enableReassign && reassignOptions.length > 0 && (
@@ -407,9 +407,9 @@ export function CommentThread({
               value={reassignTarget}
               options={reassignOptions}
               placeholder={t("issues.assignee")}
-              noneLabel="No assignee"
-              searchPlaceholder="Search assignees..."
-              emptyMessage="No assignees found."
+              noneLabel={t("issueProperties.noAssignee")}
+              searchPlaceholder={t("issueProperties.searchAssignees")}
+              emptyMessage={t("common.noResults")}
               onChange={setReassignTarget}
               className="text-xs h-8"
               renderTriggerValue={(option) => {
