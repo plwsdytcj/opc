@@ -170,28 +170,30 @@ export function InviteLandingPage() {
           <h1 className="text-lg font-semibold">{t("invite.joinSubmitted.title")}</h1>
           <p className="mt-2 text-sm text-muted-foreground">{t("invite.joinSubmitted.desc")}</p>
           <div className="mt-4 rounded-md border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
-            Request ID: <span className="font-mono">{payload.id}</span>
+            {t("invite.joinSubmitted.requestId")}:
+            {" "}
+            <span className="font-mono">{payload.id}</span>
           </div>
           {claimSecret && claimApiKeyPath && (
             <div className="mt-3 space-y-1 rounded-md border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
               <p className="font-medium text-foreground">{t("invite.joinSubmitted.claimSecret")}</p>
               <p className="font-mono break-all">{claimSecret}</p>
-              <p className="font-mono break-all">POST {claimApiKeyPath}</p>
+              <p className="font-mono break-all">{t("common.http.post", { value: claimApiKeyPath })}</p>
             </div>
           )}
           {(onboardingSkillUrl || onboardingSkillPath || onboardingInstallPath) && (
             <div className="mt-3 space-y-1 rounded-md border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
               <p className="font-medium text-foreground">{t("invite.joinSubmitted.skillBootstrap")}</p>
-              {onboardingSkillUrl && <p className="font-mono break-all">GET {onboardingSkillUrl}</p>}
-              {!onboardingSkillUrl && onboardingSkillPath && <p className="font-mono break-all">GET {onboardingSkillPath}</p>}
+              {onboardingSkillUrl && <p className="font-mono break-all">{t("common.http.get", { value: onboardingSkillUrl })}</p>}
+              {!onboardingSkillUrl && onboardingSkillPath && <p className="font-mono break-all">{t("common.http.get", { value: onboardingSkillPath })}</p>}
               {onboardingInstallPath && <p className="font-mono break-all">{t("invite.installTo", { path: onboardingInstallPath })}</p>}
             </div>
           )}
           {(onboardingTextUrl || onboardingTextPath) && (
             <div className="mt-3 space-y-1 rounded-md border border-border bg-muted/30 p-3 text-xs text-muted-foreground">
               <p className="font-medium text-foreground">{t("invite.joinSubmitted.textInstructions")}</p>
-              {onboardingTextUrl && <p className="font-mono break-all">GET {onboardingTextUrl}</p>}
-              {!onboardingTextUrl && onboardingTextPath && <p className="font-mono break-all">GET {onboardingTextPath}</p>}
+              {onboardingTextUrl && <p className="font-mono break-all">{t("common.http.get", { value: onboardingTextUrl })}</p>}
+              {!onboardingTextUrl && onboardingTextPath && <p className="font-mono break-all">{t("common.http.get", { value: onboardingTextPath })}</p>}
             </div>
           )}
           {diagnostics.length > 0 && (

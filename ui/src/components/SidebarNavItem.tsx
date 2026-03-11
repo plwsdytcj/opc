@@ -1,5 +1,6 @@
 import { NavLink } from "@/lib/router";
 import { cn } from "../lib/utils";
+import { useI18n } from "../context/I18nContext";
 import { useSidebar } from "../context/SidebarContext";
 import type { LucideIcon } from "lucide-react";
 
@@ -27,6 +28,7 @@ export function SidebarNavItem({
   liveCount,
 }: SidebarNavItemProps) {
   const { isMobile, setSidebarOpen } = useSidebar();
+  const { t } = useI18n();
 
   return (
     <NavLink
@@ -56,7 +58,7 @@ export function SidebarNavItem({
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
           </span>
-          <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">{liveCount} live</span>
+          <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">{liveCount} {t("labels.live")}</span>
         </span>
       )}
       {badge != null && badge > 0 && (
