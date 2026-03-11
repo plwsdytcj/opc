@@ -4,6 +4,7 @@ import {
   DraftInput,
 } from "../../components/agent-config-primitives";
 import { ChoosePathButton } from "../../components/PathInstructionsModal";
+import { useI18n } from "../../context/I18nContext";
 
 const inputClass =
   "w-full rounded-md border border-border px-2.5 py-1.5 bg-transparent outline-none text-sm font-mono placeholder:text-muted-foreground/40";
@@ -18,8 +19,9 @@ export function CursorLocalConfigFields({
   eff,
   mark,
 }: AdapterConfigFieldsProps) {
+  const { t } = useI18n();
   return (
-    <Field label="Agent instructions file" hint={instructionsFileHint}>
+    <Field label={t("agentConfig.instructionsFile")} hint={t("agentConfig.instructionsFile.hint") || instructionsFileHint}>
       <div className="flex items-center gap-2">
         <DraftInput
           value={
@@ -38,7 +40,7 @@ export function CursorLocalConfigFields({
           }
           immediate
           className={inputClass}
-          placeholder="/absolute/path/to/AGENTS.md"
+          placeholder={t("agentConfig.instructionsFile.placeholder")}
         />
         <ChoosePathButton />
       </div>

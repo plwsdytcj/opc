@@ -7,6 +7,7 @@ import {
   help,
 } from "../../components/agent-config-primitives";
 import { ChoosePathButton } from "../../components/PathInstructionsModal";
+import { useI18n } from "../../context/I18nContext";
 
 const inputClass =
   "w-full rounded-md border border-border px-2.5 py-1.5 bg-transparent outline-none text-sm font-mono placeholder:text-muted-foreground/40";
@@ -22,8 +23,9 @@ export function ClaudeLocalConfigFields({
   eff,
   mark,
 }: AdapterConfigFieldsProps) {
+  const { t } = useI18n();
   return (
-    <Field label="Agent instructions file" hint={instructionsFileHint}>
+    <Field label={t("agentConfig.instructionsFile")} hint={t("agentConfig.instructionsFile.hint") || instructionsFileHint}>
       <div className="flex items-center gap-2">
         <DraftInput
           value={
@@ -42,7 +44,7 @@ export function ClaudeLocalConfigFields({
           }
           immediate
           className={inputClass}
-          placeholder="/absolute/path/to/AGENTS.md"
+          placeholder={t("agentConfig.instructionsFile.placeholder")}
         />
         <ChoosePathButton />
       </div>
@@ -58,10 +60,11 @@ export function ClaudeLocalAdvancedFields({
   eff,
   mark,
 }: AdapterConfigFieldsProps) {
+  const { t } = useI18n();
   return (
     <>
       <ToggleField
-        label="Enable Chrome"
+        label={t("agentConfig.chrome.enable")}
         hint={help.chrome}
         checked={
           isCreate
@@ -75,7 +78,7 @@ export function ClaudeLocalAdvancedFields({
         }
       />
       <ToggleField
-        label="Skip permissions"
+        label={t("agentConfig.skipPermissions")}
         hint={help.dangerouslySkipPermissions}
         checked={
           isCreate
@@ -92,7 +95,7 @@ export function ClaudeLocalAdvancedFields({
             : mark("adapterConfig", "dangerouslySkipPermissions", v)
         }
       />
-      <Field label="Max turns per run" hint={help.maxTurnsPerRun}>
+      <Field label={t("agentConfig.maxTurnsPerRun")} hint={help.maxTurnsPerRun}>
         {isCreate ? (
           <input
             type="number"

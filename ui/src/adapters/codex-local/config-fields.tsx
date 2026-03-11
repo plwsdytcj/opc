@@ -6,6 +6,7 @@ import {
   help,
 } from "../../components/agent-config-primitives";
 import { ChoosePathButton } from "../../components/PathInstructionsModal";
+import { useI18n } from "../../context/I18nContext";
 
 const inputClass =
   "w-full rounded-md border border-border px-2.5 py-1.5 bg-transparent outline-none text-sm font-mono placeholder:text-muted-foreground/40";
@@ -20,12 +21,13 @@ export function CodexLocalConfigFields({
   eff,
   mark,
 }: AdapterConfigFieldsProps) {
+  const { t } = useI18n();
   const bypassEnabled =
     config.dangerouslyBypassApprovalsAndSandbox === true || config.dangerouslyBypassSandbox === true;
 
   return (
     <>
-      <Field label="Agent instructions file" hint={instructionsFileHint}>
+      <Field label={t("agentConfig.instructionsFile")} hint={t("agentConfig.instructionsFile.hint") || instructionsFileHint}>
         <div className="flex items-center gap-2">
           <DraftInput
             value={
@@ -44,13 +46,13 @@ export function CodexLocalConfigFields({
             }
             immediate
             className={inputClass}
-            placeholder="/absolute/path/to/AGENTS.md"
+            placeholder={t("agentConfig.instructionsFile.placeholder")}
           />
           <ChoosePathButton />
         </div>
       </Field>
       <ToggleField
-        label="Bypass sandbox"
+        label={t("agentConfig.bypassSandbox")}
         hint={help.dangerouslyBypassSandbox}
         checked={
           isCreate
@@ -68,7 +70,7 @@ export function CodexLocalConfigFields({
         }
       />
       <ToggleField
-        label="Enable search"
+        label={t("agentConfig.search.enable")}
         hint={help.search}
         checked={
           isCreate

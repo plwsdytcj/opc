@@ -1,9 +1,5 @@
 import type { AdapterConfigFieldsProps } from "../types";
-import {
-  Field,
-  DraftInput,
-  help,
-} from "../../components/agent-config-primitives";
+import { Field, DraftInput, help } from "../../components/agent-config-primitives";
 import { useI18n } from "../../context/I18nContext";
 
 const inputClass =
@@ -36,7 +32,7 @@ export function ProcessConfigFields({
   const { t } = useI18n();
   return (
     <>
-      <Field label="Command" hint={help.command}>
+      <Field label={t("process.command.label")} hint={help.command}>
         <DraftInput
           value={
             isCreate
@@ -53,7 +49,7 @@ export function ProcessConfigFields({
           placeholder={t("onboarding.command.placeholder")}
         />
       </Field>
-      <Field label="Args (comma-separated)" hint={help.args}>
+      <Field label={t("process.args.label")} hint={help.args}>
         <DraftInput
           value={
             isCreate
