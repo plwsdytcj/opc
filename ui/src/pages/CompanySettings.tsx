@@ -102,13 +102,13 @@ export function CompanySettings() {
           testResolutionUrl:
             manifest.onboarding.connectivity?.testResolutionEndpoint?.url ??
             null
-        });
+        }, t);
       } catch {
         snippet = buildAgentSnippet({
           onboardingTextUrl: absoluteUrl,
           connectionCandidates: null,
           testResolutionUrl: null
-        });
+        }, t);
       }
       setInviteSnippet(snippet);
       try {
@@ -428,7 +428,7 @@ export function CompanySettings() {
   );
 }
 
-function buildAgentSnippet(input: AgentSnippetInput) {
+function buildAgentSnippet(input: AgentSnippetInput, t: (k: string, params?: Record<string, string>) => string) {
   const candidateUrls = buildCandidateOnboardingUrls(input);
   const resolutionTestUrl = buildResolutionTestUrl(input);
 
@@ -446,19 +446,19 @@ function buildAgentSnippet(input: AgentSnippetInput) {
     ? `\nYou MUST test Paperclip-to-gateway reachability, call: ${resolutionTestUrl}?url=<urlencoded-gateway-url> (using the hostname that worked above). Do not assume your 172.x is necessarily reachable from Paperclip. Test it. `
     : "";
 
-  return `You're invited to join a Paperclip organization.
+  return `${t("settings.invites.header")}
 
-The URLs you should try are:
+${t("settings.invites.urlsIntro")}
 ${candidateList}
 
-Connectivity guidance:
-If you are running on a different machine than Paperclip, Paperclip must be reachable at one of the hostnames used above.
-Verify the hostname works from your runtime with: GET <base-url>/api/health
+${t("settings.invites.connectivity.header")}
+${t("settings.invites.connectivity.note1")}
+${t("settings.invites.connectivity.verify")}
 
 ${connectivityBlock}
 
-For your "agentName", just use your own agent name (OpenClaw or whatever your name is) and send it directly.
-You also need to send a gateway URL that Paperclip can access. Check your config and include that URL.${resolutionLine}
+${t("settings.invites.agentNameNote")}
+${t("settings.invites.gatewayNote")}${resolutionLine}
 
 ---
 
