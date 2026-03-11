@@ -606,7 +606,7 @@ export function NewIssueDialog() {
               </PopoverContent>
             </Popover>
             <span className="text-muted-foreground/60">&rsaquo;</span>
-            <span>New issue</span>
+            <span>{t("actions.newIssue")}</span>
           </div>
           <div className="flex items-center gap-1">
             <Button
@@ -664,9 +664,9 @@ export function NewIssueDialog() {
                 options={assigneeOptions}
                 placeholder={t("issues.assignee")}
                 disablePortal
-                noneLabel="No assignee"
-                searchPlaceholder="Search assignees..."
-                emptyMessage="No assignees found."
+                noneLabel={t("issueProperties.noAssignee")}
+                searchPlaceholder={t("issueProperties.searchAssignees")}
+                emptyMessage={t("common.noResults")}
                 onChange={(id) => { if (id) trackRecentAssignee(id); setAssigneeId(id); }}
                 onConfirm={() => {
                   projectSelectorRef.current?.focus();
@@ -692,16 +692,16 @@ export function NewIssueDialog() {
                   );
                 }}
               />
-              <span>in</span>
+              <span>{t("common.in")}</span>
               <InlineEntitySelector
                 ref={projectSelectorRef}
                 value={projectId}
                 options={projectOptions}
                 placeholder={t("issueProperties.project")}
                 disablePortal
-                noneLabel="No project"
-                searchPlaceholder="Search projects..."
-                emptyMessage="No projects found."
+                noneLabel={t("issues.noProject")}
+                searchPlaceholder={t("issueProperties.searchProjects")}
+                emptyMessage={t("common.noResults")}
                 onChange={setProjectId}
                 onConfirm={() => {
                   descriptionEditorRef.current?.focus();
@@ -762,7 +762,7 @@ export function NewIssueDialog() {
                   />
                 </div>
                 <div className="space-y-1.5">
-                  <div className="text-xs text-muted-foreground">Thinking effort</div>
+                  <div className="text-xs text-muted-foreground">{t("agentConfig.thinkingEffort")}</div>
                   <div className="flex items-center gap-1.5 flex-wrap">
                     {thinkingEffortOptions.map((option) => (
                       <button
@@ -780,7 +780,7 @@ export function NewIssueDialog() {
                 </div>
                 {assigneeAdapterType === "claude_local" && (
                   <div className="flex items-center justify-between rounded-md border border-border px-2 py-1.5">
-                    <div className="text-xs text-muted-foreground">Enable Chrome (--chrome)</div>
+                    <div className="text-xs text-muted-foreground">{t("agentConfig.chrome.enable")} (--chrome)</div>
                     <button
                       className={cn(
                         "relative inline-flex h-5 w-9 items-center rounded-full transition-colors",
@@ -798,7 +798,7 @@ export function NewIssueDialog() {
                   </div>
                 )}
                 <div className="flex items-center justify-between rounded-md border border-border px-2 py-1.5">
-                  <div className="text-xs text-muted-foreground">Use project workspace</div>
+                  <div className="text-xs text-muted-foreground">{t("newIssue.useProjectWorkspace")}</div>
                   <button
                     className={cn(
                       "relative inline-flex h-5 w-9 items-center rounded-full transition-colors",

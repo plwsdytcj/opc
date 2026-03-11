@@ -222,9 +222,11 @@ const resources: Record<Language, Dict> = {
     "actions.copy": "Copy",
     "actions.show": "Show",
     "actions.hide": "Hide",
+    "actions.revoke": "Revoke",
     "common.disabled": "Disabled",
     "common.for": "For",
     "common.model": "Model",
+    "common.in": "in",
     "common.title": "Title",
     "common.none": "None",
     "common.scrollToBottom": "Scroll to bottom",
@@ -369,6 +371,7 @@ const resources: Record<Language, Dict> = {
     "issues.assignee": "Assignee",
     "issues.created": "Created",
     "issues.quickFilters": "Quick filters",
+    "issues.none": "No issues",
 
     // Agent detail
     "agentDetail.noAssignedIssues": "No assigned issues.",
@@ -691,6 +694,7 @@ const resources: Record<Language, Dict> = {
     "agentConfig.thinkingEffort.auto": "Auto",
     "newAgent.error.noOpenCodeModels": "No OpenCode models discovered. Run `opencode models` and authenticate providers.",
     "newAgent.error.modelUnavailable": "Configured OpenCode model is unavailable: {id}",
+    "newIssue.useProjectWorkspace": "Use project workspace",
     // Approval detail
     "approvalDetail.notFound": "Approval not found.",
     "approvalDetail.confirmed": "Approval confirmed",
@@ -1035,9 +1039,11 @@ const resources: Record<Language, Dict> = {
     "actions.copy": "复制",
     "actions.show": "显示",
     "actions.hide": "隐藏",
+    "actions.revoke": "撤销",
     "common.disabled": "已禁用",
     "common.for": "用于",
     "common.model": "模型",
+    "common.in": "于",
     "common.role": "角色",
     "common.icon": "图标",
     "common.title": "标题",
@@ -1414,6 +1420,7 @@ const resources: Record<Language, Dict> = {
     "issues.priority": "优先级",
     "issues.assignee": "负责人",
     "issues.created": "创建时间",
+    "issues.none": "暂无问题",
     
     
     // Issue detail (more)

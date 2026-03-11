@@ -910,6 +910,7 @@ function AdapterTypeDropdown({
   value: string;
   onChange: (type: string) => void;
 }) {
+  const { t } = useI18n();
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -942,7 +943,7 @@ function AdapterTypeDropdown({
               <span>{item.label}</span>
             </span>
             {item.comingSoon && (
-              <span className="text-[10px] text-muted-foreground">Coming soon</span>
+              <span className="text-[10px] text-muted-foreground">{t("common.comingSoon")}</span>
             )}
           </button>
         ))}

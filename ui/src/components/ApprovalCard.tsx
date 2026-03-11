@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Identity } from "./Identity";
 import { typeLabel, typeIcon, defaultTypeIcon, ApprovalPayloadRenderer } from "./ApprovalPayload";
 import { timeAgo } from "../lib/timeAgo";
+import { useI18n } from "../context/I18nContext";
 import type { Approval, Agent } from "@paperclipai/shared";
 
 function statusIcon(status: string) {
@@ -31,6 +32,7 @@ export function ApprovalCard({
   detailLink?: string;
   isPending: boolean;
 }) {
+  const { t } = useI18n();
   const Icon = typeIcon[approval.type] ?? defaultTypeIcon;
   const label = typeLabel[approval.type] ?? approval.type;
 
@@ -90,11 +92,11 @@ export function ApprovalCard({
       <div className="mt-3">
         {detailLink ? (
           <Button variant="ghost" size="sm" className="text-xs px-0" asChild>
-            <Link to={detailLink}>View details</Link>
+            <Link to={detailLink}>{t("agentDetail.viewDetails")}</Link>
           </Button>
         ) : (
           <Button variant="ghost" size="sm" className="text-xs px-0" onClick={onOpen}>
-            View details
+            {t("agentDetail.viewDetails")}
           </Button>
         )}
       </div>
