@@ -227,7 +227,7 @@ export function ApprovalDetail() {
             onClick={() => setShowRawPayload((v) => !v)}
           >
             <ChevronRight className={`h-3 w-3 transition-transform ${showRawPayload ? "rotate-90" : ""}`} />
-            See full request
+            {t("approvalDetail.seeFullRequest")}
           </button>
           {showRawPayload && (
             <pre className="text-xs bg-muted/40 rounded-md p-3 overflow-x-auto">
@@ -257,7 +257,7 @@ export function ApprovalDetail() {
               ))}
             </div>
             <p className="text-[11px] text-muted-foreground mt-2">
-              Linked issues remain open until the requesting agent follows up and closes them.
+              {t("approvalDetail.linkedIssues.note")}
             </p>
           </div>
         )}
@@ -270,7 +270,7 @@ export function ApprovalDetail() {
                 onClick={() => approveMutation.mutate()}
                 disabled={approveMutation.isPending}
               >
-                Approve
+                {t("inbox.actions.approve")}
               </Button>
               <Button
                 variant="destructive"
@@ -278,7 +278,7 @@ export function ApprovalDetail() {
                 onClick={() => rejectMutation.mutate()}
                 disabled={rejectMutation.isPending}
               >
-                Reject
+                {t("inbox.actions.reject")}
               </Button>
             </>
           )}
@@ -289,7 +289,7 @@ export function ApprovalDetail() {
               onClick={() => revisionMutation.mutate()}
               disabled={revisionMutation.isPending}
             >
-              Request revision
+              {t("approvalDetail.requestRevision")}
             </Button>
           )}
           {approval.status === "revision_requested" && (
@@ -299,7 +299,7 @@ export function ApprovalDetail() {
               onClick={() => resubmitMutation.mutate()}
               disabled={resubmitMutation.isPending}
             >
-              Mark resubmitted
+              {t("approvalDetail.markResubmitted")}
             </Button>
           )}
           {approval.status === "rejected" && approval.type === "hire_agent" && linkedAgentId && (

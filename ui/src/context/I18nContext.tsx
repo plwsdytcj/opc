@@ -267,6 +267,22 @@ const resources: Record<Language, Dict> = {
     
     // Projects errors
     "projects.error.createFailed": "Failed to create project.",
+    
+    // Markdown
+    "markdown.mermaidFailed": "Failed to render Mermaid diagram.",
+    "markdown.mermaidUnable": "Unable to render Mermaid diagram:",
+    "markdown.mermaidRendering": "Rendering Mermaid diagram...",
+    
+    // Approval detail extras
+    "approvalDetail.seeFullRequest": "See full request",
+    "approvalDetail.requestRevision": "Request revision",
+    "approvalDetail.markResubmitted": "Mark resubmitted",
+    "approvalDetail.linkedIssues.note": "Linked issues remain open until the requesting agent follows up and closes them.",
+    
+    // Settings invite snippet
+    "settings.invites.noCandidates.short": "- (No candidate URLs available yet.)",
+    "settings.invites.noCandidates.help": "No candidate URLs are available. Ask your user to configure a reachable hostname in Paperclip, then retry.\nSuggested steps:\n- choose a hostname that resolves to the Paperclip host from your runtime\n- run: pnpm paperclipai allowed-hostname <host>\n- restart Paperclip\n- verify with: curl -fsS http://<host>:3100/api/health\n- regenerate this invite snippet",
+    "settings.invites.reachabilityNote": "If none are reachable, ask your user to add a reachable hostname in Paperclip, restart, and retry.\nSuggested command:\n- pnpm paperclipai allowed-hostname <host>\nThen verify with: curl -fsS <base-url>/api/health",
 
     // Org chart controls
     "org.zoomIn": "Zoom in",
@@ -1397,6 +1413,22 @@ const resources: Record<Language, Dict> = {
     
     // Projects errors
     "projects.error.createFailed": "创建项目失败。",
+    
+    // Markdown
+    "markdown.mermaidFailed": "渲染 Mermaid 图失败。",
+    "markdown.mermaidUnable": "无法渲染 Mermaid 图：",
+    "markdown.mermaidRendering": "正在渲染 Mermaid 图...",
+    
+    // Approval detail extras
+    "approvalDetail.seeFullRequest": "查看完整请求",
+    "approvalDetail.requestRevision": "请求复审",
+    "approvalDetail.markResubmitted": "标记为已重新提交",
+    "approvalDetail.linkedIssues.note": "在请求方跟进并关闭之前，关联问题会保持打开。",
+    
+    // Settings invite snippet
+    "settings.invites.noCandidates.short": "-（尚无可用候选 URL）",
+    "settings.invites.noCandidates.help": "当前没有候选 URL。请让用户在 Paperclip 中配置一个可达的主机名后重试。\n建议步骤：\n- 选择一个在运行环境中可解析到 Paperclip 主机的主机名\n- 运行：pnpm paperclipai allowed-hostname <host>\n- 重启 Paperclip\n- 验证：curl -fsS http://<host>:3100/api/health\n- 重新生成此邀请片段",
+    "settings.invites.reachabilityNote": "若上述主机名均不可达，请让用户在 Paperclip 中添加可达的主机名，重启并重试。\n建议命令：\n- pnpm paperclipai allowed-hostname <host>\n然后验证：curl -fsS <base-url>/api/health",
     "projects.workspace.local.placeholder": "/absolute/path/to/workspace",
     "projects.workspace.repo.url": "GitHub 仓库 URL",
     "projects.workspace.repo.url.placeholder": "https://github.com/org/repo",

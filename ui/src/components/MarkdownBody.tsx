@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { parseProjectMentionHref } from "@paperclipai/shared";
 import { cn } from "../lib/utils";
+import { useI18n } from "../context/I18nContext";
 import { useTheme } from "../context/ThemeContext";
 
 interface MarkdownBodyProps {
@@ -58,6 +59,7 @@ function mentionChipStyle(color: string | null): CSSProperties | undefined {
 }
 
 function MermaidDiagramBlock({ source, darkMode }: { source: string; darkMode: boolean }) {
+  const { t } = useI18n();
   const renderId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
   const [svg, setSvg] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +87,7 @@ function MermaidDiagramBlock({ source, darkMode }: { source: string; darkMode: b
         const message =
           err instanceof Error && err.message
             ? err.message
-            : "Failed to render Mermaid diagram.";
+            : t("markdown.mermaidFailed");
         setError(message);
       });
 
@@ -101,7 +103,7 @@ function MermaidDiagramBlock({ source, darkMode }: { source: string; darkMode: b
       ) : (
         <>
           <p className={cn("paperclip-mermaid-status", error && "paperclip-mermaid-status-error")}>
-            {error ? `Unable to render Mermaid diagram: ${error}` : "Rendering Mermaid diagram..."}
+            {error ? `${t("markdown.mermaidUnable")} ${error}` : t("markdown.mermaidRendering")}
           </p>
           <pre className="paperclip-mermaid-source">
             <code className="language-mermaid">{source}</code>
@@ -113,6 +115,7 @@ function MermaidDiagramBlock({ source, darkMode }: { source: string; darkMode: b
 }
 
 export function MarkdownBody({ children, className }: MarkdownBodyProps) {
+  const { t } = useI18n();
   const { theme } = useTheme();
   return (
     <div

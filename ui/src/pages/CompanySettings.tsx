@@ -439,17 +439,8 @@ function buildAgentSnippet(input: AgentSnippetInput) {
 
   const connectivityBlock =
     candidateUrls.length === 0
-      ? `No candidate URLs are available. Ask your user to configure a reachable hostname in Paperclip, then retry.
-Suggested steps:
-- choose a hostname that resolves to the Paperclip host from your runtime
-- run: pnpm paperclipai allowed-hostname <host>
-- restart Paperclip
-- verify with: curl -fsS http://<host>:3100/api/health
-- regenerate this invite snippet`
-      : `If none are reachable, ask your user to add a reachable hostname in Paperclip, restart, and retry.
-Suggested command:
-- pnpm paperclipai allowed-hostname <host>
-Then verify with: curl -fsS <base-url>/api/health`;
+      ? `No candidate URLs are available. Ask your user to configure a reachable hostname in Paperclip, then retry.\nSuggested steps:\n- choose a hostname that resolves to the Paperclip host from your runtime\n- run: pnpm paperclipai allowed-hostname <host>\n- restart Paperclip\n- verify with: curl -fsS http://<host>:3100/api/health\n- regenerate this invite snippet`
+      : `If none are reachable, ask your user to add a reachable hostname in Paperclip, restart, and retry.\nSuggested command:\n- pnpm paperclipai allowed-hostname <host>\nThen verify with: curl -fsS <base-url>/api/health`;
 
   const resolutionLine = resolutionTestUrl
     ? `\nYou MUST test Paperclip-to-gateway reachability, call: ${resolutionTestUrl}?url=<urlencoded-gateway-url> (using the hostname that worked above). Do not assume your 172.x is necessarily reachable from Paperclip. Test it. `
