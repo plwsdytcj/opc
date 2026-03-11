@@ -303,7 +303,7 @@ export function IssuesList({
         <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <Button size="sm" variant="outline" onClick={() => openNewIssue(newIssueDefaults())}>
             <Plus className="h-4 w-4 sm:mr-1" />
-            <span className="hidden sm:inline">New Issue</span>
+            <span className="hidden sm:inline">{t("actions.newIssue")}</span>
           </Button>
           <div className="relative w-48 sm:w-64 md:w-80">
             <Search className="pointer-events-none absolute left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
@@ -313,9 +313,9 @@ export function IssuesList({
                 setIssueSearch(e.target.value);
                 onSearchChange?.(e.target.value);
               }}
-              placeholder="Search issues..."
+              placeholder={t("issues.searchPlaceholder")}
               className="pl-7 text-xs sm:text-sm"
-              aria-label="Search issues"
+              aria-label={t("issues.searchPlaceholder")}
             />
           </div>
         </div>
@@ -326,14 +326,14 @@ export function IssuesList({
             <button
               className={`p-1.5 transition-colors ${viewState.viewMode === "list" ? "bg-accent text-foreground" : "text-muted-foreground hover:text-foreground"}`}
               onClick={() => updateView({ viewMode: "list" })}
-              title="List view"
+              title={t("issues.view.list")}
             >
               <List className="h-3.5 w-3.5" />
             </button>
             <button
               className={`p-1.5 transition-colors ${viewState.viewMode === "board" ? "bg-accent text-foreground" : "text-muted-foreground hover:text-foreground"}`}
               onClick={() => updateView({ viewMode: "board" })}
-              title="Board view"
+              title={t("issues.view.board")}
             >
               <Columns3 className="h-3.5 w-3.5" />
             </button>
@@ -344,7 +344,7 @@ export function IssuesList({
             <PopoverTrigger asChild>
               <Button variant="ghost" size="sm" className={`text-xs ${activeFilterCount > 0 ? "text-blue-600 dark:text-blue-400" : ""}`}>
                 <Filter className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                <span className="hidden sm:inline">{activeFilterCount > 0 ? `Filters: ${activeFilterCount}` : "Filter"}</span>
+                <span className="hidden sm:inline">{activeFilterCount > 0 ? t("issues.filtersButton.count", { count: activeFilterCount }) : t("issues.filterButton")}</span>
                 {activeFilterCount > 0 && (
                   <span className="sm:hidden text-[10px] font-medium ml-0.5">{activeFilterCount}</span>
                 )}
@@ -421,7 +421,7 @@ export function IssuesList({
                   <div className="space-y-3">
                     {/* Priority */}
                     <div className="space-y-1">
-                      <span className="text-xs text-muted-foreground">Priority</span>
+                      <span className="text-xs text-muted-foreground">{t("issues.priority")}</span>
                       <div className="space-y-0.5">
                         {priorityOrder.map((p) => (
                           <label key={p} className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-accent/50 cursor-pointer">
@@ -439,7 +439,7 @@ export function IssuesList({
                     {/* Assignee */}
                     {agents && agents.length > 0 && (
                       <div className="space-y-1">
-                        <span className="text-xs text-muted-foreground">Assignee</span>
+                        <span className="text-xs text-muted-foreground">{t("issues.assignee")}</span>
                         <div className="space-y-0.5 max-h-32 overflow-y-auto">
                           {agents.map((agent) => (
                             <label key={agent.id} className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-accent/50 cursor-pointer">
@@ -456,7 +456,7 @@ export function IssuesList({
 
                     {labels && labels.length > 0 && (
                       <div className="space-y-1">
-                        <span className="text-xs text-muted-foreground">Labels</span>
+                        <span className="text-xs text-muted-foreground">{t("issues.labels")}</span>
                         <div className="space-y-0.5 max-h-32 overflow-y-auto">
                           {labels.map((label) => (
                             <label key={label.id} className="flex items-center gap-2 px-2 py-1 rounded-sm hover:bg-accent/50 cursor-pointer">
@@ -483,17 +483,17 @@ export function IssuesList({
               <PopoverTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-xs">
                   <ArrowUpDown className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                  <span className="hidden sm:inline">Sort</span>
+                  <span className="hidden sm:inline">{t("issues.sort")}</span>
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="w-48 p-0">
                 <div className="p-2 space-y-0.5">
                   {([
-                    ["status", "Status"],
-                    ["priority", "Priority"],
-                    ["title", "Title"],
-                    ["created", "Created"],
-                    ["updated", "Updated"],
+                    ["status", t("issues.status")],
+                    ["priority", t("issues.priority")],
+                    ["title", t("common.title")],
+                    ["created", t("common.created")],
+                    ["updated", t("common.updated")],
                   ] as const).map(([field, label]) => (
                     <button
                       key={field}
@@ -527,16 +527,16 @@ export function IssuesList({
               <PopoverTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-xs">
                   <Layers className="h-3.5 w-3.5 sm:h-3 sm:w-3 sm:mr-1" />
-                  <span className="hidden sm:inline">Group</span>
+                  <span className="hidden sm:inline">{t("issues.group")}</span>
                 </Button>
               </PopoverTrigger>
               <PopoverContent align="end" className="w-44 p-0">
                 <div className="p-2 space-y-0.5">
                   {([
-                    ["status", "Status"],
-                    ["priority", "Priority"],
-                    ["assignee", "Assignee"],
-                    ["none", "None"],
+                    ["status", t("issues.status")],
+                    ["priority", t("issues.priority")],
+                    ["assignee", t("issues.assignee")],
+                    ["none", t("common.none")],
                   ] as const).map(([value, label]) => (
                     <button
                       key={value}
@@ -678,7 +678,7 @@ export function IssuesList({
                                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-dashed border-muted-foreground/35 bg-muted/30">
                                   <User className="h-3 w-3" />
                                 </span>
-                                Assignee
+                                {t("issues.assignee")}
                               </span>
                             )}
                           </button>
@@ -691,7 +691,7 @@ export function IssuesList({
                         >
                           <input
                             className="w-full px-2 py-1.5 text-xs bg-transparent outline-none border-b border-border mb-1 placeholder:text-muted-foreground/50"
-                            placeholder="Search agents..."
+                            placeholder={t("agents.searchPlaceholder")}
                             value={assigneeSearch}
                             onChange={(e) => setAssigneeSearch(e.target.value)}
                             autoFocus
@@ -708,7 +708,7 @@ export function IssuesList({
                                 assignIssue(issue.id, null);
                               }}
                             >
-                              No assignee
+                              {t("issueProperties.noAssignee")}
                             </button>
                             {(agents ?? [])
                               .filter((agent) => {

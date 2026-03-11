@@ -213,6 +213,9 @@ const resources: Record<Language, Dict> = {
     "common.close": "Close",
     "common.created": "Created",
     "common.updated": "Updated",
+    "common.title": "Title",
+    "common.none": "None",
+    "common.scrollToBottom": "Scroll to bottom",
 
     // Org chart controls
     "org.zoomIn": "Zoom in",
@@ -235,6 +238,36 @@ const resources: Record<Language, Dict> = {
     "issueDetail.tokens.detail.withCache": "(in {in}, out {out}, cached {cached})",
     "issueDetail.tokens.detail.noCache": "(in {in}, out {out})",
     "issueDetail.linkedApprovals": "Linked Approvals",
+    
+    
+
+    // Issues list UX
+    "issues.searchPlaceholder": "Search issues...",
+    "issues.filterButton": "Filter",
+    "issues.filtersButton.count": "Filters: {count}",
+    "issues.view.list": "List view",
+    "issues.view.board": "Board view",
+    "issues.labels": "Labels",
+    "issues.sort": "Sort",
+    "issues.group": "Group",
+
+    // Comments common
+    "comments.addPlaceholder": "Add a comment...",
+    "comments.post": "Post comment",
+    "comments.posting": "Posting…",
+
+    // Agents search
+    "agents.searchPlaceholder": "Search agents...",
+
+    // Adapter config extras
+    "agentConfig.promptTemplate.placeholder": "You are agent {{ agent.name }}. Your role is {{ agent.role }}...",
+    "agentConfig.bootstrapPrompt.label": "Bootstrap prompt (first run)",
+    "agentConfig.bootstrapPrompt.placeholder": "Optional initial setup prompt for the first run",
+    "agentConfig.extraArgs.label": "Extra args (comma-separated)",
+    "agentConfig.extraArgs.placeholder": "e.g. --verbose, --foo=bar",
+    "agentConfig.envVars.label": "Environment variables",
+    "agentConfig.error.loadModelsFailed": "Failed to load adapter models.",
+    "agentConfig.codex.minimalWarning": "Codex may reject `minimal` thinking when search is enabled.",
 
     // Identities
     "identity.system": "System",
@@ -932,6 +965,9 @@ const resources: Record<Language, Dict> = {
     "common.close": "关闭",
     "common.created": "创建时间",
     "common.updated": "更新时间",
+    "common.title": "标题",
+    "common.none": "无",
+    "common.scrollToBottom": "滚动到底部",
 
     // Activity page
     "activity.selectCompany": "请选择公司以查看活动。",
@@ -950,6 +986,14 @@ const resources: Record<Language, Dict> = {
 
     // Issues page
     "issues.selectCompany": "请选择公司以查看问题。",
+    "issues.searchPlaceholder": "搜索问题...",
+    "issues.filterButton": "筛选",
+    "issues.filtersButton.count": "筛选：{count}",
+    "issues.view.list": "列表视图",
+    "issues.view.board": "看板视图",
+    "issues.labels": "标签",
+    "issues.sort": "排序",
+    "issues.group": "分组",
     "myIssues.selectCompany": "请选择公司以查看你的问题。",
     "myIssues.empty": "暂无分配给你的问题。",
 
@@ -971,6 +1015,7 @@ const resources: Record<Language, Dict> = {
     "agents.noMatch": "没有符合当前筛选条件的智能体。",
     "agents.noHierarchy": "尚未定义组织结构。",
     "agents.noRecentRuns": "暂无近期运行。",
+    "agents.searchPlaceholder": "搜索智能体...",
 
     // Dashboard
     "dashboard.empty.noCompany.message": "欢迎使用 Paperclip。请先创建公司与智能体开始使用。",
@@ -1309,6 +1354,16 @@ const resources: Record<Language, Dict> = {
     "newAgent.error.modelRequired": "OpenCode 需要以 provider/model 格式显式选择模型。",
     "newAgent.error.loadModelsFailed": "加载 OpenCode 模型失败。",
     "newAgent.error.modelsLoading": "OpenCode 模型仍在加载，请稍后重试。",
+    
+    // Adapter config extras
+    "agentConfig.promptTemplate.placeholder": "你是智能体 {{ agent.name }}，你的角色是 {{ agent.role }}...",
+    "agentConfig.bootstrapPrompt.label": "引导提示（首次运行）",
+    "agentConfig.bootstrapPrompt.placeholder": "首次运行时的可选初始化提示",
+    "agentConfig.extraArgs.label": "额外参数（逗号分隔）",
+    "agentConfig.extraArgs.placeholder": "例如 --verbose, --foo=bar",
+    "agentConfig.envVars.label": "环境变量",
+    "agentConfig.error.loadModelsFailed": "加载适配器模型失败。",
+    "agentConfig.codex.minimalWarning": "启用搜索时，Codex 可能拒绝 minimal 思考模式。",
     // Command palette
     "command.createProject": "创建新项目",
     "command.pages": "页面",

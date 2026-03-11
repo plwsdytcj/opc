@@ -444,7 +444,7 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
                     String(config.promptTemplate ?? ""),
                   )}
                   onChange={(v) => mark("adapterConfig", "promptTemplate", v ?? "")}
-                  placeholder="You are agent {{ agent.name }}. Your role is {{ agent.role }}..."
+                  placeholder={t("agentConfig.promptTemplate.placeholder") as any}
                   contentClassName="min-h-[88px] text-sm font-mono"
                   imageUploadHandler={async (file) => {
                     const namespace = `agents/${props.agent.id}/prompt-template`;
@@ -637,7 +637,7 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
                 <p className="text-xs text-destructive">
                   {fetchedModelsError instanceof Error
                     ? fetchedModelsError.message
-                    : "Failed to load adapter models."}
+                    : t("agentConfig.error.loadModelsFailed")}
                 </p>
               )}
 
@@ -655,11 +655,9 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
               {adapterType === "codex_local" &&
                 codexSearchEnabled &&
                 currentThinkingEffort === "minimal" && (
-                  <p className="text-xs text-amber-400">
-                    Codex may reject `minimal` thinking when search is enabled.
-                  </p>
+                  <p className="text-xs text-amber-400">{t("agentConfig.codex.minimalWarning")}</p>
                 )}
-              <Field label="Bootstrap prompt (first run)" hint={help.bootstrapPrompt}>
+              <Field label={t("agentConfig.bootstrapPrompt.label")} hint={help.bootstrapPrompt}>
                 <MarkdownEditor
                   value={
                     isCreate
@@ -675,7 +673,7 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
                       ? set!({ bootstrapPrompt: v })
                       : mark("adapterConfig", "bootstrapPromptTemplate", v || undefined)
                   }
-                  placeholder="Optional initial setup prompt for the first run"
+                  placeholder={t("agentConfig.bootstrapPrompt.placeholder")}
                   contentClassName="min-h-[44px] text-sm font-mono"
                   imageUploadHandler={async (file) => {
                     const namespace = isCreate
@@ -690,7 +688,7 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
                 <ClaudeLocalAdvancedFields {...adapterFieldProps} />
               )}
 
-              <Field label="Extra args (comma-separated)" hint={help.extraArgs}>
+              <Field label={t("agentConfig.extraArgs.label")} hint={help.extraArgs}>
                 <DraftInput
                   value={
                     isCreate
@@ -704,11 +702,11 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
                   }
                   immediate
                   className={inputClass}
-                  placeholder="e.g. --verbose, --foo=bar"
+                  placeholder={t("agentConfig.extraArgs.placeholder")}
                 />
               </Field>
 
-              <Field label="Environment variables" hint={help.envVars}>
+              <Field label={t("agentConfig.envVars.label")} hint={help.envVars}>
                 <EnvVarEditor
                   value={
                     isCreate
