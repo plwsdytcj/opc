@@ -213,6 +213,9 @@ const resources: Record<Language, Dict> = {
     "common.close": "Close",
     "common.created": "Created",
     "common.updated": "Updated",
+    "common.disabled": "Disabled",
+    "common.for": "For",
+    "common.model": "Model",
     "common.title": "Title",
     "common.none": "None",
     "common.scrollToBottom": "Scroll to bottom",
@@ -258,6 +261,9 @@ const resources: Record<Language, Dict> = {
 
     // Agents search
     "agents.searchPlaceholder": "Search agents...",
+    // Icons
+    "icons.searchPlaceholder": "Search icons...",
+    "icons.noMatch": "No icons match",
 
     // Adapter config extras
     "agentConfig.promptTemplate.placeholder": "You are agent {{ agent.name }}. Your role is {{ agent.role }}...",
@@ -331,6 +337,12 @@ const resources: Record<Language, Dict> = {
     "agentDetail.viewDetails": "View details",
     "agentDetail.noConfigRevisions": "No configuration revisions yet.",
     "agentDetail.noRuns": "No runs yet.",
+    "agentDetail.permissions": "Permissions",
+    "agentDetail.invocation": "Invocation",
+    "agentDetail.prompt": "Prompt",
+    "agentDetail.context": "Context",
+    "agentDetail.environment": "Environment",
+    "agentDetail.apiKeys.namePlaceholder": "Key name (e.g. production)",
     "agentDetail.noLogEvents": "No log events.",
     "agentDetail.noPersistedTranscript": "No persisted transcript for this run.",
     "agentDetail.create": "Create",
@@ -655,6 +667,7 @@ const resources: Record<Language, Dict> = {
     "projectDetail.allGoalsLinked": "All goals linked.",
     "projectDetail.addGoal": "Goal",
     "projectDetail.removeGoal": "Remove goal {title}",
+    "projectDetail.changeColor": "Change project color",
     // Agent config / common
     "common.save": "Save",
     "actions.createAgent": "Create agent",
@@ -905,6 +918,7 @@ const resources: Record<Language, Dict> = {
     "projectDetail.allGoalsLinked": "全部目标已关联。",
     "projectDetail.addGoal": "目标",
     "projectDetail.removeGoal": "移除目标 {title}",
+    "projectDetail.changeColor": "更改项目颜色",
 
     // Agent config / common
     "common.save": "保存",
@@ -965,6 +979,9 @@ const resources: Record<Language, Dict> = {
     "common.close": "关闭",
     "common.created": "创建时间",
     "common.updated": "更新时间",
+    "common.disabled": "已禁用",
+    "common.for": "用于",
+    "common.model": "模型",
     "common.title": "标题",
     "common.none": "无",
     "common.scrollToBottom": "滚动到底部",
@@ -1016,6 +1033,9 @@ const resources: Record<Language, Dict> = {
     "agents.noHierarchy": "尚未定义组织结构。",
     "agents.noRecentRuns": "暂无近期运行。",
     "agents.searchPlaceholder": "搜索智能体...",
+    // Icons
+    "icons.searchPlaceholder": "搜索图标...",
+    "icons.noMatch": "没有匹配的图标",
 
     // Dashboard
     "dashboard.empty.noCompany.message": "欢迎使用 Paperclip。请先创建公司与智能体开始使用。",
@@ -1176,6 +1196,12 @@ const resources: Record<Language, Dict> = {
     "agentDetail.viewDetails": "查看详情",
     "agentDetail.noConfigRevisions": "暂无配置修订。",
     "agentDetail.noRuns": "暂无运行记录。",
+    "agentDetail.permissions": "权限",
+    "agentDetail.invocation": "调用",
+    "agentDetail.prompt": "提示",
+    "agentDetail.context": "上下文",
+    "agentDetail.environment": "环境",
+    "agentDetail.apiKeys.namePlaceholder": "密钥名称（例如 production）",
     "agentDetail.noLogEvents": "暂无日志事件。",
     "agentDetail.noPersistedTranscript": "该运行没有持久化的对话记录。",
     "agentDetail.create": "创建",

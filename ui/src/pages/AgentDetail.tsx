@@ -882,7 +882,7 @@ function ConfigSummary({
               {(agent.runtimeConfig as Record<string, unknown>)?.heartbeat
                 ? (() => {
                     const hb = (agent.runtimeConfig as Record<string, unknown>).heartbeat as Record<string, unknown>;
-                    if (!hb.enabled) return <span className="text-muted-foreground">Disabled</span>;
+                    if (!hb.enabled) return <span className="text-muted-foreground">{t("common.disabled")}</span>;
                     const sec = Number(hb.intervalSec) || 300;
                     const maxConcurrentRuns = Math.max(1, Math.floor(Number(hb.maxConcurrentRuns) || 1));
                     const intervalLabel = sec >= 60 ? `${Math.round(sec / 60)} min` : `${sec}s`;
@@ -1157,6 +1157,7 @@ function ConfigurationTab({
   onSavingChange: (saving: boolean) => void;
   updatePermissions: { mutate: (canCreate: boolean) => void; isPending: boolean };
 }) {
+  const { t } = useI18n();
   const queryClient = useQueryClient();
 
   const { data: adapterModels } = useQuery({
@@ -1197,7 +1198,7 @@ function ConfigurationTab({
       />
 
       <div>
-        <h3 className="text-sm font-medium mb-3">Permissions</h3>
+        <h3 className="text-sm font-medium mb-3">{t("agentDetail.permissions")}</h3>
         <div className="border border-border rounded-lg p-4">
           <div className="flex items-center justify-between text-sm">
             <span>Can create new agents</span>
@@ -1636,19 +1637,19 @@ function RunDetail({ run, agentRouteId, adapterType }: { run: HeartbeatRun; agen
           {hasMetrics && (
             <div className="border-t sm:border-t-0 sm:border-l border-border p-4 grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-3 content-center">
               <div>
-                <div className="text-xs text-muted-foreground">Input</div>
+                <div className="text-xs text-muted-foreground">{t("agentDetail.table.input")}</div>
                 <div className="text-sm font-medium font-mono">{formatTokens(metrics.input)}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground">Output</div>
+                <div className="text-xs text-muted-foreground">{t("agentDetail.table.output")}</div>
                 <div className="text-sm font-medium font-mono">{formatTokens(metrics.output)}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground">Cached</div>
+                <div className="text-xs text-muted-foreground">{t("agentDetail.tokens.cached")}</div>
                 <div className="text-sm font-medium font-mono">{formatTokens(metrics.cached)}</div>
               </div>
               <div>
-                <div className="text-xs text-muted-foreground">Cost</div>
+                <div className="text-xs text-muted-foreground">{t("agentDetail.table.cost")}</div>
                 <div className="text-sm font-medium font-mono">{metrics.cost > 0 ? `$${metrics.cost.toFixed(4)}` : "-"}</div>
               </div>
             </div>
@@ -2145,7 +2146,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
     <div className="space-y-3">
       {adapterInvokePayload && (
         <div className="rounded-lg border border-border bg-background/60 p-3 space-y-2">
-          <div className="text-xs font-medium text-muted-foreground">Invocation</div>
+          <div className="text-xs font-medium text-muted-foreground">{t("agentDetail.invocation")}</div>
           {typeof adapterInvokePayload.adapterType === "string" && (
             <div className="text-xs"><span className="text-muted-foreground">Adapter: </span>{adapterInvokePayload.adapterType}</div>
           )}
@@ -2181,7 +2182,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {adapterInvokePayload.prompt !== undefined && (
             <div>
-              <div className="text-xs text-muted-foreground mb-1">Prompt</div>
+              <div className="text-xs text-muted-foreground mb-1">{t("agentDetail.prompt")}</div>
               <pre className="bg-neutral-100 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap">
                 {typeof adapterInvokePayload.prompt === "string"
                   ? adapterInvokePayload.prompt
@@ -2191,7 +2192,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {adapterInvokePayload.context !== undefined && (
             <div>
-              <div className="text-xs text-muted-foreground mb-1">Context</div>
+              <div className="text-xs text-muted-foreground mb-1">{t("agentDetail.context")}</div>
               <pre className="bg-neutral-100 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap">
                 {JSON.stringify(adapterInvokePayload.context, null, 2)}
               </pre>
@@ -2199,7 +2200,7 @@ function LogViewer({ run, adapterType }: { run: HeartbeatRun; adapterType: strin
           )}
           {adapterInvokePayload.env !== undefined && (
             <div>
-              <div className="text-xs text-muted-foreground mb-1">Environment</div>
+              <div className="text-xs text-muted-foreground mb-1">{t("agentDetail.environment")}</div>
               <pre className="bg-neutral-100 dark:bg-neutral-950 rounded-md p-2 text-xs overflow-x-auto whitespace-pre-wrap font-mono">
                 {formatEnvForDisplay(adapterInvokePayload.env)}
               </pre>
@@ -2520,7 +2521,7 @@ function KeysTab({ agentId, companyId }: { agentId: string; companyId?: string }
         </p>
         <div className="flex items-center gap-2">
           <Input
-            placeholder="Key name (e.g. production)"
+            placeholder={t("agentDetail.apiKeys.namePlaceholder")}
             value={newKeyName}
             onChange={(e) => setNewKeyName(e.target.value)}
             className="h-8 text-sm"

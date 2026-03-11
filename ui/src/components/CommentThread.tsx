@@ -10,6 +10,7 @@ import { MarkdownEditor, type MarkdownEditorRef, type MentionOption } from "./Ma
 import { StatusBadge } from "./StatusBadge";
 import { AgentIcon } from "./AgentIconPicker";
 import { formatDateTime } from "../lib/utils";
+import { useI18n } from "../context/I18nContext";
 
 interface CommentWithRunMeta extends IssueComment {
   runId?: string | null;
@@ -228,6 +229,7 @@ export function CommentThread({
   currentAssigneeValue = "",
   mentions: providedMentions,
 }: CommentThreadProps) {
+  const { t } = useI18n();
   const [body, setBody] = useState("");
   const [reopen, setReopen] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -360,7 +362,7 @@ export function CommentThread({
           ref={editorRef}
           value={body}
           onChange={setBody}
-          placeholder="Leave a comment..."
+          placeholder={t("comments.addPlaceholder")}
           mentions={mentions}
           onSubmit={handleSubmit}
           imageUploadHandler={imageUploadHandler}
@@ -402,14 +404,14 @@ export function CommentThread({
             <InlineEntitySelector
               value={reassignTarget}
               options={reassignOptions}
-              placeholder="Assignee"
+              placeholder={t("issues.assignee")}
               noneLabel="No assignee"
               searchPlaceholder="Search assignees..."
               emptyMessage="No assignees found."
               onChange={setReassignTarget}
               className="text-xs h-8"
               renderTriggerValue={(option) => {
-                if (!option) return <span className="text-muted-foreground">Assignee</span>;
+                if (!option) return <span className="text-muted-foreground">{t("issues.assignee")}</span>;
                 const agentId = option.id.startsWith("agent:") ? option.id.slice("agent:".length) : null;
                 const agent = agentId ? agentMap?.get(agentId) : null;
                 return (

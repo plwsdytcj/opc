@@ -12,6 +12,7 @@ import { formatDate, cn, agentUrl } from "../lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "../context/I18nContext";
 
 interface GoalPropertiesProps {
   goal: Goal;
@@ -71,6 +72,7 @@ function PickerButton({
 }
 
 export function GoalProperties({ goal, onUpdate }: GoalPropertiesProps) {
+  const { t } = useI18n();
   const { selectedCompanyId } = useCompany();
 
   const { data: agents } = useQuery({
@@ -133,7 +135,7 @@ export function GoalProperties({ goal, onUpdate }: GoalPropertiesProps) {
               {ownerAgent.name}
             </Link>
           ) : (
-            <span className="text-sm text-muted-foreground">None</span>
+            <span className="text-sm text-muted-foreground">{t("projectDetail.none")}</span>
           )}
         </PropertyRow>
 

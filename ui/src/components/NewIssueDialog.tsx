@@ -632,7 +632,7 @@ export function NewIssueDialog() {
         <div className="px-4 pt-4 pb-2 shrink-0">
           <textarea
             className="w-full text-lg font-semibold bg-transparent outline-none resize-none overflow-hidden placeholder:text-muted-foreground/50"
-            placeholder="Issue title"
+            placeholder={t("newIssue.title.placeholder")}
             rows={1}
             value={title}
             onChange={(e) => {
@@ -657,12 +657,12 @@ export function NewIssueDialog() {
         <div className="px-4 pb-2 shrink-0">
           <div className="overflow-x-auto overscroll-x-contain">
             <div className="inline-flex items-center gap-2 text-sm text-muted-foreground flex-wrap sm:flex-nowrap sm:min-w-max">
-              <span>For</span>
+              <span>{t("common.for")}</span>
               <InlineEntitySelector
                 ref={assigneeSelectorRef}
                 value={assigneeId}
                 options={assigneeOptions}
-                placeholder="Assignee"
+                placeholder={t("issues.assignee")}
                 disablePortal
                 noneLabel="No assignee"
                 searchPlaceholder="Search assignees..."
@@ -678,7 +678,7 @@ export function NewIssueDialog() {
                       <span className="truncate">{option.label}</span>
                     </>
                   ) : (
-                    <span className="text-muted-foreground">Assignee</span>
+                    <span className="text-muted-foreground">{t("issues.assignee")}</span>
                   )
                 }
                 renderOption={(option) => {
@@ -697,7 +697,7 @@ export function NewIssueDialog() {
                 ref={projectSelectorRef}
                 value={projectId}
                 options={projectOptions}
-                placeholder="Project"
+                placeholder={t("issueProperties.project")}
                 disablePortal
                 noneLabel="No project"
                 searchPlaceholder="Search projects..."
@@ -716,7 +716,7 @@ export function NewIssueDialog() {
                       <span className="truncate">{option.label}</span>
                     </>
                   ) : (
-                    <span className="text-muted-foreground">Project</span>
+                    <span className="text-muted-foreground">{t("issueProperties.project")}</span>
                   )
                 }
                 renderOption={(option) => {
@@ -749,11 +749,11 @@ export function NewIssueDialog() {
             {assigneeOptionsOpen && (
               <div className="mt-2 rounded-md border border-border p-3 bg-muted/20 space-y-3">
                 <div className="space-y-1.5">
-                  <div className="text-xs text-muted-foreground">Model</div>
+                  <div className="text-xs text-muted-foreground">{t("common.model")}</div>
                   <InlineEntitySelector
                     value={assigneeModelOverride}
                     options={modelOverrideOptions}
-                    placeholder="Default model"
+                    placeholder={t("newIssue.defaultModel")}
                     disablePortal
                     noneLabel="Default model"
                     searchPlaceholder="Search models..."
@@ -825,7 +825,7 @@ export function NewIssueDialog() {
             ref={descriptionEditorRef}
             value={description}
             onChange={setDescription}
-            placeholder="Add description..."
+            placeholder={t("common.addDescriptionPlaceholder") as any}
             bordered={false}
             mentions={mentionOptions}
             contentClassName={cn("text-sm text-muted-foreground", expanded ? "min-h-[220px]" : "min-h-[120px]")}
