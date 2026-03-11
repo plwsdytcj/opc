@@ -755,9 +755,9 @@ export function NewIssueDialog() {
                     options={modelOverrideOptions}
                     placeholder={t("newIssue.defaultModel")}
                     disablePortal
-                    noneLabel="Default model"
-                    searchPlaceholder="Search models..."
-                    emptyMessage="No models found."
+                    noneLabel={t("newIssue.defaultModel")}
+                    searchPlaceholder={t("agentConfig.model.search")}
+                    emptyMessage={t("agentConfig.model.none")}
                     onChange={setAssigneeModelOverride}
                   />
                 </div>

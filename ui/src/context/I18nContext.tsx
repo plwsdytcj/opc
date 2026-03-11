@@ -258,6 +258,15 @@ const resources: Record<Language, Dict> = {
     "pathModal.linux.step3": "Copy the output and paste it here.",
     "pathModal.linux.tip": "In many file managers, Ctrl+L shows the full path.",
     "pathModal.terminal.title": "Terminal fallback (macOS/Linux)",
+    
+    // Goals
+    "goals.none": "No goals.",
+    
+    // Invite
+    "invite.installTo": "Install to {path}",
+    
+    // Projects errors
+    "projects.error.createFailed": "Failed to create project.",
 
     // Org chart controls
     "org.zoomIn": "Zoom in",
@@ -1379,6 +1388,15 @@ const resources: Record<Language, Dict> = {
     "projects.workspace.both": "两者",
     "projects.workspace.both.hint": "同时配置本地与仓库提示。",
     "projects.workspace.local.fullPath": "本地文件夹（绝对路径）",
+    
+    // Goals
+    "goals.none": "暂无目标。",
+    
+    // Invite
+    "invite.installTo": "安装到 {path}",
+    
+    // Projects errors
+    "projects.error.createFailed": "创建项目失败。",
     "projects.workspace.local.placeholder": "/absolute/path/to/workspace",
     "projects.workspace.repo.url": "GitHub 仓库 URL",
     "projects.workspace.repo.url.placeholder": "https://github.com/org/repo",

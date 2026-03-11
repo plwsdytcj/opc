@@ -46,7 +46,7 @@ export function ApprovalCard({
             <span className="font-medium text-sm">{label}</span>
             {requesterAgent && (
               <span className="text-xs text-muted-foreground">
-                requested by <Identity name={requesterAgent.name} size="sm" className="inline-flex" />
+                {t("approvalDetail.requestedBy")} <Identity name={requesterAgent.name} size="sm" className="inline-flex" />
               </span>
             )}
           </div>
@@ -77,7 +77,7 @@ export function ApprovalCard({
             onClick={onApprove}
             disabled={isPending}
           >
-            Approve
+            {t("inbox.actions.approve")}
           </Button>
           <Button
             variant="destructive"
@@ -85,7 +85,7 @@ export function ApprovalCard({
             onClick={onReject}
             disabled={isPending}
           >
-            Reject
+            {t("inbox.actions.reject")}
           </Button>
         </div>
       )}
