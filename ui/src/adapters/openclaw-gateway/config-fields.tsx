@@ -6,6 +6,7 @@ import {
   DraftInput,
   help,
 } from "../../components/agent-config-primitives";
+import { useI18n } from "../../context/I18nContext";
 
 const inputClass =
   "w-full rounded-md border border-border px-2.5 py-1.5 bg-transparent outline-none text-sm font-mono placeholder:text-muted-foreground/40";
@@ -60,6 +61,7 @@ export function OpenClawGatewayConfigFields({
   eff,
   mark,
 }: AdapterConfigFieldsProps) {
+  const { t } = useI18n();
   const configuredHeaders =
     config.headers && typeof config.headers === "object" && !Array.isArray(config.headers)
       ? (config.headers as Record<string, unknown>)
@@ -108,7 +110,7 @@ export function OpenClawGatewayConfigFields({
           }
           immediate
           className={inputClass}
-          placeholder="ws://127.0.0.1:18789"
+          placeholder={t("openclaw.url.placeholder")}
         />
       </Field>
 
@@ -126,7 +128,7 @@ export function OpenClawGatewayConfigFields({
               onCommit={(v) => mark("adapterConfig", "paperclipApiUrl", v || undefined)}
               immediate
               className={inputClass}
-              placeholder="https://paperclip.example"
+              placeholder={t("openclaw.paperclipApiUrl.placeholder")}
             />
           </Field>
 
@@ -136,9 +138,9 @@ export function OpenClawGatewayConfigFields({
               onChange={(e) => mark("adapterConfig", "sessionKeyStrategy", e.target.value)}
               className={inputClass}
             >
-              <option value="fixed">Fixed</option>
-              <option value="issue">Per issue</option>
-              <option value="run">Per run</option>
+              <option value="fixed">{t("openclaw.session.fixed")}</option>
+              <option value="issue">{t("openclaw.session.issue")}</option>
+              <option value="run">{t("openclaw.session.run")}</option>
             </select>
           </Field>
 
@@ -149,7 +151,7 @@ export function OpenClawGatewayConfigFields({
                 onCommit={(v) => mark("adapterConfig", "sessionKey", v || undefined)}
                 immediate
                 className={inputClass}
-                placeholder="paperclip"
+                placeholder={t("openclaw.sessionKey.placeholder")}
               />
             </Field>
           )}
@@ -158,7 +160,7 @@ export function OpenClawGatewayConfigFields({
             label="Gateway auth token (x-openclaw-token)"
             value={effectiveGatewayToken}
             onCommit={commitGatewayToken}
-            placeholder="OpenClaw gateway token"
+            placeholder={t("openclaw.token.placeholder")}
           />
 
           <Field label="Role">
@@ -167,7 +169,7 @@ export function OpenClawGatewayConfigFields({
               onCommit={(v) => mark("adapterConfig", "role", v || undefined)}
               immediate
               className={inputClass}
-              placeholder="operator"
+              placeholder={t("openclaw.role.placeholder")}
             />
           </Field>
 
@@ -183,7 +185,7 @@ export function OpenClawGatewayConfigFields({
               }}
               immediate
               className={inputClass}
-              placeholder="operator.admin"
+              placeholder={t("openclaw.scopes.placeholder")}
             />
           </Field>
 
@@ -200,7 +202,7 @@ export function OpenClawGatewayConfigFields({
               }}
               immediate
               className={inputClass}
-              placeholder="120000"
+              placeholder={t("openclaw.waitTimeout.placeholder")}
             />
           </Field>
 

@@ -287,7 +287,7 @@ export function IssueDetail() {
       options.push({ id: `agent:${agent.id}`, label: agent.name });
     }
     if (currentUserId) {
-      const label = currentUserId === "local-board" ? "Board" : "Me (Board)";
+      const label = currentUserId === "local-board" ? t("identity.board") : t("identity.meBoard");
       options.push({ id: `user:${currentUserId}`, label });
     }
     return options;
@@ -836,7 +836,7 @@ export function IssueDetail() {
         >
           <CollapsibleTrigger className="flex w-full items-center justify-between px-3 py-2 text-left">
             <span className="text-sm font-medium text-muted-foreground">
-              Linked Approvals ({linkedApprovals.length})
+              {t("issueDetail.linkedApprovals")} ({linkedApprovals.length})
             </span>
             <ChevronDown
               className={cn("h-4 w-4 text-muted-foreground transition-transform", secondaryOpen.approvals && "rotate-180")}

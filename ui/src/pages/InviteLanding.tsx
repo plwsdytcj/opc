@@ -13,15 +13,11 @@ import type { AgentAdapterType, JoinRequest } from "@paperclipai/shared";
 type JoinType = "human" | "agent";
 const joinAdapterOptions: AgentAdapterType[] = [...AGENT_ADAPTER_TYPES];
 
-const adapterLabels: Record<string, string> = {
-  claude_local: "Claude (local)",
-  codex_local: "Codex (local)",
-  opencode_local: "OpenCode (local)",
-  openclaw_gateway: "OpenClaw Gateway",
-  cursor: "Cursor (local)",
-  process: "Process",
-  http: "HTTP",
-};
+function adapterLabel(t: (k: string) => string, type: string): string {
+  const key = `adapterLabel.${type}`;
+  const label = t(key);
+  return label === key ? type : label;
+}
 
 const ENABLED_INVITE_ADAPTERS = new Set(["claude_local", "codex_local", "opencode_local", "cursor"]);
 
@@ -262,7 +258,7 @@ export function InviteLandingPage() {
               >
                 {joinAdapterOptions.map((type) => (
                   <option key={type} value={type} disabled={!ENABLED_INVITE_ADAPTERS.has(type)}>
-                    {adapterLabels[type]}{!ENABLED_INVITE_ADAPTERS.has(type) ? ` (${t("common.comingSoon")})` : ""}
+                    {adapterLabel(t, type)}{!ENABLED_INVITE_ADAPTERS.has(type) ? ` (${t("common.comingSoon")})` : ""}
                   </option>
                 ))}
               </select>

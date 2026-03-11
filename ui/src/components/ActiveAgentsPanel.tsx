@@ -447,7 +447,7 @@ function AgentRunCard({
           )}
           <Identity name={run.agentName} size="sm" />
           {isActive && (
-            <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">Live</span>
+            <span className="text-[11px] font-medium text-blue-600 dark:text-blue-400">{t("agentDetail.live")}</span>
           )}
         </div>
         <Link

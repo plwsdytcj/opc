@@ -116,15 +116,11 @@ function collectEdges(nodes: LayoutNode[]): Array<{ parent: LayoutNode; child: L
 
 // ── Status dot colors (raw hex for SVG) ─────────────────────────────────
 
-const adapterLabels: Record<string, string> = {
-  claude_local: "Claude",
-  codex_local: "Codex",
-  opencode_local: "OpenCode",
-  cursor: "Cursor",
-  openclaw_gateway: "OpenClaw Gateway",
-  process: "Process",
-  http: "HTTP",
-};
+function adapterLabel(t: (k: string) => string, type: string): string {
+  const key = `adapterLabel.${type}`;
+  const label = t(key);
+  return label === key ? type : label;
+}
 
 const statusDotColor: Record<string, string> = {
   running: "#22d3ee",
@@ -410,7 +406,7 @@ export function OrgChart() {
                   </span>
                   {agent && (
                     <span className="text-[10px] text-muted-foreground/60 font-mono leading-tight mt-1">
-                      {adapterLabels[agent.adapterType] ?? agent.adapterType}
+                      {adapterLabel(t, agent.adapterType)}
                     </span>
                   )}
                 </div>

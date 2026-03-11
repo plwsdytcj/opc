@@ -184,7 +184,7 @@ export function ApprovalDetail() {
               <div>
                 <p className="text-sm text-green-800 dark:text-green-100 font-medium">{t("approvalDetail.confirmed")}</p>
                 <p className="text-xs text-green-700 dark:text-green-200/90">
-                  Requesting agent was notified to review this approval and linked issues.
+                  {t("approvalDetail.confirmed.desc")}
                 </p>
               </div>
             </div>

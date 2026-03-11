@@ -234,10 +234,13 @@ const resources: Record<Language, Dict> = {
     "issueDetail.tokens.label": "Tokens {count}",
     "issueDetail.tokens.detail.withCache": "(in {in}, out {out}, cached {cached})",
     "issueDetail.tokens.detail.noCache": "(in {in}, out {out})",
+    "issueDetail.linkedApprovals": "Linked Approvals",
 
     // Identities
     "identity.system": "System",
     "identity.board": "Board",
+    "identity.me": "Me",
+    "identity.meBoard": "Me (Board)",
     "identity.unknown": "Unknown",
 
     // Issue activity simple labels
@@ -374,6 +377,27 @@ const resources: Record<Language, Dict> = {
     "onboarding.task.desc.placeholder": "Add more detail about what the agent should do...",
     "onboarding.summary.company": "Company",
     "onboarding.summary.task": "Task",
+
+    // Adapter config placeholders (Process)
+    "process.args.placeholder": "e.g. script.js, --flag",
+
+    // Projects workspaces (properties)
+    "projects.workspaces": "Workspaces",
+    "projects.workspaces.helpAria": "Workspaces help",
+    "projects.workspaces.help": "Workspaces give your agents hints about where the work is",
+    "projects.workspaces.none": "No workspace configured.",
+
+    // Adapter config placeholders (OpenClaw Gateway)
+    "openclaw.url.placeholder": "ws://127.0.0.1:18789",
+    "openclaw.paperclipApiUrl.placeholder": "https://paperclip.example",
+    "openclaw.session.fixed": "Fixed",
+    "openclaw.session.issue": "Per issue",
+    "openclaw.session.run": "Per run",
+    "openclaw.sessionKey.placeholder": "paperclip",
+    "openclaw.token.placeholder": "OpenClaw gateway token",
+    "openclaw.role.placeholder": "operator",
+    "openclaw.scopes.placeholder": "operator.admin",
+    "openclaw.waitTimeout.placeholder": "120000",
 
     // Common UI
     "common.properties": "Properties",
@@ -581,6 +605,7 @@ const resources: Record<Language, Dict> = {
     // Approval detail
     "approvalDetail.notFound": "Approval not found.",
     "approvalDetail.confirmed": "Approval confirmed",
+    "approvalDetail.confirmed.desc": "Requesting agent was notified to review this approval and linked issues.",
     "approvalDetail.requestedBy": "Requested by",
     "approvalDetail.linkedIssues": "Linked Issues",
     "approvalDetail.deleteDisapprovedConfirm": "Delete this disapproved agent? This cannot be undone.",
@@ -599,6 +624,8 @@ const resources: Record<Language, Dict> = {
     "projectDetail.removeGoal": "Remove goal {title}",
     // Agent config / common
     "common.save": "Save",
+    "actions.createAgent": "Create agent",
+    "actions.creating": "Creating…",
     
 
     // New agent
@@ -610,6 +637,45 @@ const resources: Record<Language, Dict> = {
     "newAgent.reportsToNone": "Reports to: N/A (CEO)",
     "newAgent.reportsToEllipsis": "Reports to...",
     "newAgent.thisWillBeCeo": "This will be the CEO",
+    
+    // Adapter labels
+    "adapterLabel.claude_local": "Claude (local)",
+    "adapterLabel.codex_local": "Codex (local)",
+    "adapterLabel.opencode_local": "OpenCode (local)",
+    "adapterLabel.openclaw_gateway": "OpenClaw Gateway",
+    "adapterLabel.cursor": "Cursor (local)",
+    "adapterLabel.process": "Process",
+    "adapterLabel.http": "HTTP",
+    "newAgent.error.createFailed": "Failed to create agent",
+    "newAgent.error.modelRequired": "OpenCode requires an explicit model in provider/model format.",
+    "newAgent.error.loadModelsFailed": "Failed to load OpenCode models.",
+    "newAgent.error.modelsLoading": "OpenCode models are still loading. Please wait and try again.",
+    // Command palette
+    "command.createProject": "Create new project",
+    "command.pages": "Pages",
+
+    // Issue properties
+    "issueProperties.labels": "Labels",
+    "issueProperties.project": "Project",
+    "issueProperties.parent": "Parent",
+    "issueProperties.depth": "Depth",
+    "issueProperties.started": "Started",
+    "issueProperties.completed": "Completed",
+    "issueProperties.noLabels": "No labels",
+    "issueProperties.searchLabels": "Search labels...",
+    "issueProperties.newLabel": "New label",
+    "issueProperties.creating": "Creating…",
+    "issueProperties.createLabel": "Create label",
+    "issueProperties.unassigned": "Unassigned",
+    "issueProperties.noAssignee": "No assignee",
+    "issueProperties.searchAssignees": "Search assignees...",
+    "issueProperties.searchProjects": "Search projects...",
+    "issueProperties.deleteLabel": "Delete {name}",
+    "issueProperties.assignToSelf": "Assign to me",
+    "issueProperties.assignToRequester": "Assign to requester",
+    "issueProperties.assignTo": "Assign to {name}",
+
+    
   },
   zh: {
     "common.loading": "加载中...",
@@ -673,6 +739,10 @@ const resources: Record<Language, Dict> = {
     "labels.issues": "个问题",
     "labels.unlimitedBudget": "不限预算",
     "labels.created": "创建于{time}",
+    
+    // Actions (common)
+    "actions.createAgent": "创建智能体",
+    "actions.creating": "正在创建…",
 
     // Auth
     "auth.signInTitle": "登录 Paperclip",
@@ -780,6 +850,7 @@ const resources: Record<Language, Dict> = {
     // Approval detail
     "approvalDetail.notFound": "未找到审批。",
     "approvalDetail.confirmed": "审批已确认",
+    "approvalDetail.confirmed.desc": "已通知请求方查看此审批及关联问题。",
     "approvalDetail.requestedBy": "请求方",
     "approvalDetail.linkedIssues": "关联问题",
     "approvalDetail.reviewLinkedIssues": "查看关联问题",
@@ -1005,10 +1076,13 @@ const resources: Record<Language, Dict> = {
     "issueDetail.tokens.label": "Tokens {count}",
     "issueDetail.tokens.detail.withCache": "(入 {in}，出 {out}，缓存 {cached})",
     "issueDetail.tokens.detail.noCache": "(入 {in}，出 {out})",
+    "issueDetail.linkedApprovals": "关联审批",
 
     // Identities
     "identity.system": "系统",
     "identity.board": "看板",
+    "identity.me": "我",
+    "identity.meBoard": "我（看板）",
     "identity.unknown": "未知",
 
     // Issue activity simple labels
@@ -1110,6 +1184,23 @@ const resources: Record<Language, Dict> = {
     "onboarding.task.desc.placeholder": "补充智能体应执行的详细说明...",
     "onboarding.summary.company": "公司",
     "onboarding.summary.task": "任务",
+    
+    // Adapter config placeholders (Process)
+    "process.args.placeholder": "例如 script.js, --flag",
+
+    
+
+    // Adapter config placeholders (OpenClaw Gateway)
+    "openclaw.url.placeholder": "ws://127.0.0.1:18789",
+    "openclaw.paperclipApiUrl.placeholder": "https://paperclip.example",
+    "openclaw.session.fixed": "固定",
+    "openclaw.session.issue": "按问题",
+    "openclaw.session.run": "按运行",
+    "openclaw.sessionKey.placeholder": "paperclip",
+    "openclaw.token.placeholder": "OpenClaw 网关令牌",
+    "openclaw.role.placeholder": "operator",
+    "openclaw.scopes.placeholder": "operator.admin",
+    "openclaw.waitTimeout.placeholder": "120000",
 
     // Common UI
     "common.properties": "属性",
@@ -1193,6 +1284,61 @@ const resources: Record<Language, Dict> = {
     "costs.byProject": "按项目",
     "costs.byProject.none": "暂无项目归属的运行成本。",
     "costs.unattributed": "未归属",
+
+    // Adapter labels
+    "adapterLabel.claude_local": "Claude（本地）",
+    "adapterLabel.codex_local": "Codex（本地）",
+    "adapterLabel.opencode_local": "OpenCode（本地）",
+    "adapterLabel.openclaw_gateway": "OpenClaw 网关",
+    "adapterLabel.cursor": "Cursor（本地）",
+    "adapterLabel.process": "进程",
+    "adapterLabel.http": "HTTP",
+
+    // New agent
+    "newAgent.title": "新建智能体",
+    "newAgent.subtitle": "高级智能体配置",
+    "newAgent.name.placeholder": "智能体名称",
+    "newAgent.title.placeholder": "头衔（例如 技术副总裁）",
+    "newAgent.reportsTo": "汇报对象",
+    "newAgent.reportsToNone": "汇报对象：无（CEO）",
+    "newAgent.reportsToEllipsis": "汇报对象...",
+    "newAgent.thisWillBeCeo": "这将成为 CEO",
+    "newAgent.noManager": "无上级",
+    "newAgent.noModels": "暂无可用模型",
+    "newAgent.error.createFailed": "创建智能体失败",
+    "newAgent.error.modelRequired": "OpenCode 需要以 provider/model 格式显式选择模型。",
+    "newAgent.error.loadModelsFailed": "加载 OpenCode 模型失败。",
+    "newAgent.error.modelsLoading": "OpenCode 模型仍在加载，请稍后重试。",
+    // Command palette
+    "command.createProject": "创建新项目",
+    "command.pages": "页面",
+
+    // Issue properties
+    "issueProperties.labels": "标签",
+    "issueProperties.project": "项目",
+    "issueProperties.parent": "父问题",
+    "issueProperties.depth": "深度",
+    "issueProperties.started": "开始时间",
+    "issueProperties.completed": "完成时间",
+    "issueProperties.noLabels": "暂无标签",
+    "issueProperties.searchLabels": "搜索标签...",
+    "issueProperties.newLabel": "新建标签",
+    "issueProperties.creating": "正在创建…",
+    "issueProperties.createLabel": "创建标签",
+    "issueProperties.unassigned": "未指派",
+    "issueProperties.noAssignee": "暂无负责人",
+    "issueProperties.searchAssignees": "搜索负责人...",
+    "issueProperties.searchProjects": "搜索项目...",
+    "issueProperties.deleteLabel": "删除 {name}",
+    "issueProperties.assignToSelf": "指派给我",
+    "issueProperties.assignToRequester": "指派给请求人",
+    "issueProperties.assignTo": "指派给 {name}",
+
+    // Projects workspaces (properties)
+    "projects.workspaces": "工作区",
+    "projects.workspaces.helpAria": "工作区帮助",
+    "projects.workspaces.help": "工作区为智能体提供工作位置的提示",
+    "projects.workspaces.none": "尚未配置工作区。",
   },
 };
 
